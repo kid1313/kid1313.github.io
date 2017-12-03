@@ -1,0 +1,386 @@
+/*Общая разметка блоков*/
+.body{
+	min-width: 980px;
+	height: 2137px;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 25px;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	color: #ffffff;
+	/*text-transform: uppercase;*/ 
+	background-color: #000000;
+}
+.clearfix::after{/*распорка для float*/
+	content: "";
+	display: table;
+	clear: both;
+}
+.main-header{
+	height: 100px;
+	color: #000000;
+	background-color: #d1d1d1;
+}
+.conteiner{
+	height: 100px;
+	width: 980px;
+	padding: 0 10px;/*отступ сверху/снизу - 0, отступ справа/слева - 10*/
+	margin: 0 auto;/*центровка контиейнера меню*/
+}
+.main-navigation{
+	float: left;
+	height: 100px;
+	width: 960px;
+	text-align: center;
+}
+.main-navigation a{
+	display: block; /*делаем ссылку блочной, чтобы можно было добавить отступы*/
+	padding-top: 34px;
+	padding-bottom: 36px;
+	padding-right: 20px;
+	padding-left: 20px;
+	color: #000000;
+	font-variant: small-caps;
+	text-decoration: none; /*убрать подсветку ссылок*/
+}
+.main-navigation a:hover{ /*действия при наведении на ссылку*/
+	background: #b2afaf;
+}
+.main-navigation ul{ /*сброс отступов у списка и убрать точки у элементов*/
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0; /*обнуляем размер текста в родительском блоке для установки размера в блоках li*/	
+}
+.main-navigation li{
+	display: inline-block; /*превращаем список в строку*/
+	vertical-align: top; /*выравниваем строку по верхнему краю блока*/
+	font-size: 25px;
+	line-height: 30px;
+}
+
+.index-logo{
+	width: 1130px;
+	height: 548px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 65px;
+}
+.main-article{
+	height: 300px;
+	width: 980px;
+	padding: 0 10px;/*отступ сверху/снизу - 0, отступ справа/слева - 10*/
+	margin: 0 auto;/*центровка контиейнера меню*/
+	margin-bottom: 65px;
+}
+.main-article-item{
+	position: relative;
+	float: left;
+	width: 313px;
+	height: 300px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 15px;
+	padding-bottom: 25px;
+	margin-right: 10px;
+	transition: 0.5s linear;/*нужно, чтобы корректно работал scale ниже*/
+}
+.main-article-item:hover{
+	transition-timing-function: ease;
+	-webkit-transform: scale(1.2);
+  	transform: scale(1.2);
+ }
+.main-article-item:last-child{ /*псевдокласс, стилизация последнего элемента, в данном случае у последнего элемента убирается отступ*/
+	margin-right: 0;
+}
+.main-article-item h2{
+	position: relative;
+	display: block;
+	text-align: center;
+	font-size: 25px;
+	line-height: 30px;
+	font-weight: bold;
+	margin-bottom: 0px;
+	padding-bottom: 40px;
+}
+.main-article-item h2::after{ /*псевдо элемент квадратик*/
+	content: "";/*обязательное условие*/			
+	position: absolute;/*будем смещать относительного родительского элемента h2 position: relative*/
+	bottom: 0;/*прижимаем к нижней границе родительского элемента*/
+	left: 50%;/*распологаем по центру левую грань псевдоэлемента относительно родительского элемента*/
+	display: block;/*для того чтобы элемент отрисовался*/
+	width: 20px;
+	height: 20px;
+	margin-left: -10px;/*ребро элемента 20px, смещвем влево на 10px, сейчас элемент по центру*/
+	background-color: #ffffff;
+	transform: rotate(45deg);/*поворачиваем элемент на 45 гр*/
+}
+.main-article-item p{
+	text-align: left;
+	font-size: 14px;
+	line-height: 17px;
+	font-weight: normal;
+	text-transform: none;
+	padding-left: 27px;
+	padding-right: 0px;
+}
+
+.main-article-item a{
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	font-size: 20px;
+	line-height: 25px;
+	font-variant: small-caps;
+	color: #ffffff;
+	padding-top: 258px;
+	padding-right: 0px;
+	padding-bottom: 20px;
+	padding-left: 170px;
+}
+.about-me{
+	position: relative;
+	width: 980px;
+	height: 400px;
+	padding: 0 10px;
+	margin: 0 auto;
+	margin-bottom: 65px;
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 25px;
+	line-height: 29px;
+	font-weight: normal;
+}
+.about-me a{
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	text-decoration: none;
+	color: #000000;
+	font-size: 27px;
+	line-height: 29px;
+	font-weight: bold;
+	font-variant: small-caps;
+	padding-top: 7px;
+	padding-bottom: 9px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #a2a2a2;
+	border-style: solid;
+	border-color: #a2a2a2;
+}
+.about-me a:hover{
+	background-color: #000000;
+	color: #ffffff; 
+}
+.about-me p{
+	margin-top: 95px;
+	margin-right: 21px;
+}
+.my-photo{
+	float: left;
+	width: 400px;
+	height: 400px;
+	margin-right: 20px;
+}
+.about-me-text{
+	float: left;
+	width: 540px;
+	height: 400px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.contacts{
+	width: 980px;
+	height: 320px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.contacts-left{
+	float: left;
+	width: 475px;
+	height: 320px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-right: 10px;
+	font-size: 20px;
+	line-height: 27px;
+	font-weight: normal;
+}
+.contacts-left p{
+	margin-bottom: 5px;
+}
+.contacts-left-phone{
+	position: relative;
+	padding-left: 60px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	margin-top: 0px;
+}
+.contacts-left-phone::before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 45px;
+	height: 50px;
+	bottom: 50%;
+	left: 0;
+	margin-bottom: -25px;
+	background-color: #000000;
+	background-image: url("../img/viber_icon.png");
+}
+.contacts-left a{
+	position: relative;
+	text-decoration: none;
+	color: #ffffff;
+	padding-left: 60px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	bottom: -22px;
+}
+.contacts-left a::before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 45px;
+	height: 46px;
+	bottom: 50%;
+	left: 0;
+	margin-bottom: -23px;
+	background-color: #000000;
+	background-image: url("../img/vk_icon.png");
+}
+.contacts-left a:hover{
+	text-decoration: underline;
+}
+.contacts-right{
+	float: right;
+	width: 475px;
+	height: 320px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-size: 27px;
+	line-height: 40px;
+}
+.contacts-right h2{
+	font-size: 27px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.contacts-right input{
+	display: block;
+	width: 220px;
+	height: 35px;
+}
+.appointment-form-item{
+	float: left;
+	margin-right: 7px;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+.appointment-form-item::ntl-child(2n){
+	margin-right: 0;
+}
+.appointment-form-item p{
+	font-variant: small-caps;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	line-height: 25px;
+	text-align: center;
+}
+.appointment-form-item input{
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.btn{
+	margin-top: 20px;
+	width: 230px;
+	height: 45px;
+	margin-left: 120px;
+	text-decoration: none;
+	color: #000000;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	font-size: 27px;
+	line-height: 27px;
+	font-weight: bold;
+	font-variant: small-caps;
+	border: none;
+	padding-top: 0px;
+	padding-bottom: 3px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #a2a2a2;
+	border-style: solid;
+	border-color: #a2a2a2;
+
+}
+.btn:hover{
+	background-color: #000000;
+	color: #ffffff;
+}
+.main-footer{
+	margin-top: 65px;
+	height: 200px;
+	background-color: #d1d1d1;
+}
+.main-footer-logo{
+	float: left;
+	height: 200px;
+	width: 390px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-right: 10px;
+}
+.main-footer-adress{
+	float: left;
+	height: 200px;
+	width: 340px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 40px;
+	padding-bottom: 0px;
+	margin-right: 10px;
+	font-size: 14px;
+	line-height: 29px;
+	font-weight: bold;
+	color: #000000;
+	text-transform: uppercase;
+	vertical-align: center;
+}
+.main-footer-social{
+	float: right;
+	height: 200px;
+	width: 160px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 40px;
+	padding-bottom: 0px;
+	font-size: 14px;
+	line-height: 29px;
+	font-weight: bold;
+	color: #000000;
+	text-transform: uppercase;
+}
+.main-footer-social a{
+	text-decoration: none;
+	color: #000000;
+	display: inline-block;
+	width: 29px;
+	height: 29px;
+	background: #d1d1d1 url("../img/footer_vk.png") no-repeat center;
+	font-size: 0px;
+	vertical-align: top;
+	padding-left: 70px;
+	padding-bottom: 20px;
+}
+/*Задание стидей элементов*/
