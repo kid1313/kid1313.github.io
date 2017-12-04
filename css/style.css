@@ -1,7 +1,7 @@
 /*Общая разметка блоков*/
 .body{
 	min-width: 980px;
-	height: 2137px;
+	height: 1900px;
 	font-size: 20px;
 	font-weight: bold;
 	line-height: 25px;
@@ -16,26 +16,27 @@
 	clear: both;
 }
 .main-header{
-	height: 100px;
+	height: 70px;
 	color: #000000;
 	background-color: #d1d1d1;
+	margin-bottom: 40px;
 }
 .conteiner{
-	height: 100px;
+	height: 70px;
 	width: 980px;
 	padding: 0 10px;/*отступ сверху/снизу - 0, отступ справа/слева - 10*/
 	margin: 0 auto;/*центровка контиейнера меню*/
 }
 .main-navigation{
 	float: left;
-	height: 100px;
+	height: 70px;
 	width: 960px;
 	text-align: center;
 }
 .main-navigation a{
 	display: block; /*делаем ссылку блочной, чтобы можно было добавить отступы*/
-	padding-top: 34px;
-	padding-bottom: 36px;
+	padding-top: 15px;
+	padding-bottom: 25px;
 	padding-right: 20px;
 	padding-left: 20px;
 	color: #000000;
@@ -59,8 +60,8 @@
 }
 
 .index-logo{
-	width: 1130px;
-	height: 548px;
+	width: 909px;
+	height: 440px;
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 65px;
@@ -139,16 +140,16 @@
 }
 .about-me{
 	position: relative;
-	width: 980px;
-	height: 400px;
+	width: 960px;
+	height: 322px;
 	padding: 0 10px;
 	margin: 0 auto;
-	margin-bottom: 65px;
 	background-color: #ffffff;
 	color: #000000;
-	font-size: 25px;
-	line-height: 29px;
+	font-size: 20px;
+	line-height: 27px;
 	font-weight: normal;
+	margin-bottom: 65px;
 }
 .about-me a{
 	position: absolute;
@@ -173,14 +174,18 @@
 	color: #ffffff; 
 }
 .about-me p{
-	margin-top: 95px;
-	margin-right: 21px;
+	display: inline-block;
+	width: 570px;
+	height: 140px;
+	vertical-align: top;
+	margin-top: 90px;
+	margin-right: 5px;
 }
 .my-photo{
 	float: left;
-	width: 400px;
-	height: 400px;
-	margin-right: 20px;
+	width: 322px;
+	height: 322px;
+	margin-right: 40px;
 }
 .about-me-text{
 	float: left;
