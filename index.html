@@ -129,12 +129,13 @@
       </div>
     </main>
     <footer class="main-footer">
-      <div class="conteiner clearfix">
+      <div class="footer-conteiner clearfix">
         <img class="main-footer-logo" src="img/footer_logo.png" width="413" height="194" alt="Депиляция Киров">
         <div class="main-footer-adress">
           <p>Депиляция Киров<br>
             Адрес: г. Киров  ул. Карла Маркса д.21, 5 этаж, оф. 508 <br>
             Телефон: +7(922)903-19-05</p>
+            <a class="footer-map" href="#">Показать на карте</a>
         </div>
         <div class="main-footer-social">
           <p>Присоединяйтесь!</p>
@@ -145,7 +146,7 @@
     <div class="modal-wax">
       <div class="modal-wax-header clearfix">
         <h1>Восковая эпиляция</h1>
-        <a class="modal-wax-close" href="#">Закрыть</a>
+        <a class="bntclose" href="#">Закрыть</a>
       </div>
       <section class="modal-wax-introduction clearfix">
         <p><img class="modal-wax-img-left" src="img/modal-wax-1.jpg" width="310" height="205" alt="Депиляция Киров">
@@ -195,11 +196,22 @@
         повреждения кожи. Во всяком случае, все решается индивидуально.</p>
       </section>
     </div>
+    <div class="modal-map">
+      <div class="modal-map-conteiner" tabindex="0">
+        <a class="bntclose" href="#">Закрыть</a>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2077.8606309112456!2d49.66430631626407!3d58.614688981414524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43fcf5b7f9483e37%3A0xf89485f04a9221e5!2z0YPQuy4g0JrQsNGA0LvQsCDQnNCw0YDQutGB0LAsIDIxLCDQmtC40YDQvtCyLCDQmtC40YDQvtCy0YHQutCw0Y8g0L7QsdC7LiwgNjEwMDIw!5e0!3m2!1sru!2sru!4v1512487712236" width="735" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+<!--Описание скриптов-->
     <script>
       var 
       modalWax = document.querySelector(".modal-wax");
       articleWax = document.querySelector(".article-item-wax");
-      modalClose = document.querySelector(".modal-wax-close")
+      modalClose = document.querySelector(".bntclose");
+      footerMap = document.querySelector(".footer-map");
+      modalMap = document.querySelector(".modal-map");
+      modalMapClose = document.querySelector(".modal-map-conteiner a");
+      focusMap = document.querySelector(".modal-map-conteiner");
 
       articleWax.addEventListener("click", function(event){
         event.preventDefault();
@@ -208,6 +220,15 @@
       modalClose.addEventListener("click", function(event) {
         event.preventDefault();
         modalWax.classList.remove("modal-wax-show");
+      });
+      footerMap.addEventListener("click", function(event){
+        event.preventDefault();
+        modalMap.classList.add("modal-wax-show");
+        focusMap.focus();
+      });
+      modalMapClose.addEventListener("click", function(event){
+        event.preventDefault();
+        modalMap.classList.remove("modal-wax-show");
       });
 
     </script>

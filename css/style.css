@@ -337,6 +337,13 @@
 	height: 200px;
 	background-color: #d1d1d1;
 }
+.footer-conteiner{
+	height: 200px;
+	width: 960px;
+	padding: 0 10px;/*отступ сверху/снизу - 0, отступ справа/слева - 10*/
+	margin: 0 auto;/*центровка контиейнера меню*/
+}
+
 .main-footer-logo{
 	float: left;
 	height: 200px;
@@ -353,7 +360,7 @@
 	width: 340px;
 	padding-left: 0px;
 	padding-right: 0px;
-	padding-top: 40px;
+	padding-top: 0px;
 	padding-bottom: 0px;
 	margin-right: 10px;
 	font-size: 14px;
@@ -361,7 +368,13 @@
 	font-weight: bold;
 	color: #000000;
 	text-transform: uppercase;
-	vertical-align: center;
+}
+.main-footer-adress p{
+	margin-top: 50px;
+	margin-bottom: 0px;
+}
+.main-footer-adress a{
+	margin-top: 5px;
 }
 .main-footer-social{
 	float: right;
@@ -369,13 +382,16 @@
 	width: 160px;
 	padding-left: 0px;
 	padding-right: 0px;
-	padding-top: 40px;
+	padding-top: 0px;
 	padding-bottom: 0px;
 	font-size: 14px;
 	line-height: 29px;
 	font-weight: bold;
 	color: #000000;
 	text-transform: uppercase;
+}
+.main-footer-social p{
+	margin-top: 50px;
 }
 .main-footer-social a{
 	text-decoration: none;
@@ -389,7 +405,9 @@
 	padding-left: 70px;
 	padding-bottom: 20px;
 }
-/*Popup*/
+/*-------------------------------------------------------------*/
+/*-------------------------Popup-------------------------------*/
+/*-------------------------------------------------------------*/
 .modal-wax{
 	display: none;
 	font-family: "PT Sans Narrow", "Arial", sans-serif;
@@ -397,8 +415,8 @@
 	font-weight: normal;
 	line-height: 18px;
 	color: #000000;
-	border-right: : 3px;
-  	border-left: : 3px;
+	border-right: 3px;
+  	border-left: 3px;
   	border-bottom: 70px;
   	border-color: rgb(212, 212, 212);
   	border-style: solid;
@@ -430,7 +448,7 @@
 	line-height: 27px;
 	padding-left: 283px;
 }
-.modal-wax-header a{
+.bntclose{
 	position: absolute;
 	display: block;
 	text-decoration: none;
@@ -438,7 +456,7 @@
 	font-size: 0px;
 	width: 34px;
 	height: 34px;
-	background: url('../img/close.png') center no-repeat;
+	background: transparent url('../img/close.png') center no-repeat;
 	right: 0;
 	top: 0;
 }
@@ -483,7 +501,29 @@
 	line-height: 25px;
 	padding-left: 330px;
 }
+.modal-map{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: transparent;
+	width: 100%;
+	height: 1900px;
+	z-index: 36;
+}
+.modal-map-conteiner{
+	position: relative;
+	width: 735px;
+	height: 500px;
+	border: 3px;
+  	border-color: rgb(212, 212, 212);
+  	border-style: solid;
+  	background-color: rgb(246, 246, 246);
+	box-shadow: 30px 30px 9.3px 0.7px rgba(0, 0, 0, 0.35);
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 1200px;
+}
 .modal-wax-show{
 	display: block;
 }
-
