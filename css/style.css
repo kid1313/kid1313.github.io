@@ -1,4 +1,6 @@
-/*Общая разметка блоков*/
+/*-----------------------------------------------------*/
+/*--------------------Main Page------------------------*/
+/*-----------------------------------------------------*/
 .body{
 	min-width: 980px;
 	height: 1900px;
@@ -438,7 +440,6 @@
 	background-color: #d4d4d4;
 	padding: 0 10px;/*отступ сверху/снизу - 0, отступ справа/слева - 10*/
 	margin: 0 auto;
-	/*margin-bottom: 28px;*/
 }
 .modal-wax-header h1{
 	float: left;
@@ -526,4 +527,89 @@
 }
 .modal-wax-show{
 	display: block;
+}
+/*------------------------------------------------------------
+----------------------Pages Reviews---------------------------
+---------------------------------------------------------------*/
+.main-navigation-reviews{
+	background-color: #b2afaf;
+	border: solid red;
+}
+.reviews{
+	width: 980px;
+	height: 1020px;
+	margin: 0 auto;
+}
+.reviews-item-1{
+	float: left;
+	width: 460px;
+	height: 223px;
+	font-size: 14px;
+	font-weight: normal;
+	color: #000000;
+	line-height: 24px;
+	background-color: #ffffff;
+	margin-bottom: 65px;
+	margin-right:20px;
+	margin-left: 20px;
+}
+.reviews-item-2{
+	float: right;
+	width: 460px;
+	height: 223px;
+	font-size: 14px;
+	font-weight: normal;
+	color: #000000;
+	line-height: 24px;
+	background-color: #ffffff;
+	margin-bottom: 65px;
+	margin-right: 20px;
+}
+.reviews-item-3{
+	float: left;
+	width: 460px;
+	height: 300px;
+	font-size: 14px;
+	font-weight: normal;
+	color: #000000;
+	line-height: 24px;
+	background-color: #ffffff;
+	margin-bottom: 65px;
+	margin-right:20px;
+	margin-left: 20px;
+}
+.reviews-item-4{
+	float: right;
+	width: 460px;
+	height: 300px;
+	font-size: 14px;
+	font-weight: normal;
+	color: #000000;
+	line-height: 24px;
+	background-color: #ffffff;
+	margin-bottom: 65px;
+	margin-right: 20px;
+}
+.reviews-item-5{
+	float: left;
+	width: 600px;
+	height: 367px;
+	font-size: 14px;
+	font-weight: normal;
+	color: #000000;
+	line-height: 24px;
+	background-color: #ffffff;
+	margin-left: 193px;
+}
+.reviews b{
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+.reviews p{
+	padding-right: 20px;
+	padding-left: 20px;
 }
