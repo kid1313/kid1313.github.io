@@ -389,4 +389,101 @@
 	padding-left: 70px;
 	padding-bottom: 20px;
 }
-/*Задание стидей элементов*/
+/*Popup*/
+.modal-wax{
+	display: none;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 18px;
+	color: #000000;
+	border-right: : 3px;
+  	border-left: : 3px;
+  	border-bottom: 70px;
+  	border-color: rgb(212, 212, 212);
+  	border-style: solid;
+  	background-color: rgb(246, 246, 246);
+	box-shadow: 30px 30px 9.3px 0.7px rgba(0, 0, 0, 0.35);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -367px;
+	margin-top: -440px
+	width: 735px;
+	height: 880px;
+	z-index: 35;
+}
+.modal-wax-header{
+	position: relative;
+	max-width: 740px;
+	max-height: 70px;
+	background-color: #d4d4d4;
+	padding: 0 10px;/*отступ сверху/снизу - 0, отступ справа/слева - 10*/
+	margin: 0 auto;
+	/*margin-bottom: 28px;*/
+}
+.modal-wax-header h1{
+	float: left;
+	font-size: 25px
+	font-weight: bold;
+	color: #000000;
+	line-height: 27px;
+	padding-left: 283px;
+}
+.modal-wax-header a{
+	position: absolute;
+	display: block;
+	text-decoration: none;
+	color: #000000;
+	font-size: 0px;
+	width: 34px;
+	height: 34px;
+	background: url('../img/close.png') center no-repeat;
+	right: 0;
+	top: 0;
+}
+.modal-wax-introduction{
+	width: 700px;
+	height: 260px
+	padding: 0 10px;/*отступ сверху/снизу - 0, отступ справа/слева - 10*/
+	margin: 0 auto;
+}
+.modal-wax-img-left{
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 10px; 
+}
+.modal-wax-article_1{
+	width: 700px;
+	height: 263px;
+	padding: 0 10px;/*отступ сверху/снизу - 0, отступ справа/слева - 10*/
+	margin: 0 auto;
+}
+.modal-wax-article_1 h2{
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 25px;
+	padding-left: 35px;
+}
+.modal-wax-img-right{
+	float: right;
+	padding-left: 10px;
+	padding-bottom: 10px; 
+	vertical-align: top;
+}
+.modal-wax-article_2{
+	width: 700px;
+	height: 260px;
+	padding: 0 10px;/*отступ сверху/снизу - 0, отступ справа/слева - 10*/
+	margin: 0 auto;
+}
+.modal-wax-article_2 h2{
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 25px;
+	padding-left: 330px;
+}
+.modal-wax-show{
+	display: block;
+}
+
