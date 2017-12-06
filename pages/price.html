@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Депиляция Киров</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body class="price-body">
+    <header class="main-header">
+      <div class="conteiner clearfix">
+        <nav class="main-navigation">
+          <ul">
+            <li>
+              <a href="../index.html">главная</a>
+            </li>
+            <li>
+              <a href="#">прайс-лист</a>
+            </li>
+            <li>
+              <a href="#">статьи</a>
+            </li>
+            <li>
+              <a href="#">контакты</a>
+            </li>
+            <li>
+              <a href="reviews.html">отзывы</a>
+            </li>
+          </ul>  
+        </nav>
+      </div>  
+    </header> 
+    <main class="main-price">
+      <h1>Прайс лист</h1>
+      <div class="path clearfix">  
+        <span class="path-main">Главная</span>
+        <span class="path-price">Прайс-лист</span>
+      </div>
+      <section class="price clearfix">
+        <div class="price-item">
+          <img src="../img/price-face.jpg" width="280" height="199" alt="Депиляция лица Киров">
+          <h2>Депиляция лица</h2>
+          <span>100 руб.</span>
+          <a href="#">Подробнее</a>
+        </div>
+        <div class="price-item">
+          <img src="../img/price-armpits.jpg" width="280" height="199" alt="Депиляция подмышечных впадин Киров">
+          <h2>Депиляция подмышечных впадин</h2>
+          <span>200 руб.</span>
+          <a href="#">Подробнее</a>
+        </div>
+        <div class="price-item">
+          <img src="../img/price-hand.jpg" width="280" height="199" alt="Депиляция рук Киров">
+          <h2>Депиляция рук</h2>
+          <span>от 200 руб.</span>
+          <a href="#">Подробнее</a>
+        </div>
+        <div class="price-item">
+          <img src="../img/price-bikini.jpg" width="280" height="199" alt="Депиляция зоны бикини Киров">
+          <h2>Депиляция зоны бикини</h2>
+          <span>от 350 руб.</span>
+          <a href="#">Подробнее</a>
+        </div>
+        <div class="price-item">
+          <img src="../img/price-ass.jpg" width="280" height="199" alt="Депиляция ягодиц/поясницы Киров">
+          <h2>Депиляция ягодиц/поясницы</h2>
+          <span>100 руб.</span>
+          <a href="#">Подробнее</a>
+        </div>
+        <div class="price-item">
+          <img src="../img/price-legs.jpg" width="280" height="199" alt="Депиляция ног Киров">
+          <h2>Депиляция ног</h2>
+          <span>от 250 руб.</span>
+          <a href="#">Подробнее</a>
+        </div>
+      </section>
+      
+    </main>
+    <footer class="main-footer">
+      <div class="footer-conteiner clearfix">
+        <img class="main-footer-logo" src="../img/footer_logo.png" width="413" height="202" alt="Депиляция Киров">
+        <div class="main-footer-adress">
+          <p>Депиляция Киров<br>
+            Адрес: г. Киров  ул. Карла Маркса д.21, 5 этаж, оф. 508 <br>
+            Телефон: +7(922)903-19-05</p>
+            <a class="footer-map" href="#">Показать на карте</a>
+        </div>
+        <div class="main-footer-social">
+          <p>Присоединяйтесь!</p>
+          <a href="https://vk.com/depilyaciya_kirov">ВКонтакте</a>
+        </div>
+      </div>
+    </footer> 
+    <div class="modal-map">
+        <div class="modal-map-conteiner" tabindex="0">
+          <a class="bntclose" href="#">Закрыть</a>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2077.8606309112456!2d49.66430631626407!3d58.614688981414524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43fcf5b7f9483e37%3A0xf89485f04a9221e5!2z0YPQuy4g0JrQsNGA0LvQsCDQnNCw0YDQutGB0LAsIDIxLCDQmtC40YDQvtCyLCDQmtC40YDQvtCy0YHQutCw0Y8g0L7QsdC7LiwgNjEwMDIw!5e0!3m2!1sru!2sru!4v1512487712236" width="735" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-overlay"></div>
+
+
+    <script>
+      var 
+      footerMap = document.querySelector(".footer-map");
+      modalMap = document.querySelector(".modal-map");
+      modalMapClose = document.querySelector(".modal-map-conteiner a");
+      focusMap = document.querySelector(".modal-map-conteiner");
+      overlay = document.querySelector(".modal-overlay");
+      
+      footerMap.addEventListener("click", function(event){
+        event.preventDefault();
+        modalMap.classList.add("modal-wax-show");
+        overlay.classList.add("modal-wax-show");
+      });
+      modalMapClose.addEventListener("click", function(event){
+        event.preventDefault();
+        modalMap.classList.remove("modal-wax-show");
+        overlay.classList.remove("modal-wax-show");
+      });
+
+    </script>  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+  </body>
+
+
+</html>

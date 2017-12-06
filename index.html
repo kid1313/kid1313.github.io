@@ -19,7 +19,7 @@
               <a href="#">главная</a>
             </li>
             <li>
-              <a href="#">прайс</a>
+              <a href="pages/price.html">прайс-лист</a>
             </li>
             <li>
               <a href="#">статьи</a>
@@ -202,6 +202,7 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2077.8606309112456!2d49.66430631626407!3d58.614688981414524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43fcf5b7f9483e37%3A0xf89485f04a9221e5!2z0YPQuy4g0JrQsNGA0LvQsCDQnNCw0YDQutGB0LAsIDIxLCDQmtC40YDQvtCyLCDQmtC40YDQvtCy0YHQutCw0Y8g0L7QsdC7LiwgNjEwMDIw!5e0!3m2!1sru!2sru!4v1512487712236" width="735" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
     </div>
+    <div class="modal-overlay"></div>
 <!--Описание скриптов-->
     <script>
       var 
@@ -212,7 +213,8 @@
       modalMap = document.querySelector(".modal-map");
       modalMapClose = document.querySelector(".modal-map-conteiner a");
       focusMap = document.querySelector(".modal-map-conteiner");
-
+      overlay = document.querySelector(".modal-overlay");
+      
       articleWax.addEventListener("click", function(event){
         event.preventDefault();
         modalWax.classList.add("modal-wax-show");
@@ -224,11 +226,12 @@
       footerMap.addEventListener("click", function(event){
         event.preventDefault();
         modalMap.classList.add("modal-wax-show");
-        focusMap.focus();
+        overlay.classList.add("modal-wax-show");
       });
       modalMapClose.addEventListener("click", function(event){
         event.preventDefault();
         modalMap.classList.remove("modal-wax-show");
+        overlay.classList.remove("modal-wax-show");
       });
 
     </script>

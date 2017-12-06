@@ -3,7 +3,7 @@
 /*-----------------------------------------------------*/
 .body{
 	min-width: 980px;
-	height: 1900px;
+	/*height: 1900px;*/
 	font-size: 20px;
 	font-weight: bold;
 	line-height: 25px;
@@ -33,6 +33,13 @@
 	height: 70px;
 	width: 960px;
 	text-align: center;
+}
+.main-navigation::before{
+	content: "";
+	float: left;
+	width: 180px;
+	height: 65px;
+	background: transparent url("../img/logo_header.png") center no-repeat;
 }
 .main-navigation a{
 	display: block; /*делаем ссылку блочной, чтобы можно было добавить отступы*/
@@ -503,16 +510,9 @@
 }
 .modal-map{
 	display: none;
-	position: absolute;
-	left: 0;
-	top: 0;
-	background: transparent;
-	width: 100%;
-	height: 1900px;
-	z-index: 36;
 }
 .modal-map-conteiner{
-	position: relative;
+	position: fixed;
 	width: 735px;
 	height: 500px;
 	border: 3px;
@@ -520,9 +520,21 @@
   	border-style: solid;
   	background-color: rgb(246, 246, 246);
 	box-shadow: 30px 30px 9.3px 0.7px rgba(0, 0, 0, 0.35);
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: 1200px;
+	top: 50%;
+	left: 50%;
+	margin-left: -367px;
+	margin-top: -250px;
+	z-index: 20;
+}
+.modal-overlay{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
 }
 .modal-wax-show{
 	display: block;
@@ -611,3 +623,110 @@
 	padding-right: 20px;
 	padding-left: 20px;
 }
+/*------------------------------------------------------
+--------------------------Price-------------------------
+--------------------------------------------------------*/
+.price-body{
+	min-width: 980px;
+	/*height: 1900px;*/
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 25px;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	color: #ffffff;
+	background: #e5e5e5; /*для старых броузеров*/
+}
+.main-price{
+	width: 980px;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #000000;
+	text-transform: uppercase;
+}
+.main-price h1{
+	font-size: 30px;
+	line-height: 42px;
+	padding-left: 20px;
+}
+.path{
+	position: relative;
+	width: 150px;
+	height: 25px;
+	margin-left: 20px;
+	margin-bottom: 65px;
+}
+.path .path-main{
+	float: left;
+}
+.path .path-main::after{
+	content: "";
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	top: 0px;
+	left: 60px;
+	margin-top: 5px;
+	background-color: #000000;
+	transform: rotate(45deg);
+}
+.path .path-price{
+	float: right;
+	color: #b8b8b8;
+}
+.main-price{
+	width: 980px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.price{
+	width: 980px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.price-item{
+	float: left;
+	width: 300px;
+	height: 348px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	background-color: #ffffff;
+	box-shadow: 4px 9px 9.3px 0.7px rgba(0, 0, 0, 0.35);
+	transition: 0.5s linear;
+}
+.price-item:hover{
+	transition-timing-function: ease;
+	-webkit-transform: scale(1.07);
+  	transform: scale(1.07);
+}
+.price-item img{
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.price-item h2{
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	margin-top: 5px;
+}
+.price-item span{
+	display: inline-block;
+	width: 260px;
+	height: 40px;
+	background-color: #e5e5e5;
+	text-align: center;
+	line-height: 40px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+.price-item a{
+	display: inline-block;
+	width: 260px;
+	height: 40px;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #000000;
+	margin-left: 20px;
+	text-align: center;
+	line-height: 40px;
+}	
