@@ -218,10 +218,12 @@
       articleWax.addEventListener("click", function(event){
         event.preventDefault();
         modalWax.classList.add("modal-wax-show");
+        overlay.classList.add("modal-wax-show");
       });
       modalClose.addEventListener("click", function(event) {
         event.preventDefault();
         modalWax.classList.remove("modal-wax-show");
+        overlay.classList.remove("modal-wax-show");
       });
       footerMap.addEventListener("click", function(event){
         event.preventDefault();

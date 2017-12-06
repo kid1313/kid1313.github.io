@@ -434,10 +434,10 @@
 	left: 50%;
 	top: 50%;
 	margin-left: -367px;
-	margin-top: -440px
+	margin-top: -440px;
 	width: 735px;
 	height: 880px;
-	z-index: 35;
+	z-index: 20;
 }
 .modal-wax-header{
 	position: relative;
