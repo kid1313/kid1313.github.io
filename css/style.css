@@ -9,8 +9,8 @@
 	line-height: 25px;
 	font-family: "PT Sans Narrow", "Arial", sans-serif;
 	color: #ffffff;
-	/*text-transform: uppercase;*/ 
-	background-color: #000000;
+	background: #000000; /*для старых броузеров*/
+	background: linear-gradient(to top, #1d1d1d, #0b0b0b);
 }
 .clearfix::after{/*распорка для float*/
 	content: "";
@@ -19,8 +19,7 @@
 }
 .main-header{
 	height: 70px;
-	color: #000000;
-	background-color: #d1d1d1;
+	background-color: #000000;
 	margin-bottom: 40px;
 }
 .conteiner{
@@ -41,12 +40,12 @@
 	padding-bottom: 25px;
 	padding-right: 20px;
 	padding-left: 20px;
-	color: #000000;
+	color: #ffffff;
 	font-variant: small-caps;
 	text-decoration: none; /*убрать подсветку ссылок*/
 }
 .main-navigation a:hover{ /*действия при наведении на ссылку*/
-	background: #b2afaf;
+	background: #1f1f1f;
 }
 .main-navigation ul{ /*сброс отступов у списка и убрать точки у элементов*/
 	margin: 0;
@@ -146,7 +145,7 @@
 	height: 322px;
 	padding: 0 10px;
 	margin: 0 auto;
-	background-color: #ffffff;
+	background-color: #f7f4f1;
 	color: #000000;
 	font-size: 20px;
 	line-height: 27px;
@@ -237,8 +236,7 @@
 	bottom: 50%;
 	left: 0;
 	margin-bottom: -25px;
-	background-color: #000000;
-	background-image: url("../img/viber_icon.png");
+	background: transparent url("../img/viber_icon.png") center no-repeat;
 }
 .contacts-left a{
 	position: relative;
@@ -253,13 +251,12 @@
 	content: "";
 	position: absolute;
 	display: block;
-	width: 45px;
+	width: 46px;
 	height: 46px;
 	bottom: 50%;
 	left: 0;
 	margin-bottom: -23px;
-	background-color: #000000;
-	background-image: url("../img/vk_icon.png");
+	background: transparent url("../img/vk_icon.png") center no-repeat; 
 }
 .contacts-left a:hover{
 	text-decoration: underline;
@@ -337,13 +334,14 @@
 .main-footer{
 	margin-top: 65px;
 	height: 200px;
-	background-color: #d1d1d1;
+	background-color: #252525;
 }
 .footer-conteiner{
 	height: 200px;
 	width: 960px;
 	padding: 0 10px;/*отступ сверху/снизу - 0, отступ справа/слева - 10*/
 	margin: 0 auto;/*центровка контиейнера меню*/
+	color: #ffffff;
 }
 
 .main-footer-logo{
@@ -368,7 +366,6 @@
 	font-size: 14px;
 	line-height: 29px;
 	font-weight: bold;
-	color: #000000;
 	text-transform: uppercase;
 }
 .main-footer-adress p{
@@ -377,6 +374,7 @@
 }
 .main-footer-adress a{
 	margin-top: 5px;
+	color: #ffffff;
 }
 .main-footer-social{
 	float: right;
@@ -389,23 +387,24 @@
 	font-size: 14px;
 	line-height: 29px;
 	font-weight: bold;
-	color: #000000;
 	text-transform: uppercase;
 }
 .main-footer-social p{
 	margin-top: 50px;
+	margin-bottom: 0px;
 }
 .main-footer-social a{
 	text-decoration: none;
-	color: #000000;
 	display: inline-block;
-	width: 29px;
-	height: 29px;
-	background: #d1d1d1 url("../img/footer_vk.png") no-repeat center;
+	width: 46px;
+	height: 46px;
+	background: transparent url("../img/vk_icon.png") no-repeat center;
 	font-size: 0px;
 	vertical-align: top;
-	padding-left: 70px;
+	padding-left: 60px;
 	padding-bottom: 20px;
+	margin-top: 0px;
+
 }
 /*-------------------------------------------------------------*/
 /*-------------------------Popup-------------------------------*/
@@ -532,8 +531,7 @@
 ----------------------Pages Reviews---------------------------
 ---------------------------------------------------------------*/
 .main-navigation-reviews{
-	background-color: #b2afaf;
-	border: solid red;
+	border-bottom: 5px solid  #ffffff;
 }
 .reviews{
 	width: 980px;
@@ -548,7 +546,7 @@
 	font-weight: normal;
 	color: #000000;
 	line-height: 24px;
-	background-color: #ffffff;
+	background-color: #f7f4f1;
 	margin-bottom: 65px;
 	margin-right:20px;
 	margin-left: 20px;
@@ -561,7 +559,7 @@
 	font-weight: normal;
 	color: #000000;
 	line-height: 24px;
-	background-color: #ffffff;
+	background-color: #f7f4f1;
 	margin-bottom: 65px;
 	margin-right: 20px;
 }
@@ -573,7 +571,7 @@
 	font-weight: normal;
 	color: #000000;
 	line-height: 24px;
-	background-color: #ffffff;
+	background-color: #f7f4f1;
 	margin-bottom: 65px;
 	margin-right:20px;
 	margin-left: 20px;
@@ -586,7 +584,7 @@
 	font-weight: normal;
 	color: #000000;
 	line-height: 24px;
-	background-color: #ffffff;
+	background-color: #f7f4f1;
 	margin-bottom: 65px;
 	margin-right: 20px;
 }
@@ -598,7 +596,7 @@
 	font-weight: normal;
 	color: #000000;
 	line-height: 24px;
-	background-color: #ffffff;
+	background-color: #f7f4f1;
 	margin-left: 193px;
 }
 .reviews b{
