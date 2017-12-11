@@ -152,7 +152,7 @@ html{
 }
 .about-me{
 	position: relative;
-	width: 960px;
+	width: 980px;
 	height: 322px;
 	padding: 0 10px;
 	margin: 0 auto;
@@ -213,15 +213,14 @@ html{
 	height: 320px;
 	padding: 0 10px;
 	margin: 0 auto;
+	background-color: #f7f4f1;
+	color: #000000;
 }
 .contacts-left{
 	float: left;
 	width: 475px;
 	height: 320px;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+	margin-left: 20px;
 	margin-right: 10px;
 	font-size: 20px;
 	line-height: 27px;
@@ -234,7 +233,7 @@ html{
 .contacts-left-phone{
 	position: relative;
 	padding-left: 60px;
-	padding-top: 25px;
+	padding-top: 10px;
 	padding-bottom: 25px;
 	margin-top: 0px;
 }
@@ -246,16 +245,16 @@ html{
 	height: 50px;
 	bottom: 50%;
 	left: 0;
-	margin-bottom: -25px;
-	background: transparent url("../img/viber_icon.png") center no-repeat;
+	margin-bottom: -20px;
+	background: transparent url("../img/vider_icon_black.png") center no-repeat;
 }
 .contacts-left a{
 	position: relative;
 	text-decoration: none;
-	color: #ffffff;
+	color: #000000;
 	padding-left: 60px;
 	padding-top: 25px;
-	padding-bottom: 25px;
+	padding-bottom: 15px;
 	bottom: -22px;
 }
 .contacts-left a::before{
@@ -267,7 +266,7 @@ html{
 	bottom: 50%;
 	left: 0;
 	margin-bottom: -23px;
-	background: transparent url("../img/vk_icon.png") center no-repeat; 
+	background: transparent url("../img/vk_icon_black.png") center no-repeat; 
 }
 .contacts-left a:hover{
 	text-decoration: underline;
@@ -287,29 +286,28 @@ html{
 	font-size: 27px;
 	text-transform: uppercase;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 0px;
 	margin-bottom: 10px;
 }
 .contacts-right input{
 	display: block;
 	width: 220px;
 	height: 35px;
+	border: solid #000000 1px;
 }
 .appointment-form-item{
 	float: left;
-	margin-right: 7px;
+	margin-right: 5px;
 	margin-left: 5px;
 	margin-bottom: 10px;
+	text-align: center;
 }
 .appointment-form-item::ntl-child(2n){
 	margin-right: 0;
 }
-.appointment-form-item p{
+.appointment-form-item label{
 	font-variant: small-caps;
-	margin-bottom: 10px;
-	margin-top: 0px;
 	line-height: 25px;
-	text-align: center;
 }
 .appointment-form-item input{
 	font-size: 20px;

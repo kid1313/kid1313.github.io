@@ -11,7 +11,6 @@
     <link href="../css/style.css" rel="stylesheet">
   </head>
   <body class="price-body">
-    <noscript><p>Ваш браузер не поддерживает скрипты!</p></noscript> 
     <header class="main-header">
       <div class="conteiner clearfix">
         <nav class="main-navigation">
@@ -29,7 +28,7 @@
               <a href="#">контакты</a>
             </li>
             <li>
-              <a href="#" onClick="reviews()">отзывы</a>
+              <a href="#" onClick="return reviews()">отзывы</a>
             </li>
           </ul>  
         </nav>
@@ -48,14 +47,14 @@
             <h2>Депиляция лица</h2>
             <span>100 руб.</span>
             <div class="price-item-btn">
-              <a onClick="slidedown(this.id, 50)" href="#" id="face">Подробнее</a>
+              <a href="#" onClick="return slidedown(this.id, 50)" id="face">Подробнее</a>
             </div>
           </div>
           <div class="modal-price-item modal-face">
               <div class="modal-price-item-container">
                 <p>Удаление нежелательных волос на лице<br> 
                 (шугаринг, пленочный воск)</p>
-                <button class="modal-close" onClick="slideup()">Закрыть</button>
+                <button class="modal-close" onClick="return slideup()">Закрыть</button>
               </div>
             </div>
         </div>
@@ -65,14 +64,14 @@
             <h2>Депиляция подмышечных впадин</h2>
             <span>200 руб.</span>
             <div class="price-item-btn">
-              <a onClick="slidedown(this.id, 50)" href="#" id="armpits">Подробнее</a>
+              <a onClick="return slidedown(this.id, 50)" href="#" id="armpits">Подробнее</a>
             </div>
           </div>
           <div class="modal-price-item modal-armpits">
               <div class="modal-price-item-container">
                 <p>Депиляция подмышечных впадин<br> 
                 (шугаринг, пленочный воск)</p>
-                <button class="modal-close" onClick="slideup()">Закрыть</button>
+                <button class="modal-close" onClick="return slideup()">Закрыть</button>
               </div>
             </div>
         </div>
@@ -82,7 +81,7 @@
             <h2>Депиляция рук</h2>
             <span>от 200 руб.</span>
             <div class="price-item-btn">
-              <a onClick="slidedown(this.id, 155)" href="#" id="hand">Подробнее</a>
+              <a onClick="return slidedown(this.id, 155)" href="#" id="hand">Подробнее</a>
             </div>
           </div>
            <div class="modal-price-item modal-hand">
@@ -95,7 +94,7 @@
                   ТЕПЛЫЙ ВОСК в картридже: <br>
                   - руки до локтя - 200 руб. <br>
                   - руки полностью - 400 руб.</p>
-                <button class="modal-close" onClick="slideup()">Закрыть</button>
+                <button class="modal-close" onClick="return slideup()">Закрыть</button>
               </div>
             </div>
         </div>
@@ -105,7 +104,7 @@
             <h2>Депиляция зоны бикини</h2>
             <span>от 350 руб.</span>
             <div class="price-item-btn">
-              <a onClick="slidedown(this.id, 105)" href="#" id="bikini" >Подробнее</a>
+              <a onClick="return slidedown(this.id, 105)" href="#" id="bikini" >Подробнее</a>
             </div>
           </div>
           <div class="modal-price-item modal-bikini">
@@ -115,7 +114,7 @@
                   - классическое бикини - 350 руб. <br>
                   - классическое + меж ягодичная впадина - 400 руб. <br>
                   - глубокое бикини - 500 руб.</p>
-                <button class="modal-close" onClick="slideup()">Закрыть</button>
+                <button class="modal-close" onClick="return slideup()">Закрыть</button>
               </div>
             </div>
         </div>
@@ -125,14 +124,14 @@
             <h2>Депиляция ягодиц/поясницы</h2>
             <span>100 руб.</span>
             <div class="price-item-btn">
-              <a onClick="slidedown(this.id, 50)" href="#" id="ass">Подробнее</a>
+              <a onClick="return slidedown(this.id, 50)" href="#" id="ass">Подробнее</a>
             </div>
           </div>
           <div class="modal-price-item modal-ass">
               <div class="modal-price-item-container">
                 <p>Удаление волос на ягодицах / пояснице<br> 
                   (шугаринг, теплый воск в картридже)</p>
-                <button class="modal-close" onClick="slideup()">Закрыть</button>
+                <button class="modal-close" onClick="return slideup()">Закрыть</button>
               </div>
             </div>
         </div>
@@ -142,7 +141,7 @@
             <h2>Депиляция ног</h2>
             <span>от 250 руб.</span>
             <div class="price-item-btn">
-              <a onClick="slidedown(this.id, 175)" href="#" id="legs">Подробнее</a>
+              <a onClick="return slidedown(this.id, 175)" href="#" id="legs">Подробнее</a>
             </div>
           </div>
           <div class="modal-price-item modal-legs">
@@ -156,7 +155,7 @@
                     - голень - 250 руб. <br>
                     - бедро - 250 руб. <br>
                     - ноги полностью - 500 руб.</p>
-                <button class="modal-close" onClick="slideup()">Закрыть</button>
+                <button class="modal-close" onClick="return slideup()">Закрыть</button>
               </div>
             </div>
         </div>
@@ -287,16 +286,15 @@
       function slidedown(id, deep){
           id_slideup = id;
           deep = "translateY(" + deep + "px)";
-          event.preventDefault();
           document.querySelector('.' + id + ' .price-item-btn').classList.add("hide-btn");
           document.querySelector('.modal-' + id).style.transform = deep; //"translateY(50px)";
           document.querySelector('.' + id).classList.add("modal-z-20","item-zoom-up");
           document.querySelector('.modal-' + id).classList.add("modal-z-10","item-zoom-up");
           overlay.classList.add("modal-show");
+          return false;
       };
 
       function slideup(){
-          event.preventDefault();
           document.querySelector('.modal-' + id_slideup).style.transform = "translateY(0)";
           setTimeout(function(){
             document.querySelector('.' + id_slideup).classList.remove("modal-z-20","item-zoom-up");
@@ -304,13 +302,13 @@
             overlay.classList.remove("modal-show");
             document.querySelector('.' + id_slideup + ' .price-item-btn').classList.remove("hide-btn");
             }, 500);
+          return false;
 
       };
 
        var numReview = 1; //номер отзыва
 
      function reviews(){
-          event.preventDefault();
           document.querySelector(".modal-overlay").style.display = "block";
           document.querySelector(".modal-reviews").style.display = "block";
           document.querySelector("#i" + numReview).style.visibility = "visible";
@@ -320,6 +318,7 @@
           document.querySelector("#i" + 1).style.left = "0";
           document.querySelector("#i" + 1).style.top = "50%";
           document.querySelector("#i" + 1).style.marginTop = "-" + h/2 + "px";
+          return false;
       };
 
       function vert_align(id, re, direction)
@@ -350,7 +349,6 @@
         };
 
       function forward(){
-        event.preventDefault();
         numReview = numReview + 1;
         if(numReview>1 && numReview<=5)
         {
@@ -404,7 +402,6 @@
       };
 
       function backward(){
-        event.preventDefault();
         numReview = numReview - 1; //2
         if(numReview<=5 && numReview>=1)
         {
@@ -458,13 +455,17 @@
       };
 
       function closeReviews(){
-        event.preventDefault();
         document.querySelector(".modal-overlay").style.display = "";
         document.querySelector(".modal-reviews").style.display = "";
         document.querySelector(".modal-reviews-item").style.visibility = "";
         document.querySelector("#i" + numReview).style.visibility = "";
         numReview = 1;
       };
+
+      //document.querySelector(".price-item-btn a").addEventListener("click", function(event){
+      //  event.preventDefault();
+      //  console.log("я тут");
+     // });
 
      /* btnModalClose.addEventListener("click", function(event){ //при закрытии модального окна, кнопка появляется только 1
         event.preventDefault();

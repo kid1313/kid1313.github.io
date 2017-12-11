@@ -29,7 +29,7 @@
               <a href="#">контакты</a>
             </li>
             <li>
-              <a href="#Reviews" onClick="reviews()">отзывы</a>
+              <a href="#Reviews" onClick=" return reviews()">отзывы</a>
             </li>
           </ul>  
         </nav>
@@ -109,20 +109,20 @@
           <h2 class="contacts-right-title">Форма записи</h2>
           <form class="appointment-form" action="#" method="post">
             <div class="appointment-form-item">
-              <p>имя</p>
-              <input type="text" name="name" value="" placeholder="Ваше имя">
+              <label for="name-fild">имя</label>
+              <input id="name-fild" type="text" name="name" value="" placeholder="Ваше имя">
             </div>
             <div class="appointment-form-item">
-              <p>телефон</p>
-              <input type="tel" name="phone" value="" placeholder="Телефон">
+              <label for="phone-fild">телефон</label>
+              <input id="phone-fild" type="tel" name="phone" value="" placeholder="Телефон">
             </div>
             <div class="appointment-form-item">
-              <p>дата</p>
-              <input type="date" name="date" value="" placeholder="Дата">
+              <label for="date-fild">дата</label>
+              <input id="date-fild" type="date" name="date" value="" placeholder="Дата">
             </div>
             <div class="appointment-form-item">
-              <p>время</p>
-              <input type="time" name="time" value="" placeholder="Время">
+              <label for="time-fild">время</label>
+              <input id="time-fild" type="time" name="time" value="" placeholder="Время">
             </div>
             <button class="btn" type="submit">отправить</button>
           </form>  
