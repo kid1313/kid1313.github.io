@@ -11,6 +11,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="body">
+    <noscript><p>Ваш браузер не поддерживает скрипты!</p></noscript> 
     <header class="main-header">
       <div class="conteiner clearfix">
         <nav class="main-navigation">
@@ -28,7 +29,7 @@
               <a href="#">контакты</a>
             </li>
             <li>
-              <a href="#" onClick="reviews()">отзывы</a>
+              <a href="#Reviews" onClick="reviews()">отзывы</a>
             </li>
           </ul>  
         </nav>
@@ -303,7 +304,6 @@
       var numReview = 1; //номер отзыва
 
      function reviews(){
-          event.preventDefault();
           document.querySelector(".modal-overlay").style.display = "block";
           document.querySelector(".modal-reviews").style.display = "block";
           document.querySelector("#i" + numReview).style.visibility = "visible";
@@ -343,7 +343,6 @@
         };
 
       function forward(){
-        event.preventDefault();
         numReview = numReview + 1;
         if(numReview>1 && numReview<=5)
         {
@@ -356,7 +355,7 @@
             document.querySelector("#i" + numReview).style.transitionDuration = "0.5s";
             document.querySelector("#i" + numReview).style.transitionTimingFunction = "linear";
             document.querySelector("#i" + numReview).style.transform = "translateX(-2100px)";
-          }, 10);
+          }, 50);
           setTimeout(function(){
             document.querySelector("#i" + (numReview-1)).style.visibility = "";
             document.querySelector("#i" + (numReview-1)).style.transitionDuration = "";
@@ -381,7 +380,7 @@
             document.querySelector("#i" + 1).style.transitionDuration = "0.5s";
             document.querySelector("#i" + 1).style.transitionTimingFunction = "linear";
             document.querySelector("#i" + 1).style.transform = "translateX(-2100px)";
-          },10);
+          },50);
           setTimeout(function(){
             document.querySelector("#i" + 5).style.visibility = "";
             document.querySelector("#i" + 5).style.transitionDuration = "";
@@ -397,7 +396,6 @@
       };
 
       function backward(){
-        event.preventDefault();
         numReview = numReview - 1; //2
         if(numReview<=5 && numReview>=1)
         {
@@ -410,7 +408,7 @@
             document.querySelector("#i" + numReview).style.transitionDuration = "0.5s";
             document.querySelector("#i" + numReview).style.transitionTimingFunction = "linear";
             document.querySelector("#i" + numReview).style.transform = "translateX(2100px)";
-          },10);
+          },50);
           setTimeout(function(){
             document.querySelector("#i" + (numReview+1)).style.visibility = "";
             document.querySelector("#i" + (numReview+1)).style.transitionDuration = "";
@@ -435,7 +433,7 @@
             document.querySelector("#i" + 5).style.transitionDuration = "0.5s";
             document.querySelector("#i" + 5).style.transitionTimingFunction = "linear";
             document.querySelector("#i" + 5).style.transform = "translateX(2100px)";
-          },10);
+          },50);
           setTimeout(function(){
             document.querySelector("#i" + 1).style.visibility = "";
             document.querySelector("#i" + 1).style.transitionDuration = "";
@@ -451,7 +449,6 @@
       };
 
       function closeReviews(){
-        event.preventDefault();
         document.querySelector(".modal-overlay").style.display = "";
         document.querySelector(".modal-reviews").style.display = "";
         document.querySelector(".modal-reviews-item").style.visibility = "";

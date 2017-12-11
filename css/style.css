@@ -467,9 +467,15 @@ html{
 	font-size: 0px;
 	width: 34px;
 	height: 34px;
+	margin-top: -36px;
 	background: transparent url('../img/close.png') center no-repeat;
 	right: 0;
 	top: 0;
+	transition: 0.2s linear;
+}
+.bntclose:hover{
+	transform: scale(1.2);	
+
 }
 .modal-wax-introduction{
 	width: 700px;
@@ -603,6 +609,7 @@ html{
 	background: transparent url("../img/close.png") no-repeat center;
 	right: 0;
 	top: 0;
+	margin-top: -34px;
 	outline: none;
 	transition: 0.2s linear;
 }
