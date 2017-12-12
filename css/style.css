@@ -273,7 +273,7 @@ html{
 }
 .contacts-right{
 	float: right;
-	width: 475px;
+	width: 470px;
 	height: 320px;
 	padding-left: 0px;
 	padding-right: 0px;
@@ -561,19 +561,30 @@ html{
 	z-index: 20;
 	background: rgba(0, 0, 0, 0.9);
 }
-.modal-reviews-container{
+.slider-frame{ /*окно активного слайда, по которому будем позиционироваться*/
 	position: relative;
 	width: 800px;
 	height: 450px;
 	padding: 0 10px;/*отступ сверху/снизу - 0, отступ справа/слева - 10*/
 	margin: 0 auto;/*центровка контиейнера меню*/
+
+}
+.modal-reviews-container{ /*контейнер, внутрти которого находятся слайды */
+	position: absolute;
+	width: 14000px;
+	height: 450px;
+	padding: 0 10px;/*отступ сверху/снизу - 0, отступ справа/слева - 10*/
+	margin: 0 auto;/*центровка контиейнера меню*/
 	z-index: 30;
+	transition: 0.5s linear;
+
+	top: 0;
+	left: 0;
 }
 .modal-reviews-item{
-	position: absolute;
-	visibility: hidden;
+	float: left;
 	width: 800px;
-	/*transition: 0.5s linear;*/
+	margin-right: 2000px;
 }
 .modal-reviews-item img{
 	float: left;
@@ -615,6 +626,7 @@ html{
 	cursor: pointer;
 	transform: scale(1.2);
 }
+
 .backward{
 	position: absolute;
 	border: none;
@@ -627,6 +639,7 @@ html{
 	margin-left: -100px;
 	outline: none;
 	transition: 0.2s linear;
+	z-index: 100;
 
 }
 .forward{
@@ -641,8 +654,23 @@ html{
 	right: 0;
 	margin-right: -100px;
 	outline: none;
+	z-index: 100;
 }
-
+#i1{
+	margin-top: 120px;
+}
+#i2{
+	margin-top: 120px;
+}
+#i3{
+	margin-top: 107px;
+}
+#i4{
+	margin-top: 95px;
+}
+#i5{
+	margin-top: 20px;
+}
 /*------------------------------------------------------
 --------------------------Price-------------------------
 --------------------------------------------------------*/
