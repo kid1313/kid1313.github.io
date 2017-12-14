@@ -674,7 +674,7 @@ html{
 /*------------------------------------------------------
 --------------------------Price-------------------------
 --------------------------------------------------------*/
-.price-body{
+.price-body, .articles-body{
 	min-width: 980px;
 	/*height: 1900px;*/
 	font-size: 20px;
@@ -684,7 +684,7 @@ html{
 	color: #ffffff;
 	background: #e5e5e5; /*для старых броузеров*/
 }
-.main-price{
+.main-price, .articles{
 	width: 980px;
 	font-size: 14px;
 	line-height: 24px;
@@ -692,7 +692,7 @@ html{
 	color: #000000;
 	text-transform: uppercase;
 }
-.main-price h1{
+.main-price h1, .articles h1{
 	font-size: 30px;
 	line-height: 42px;
 	padding-left: 20px;
@@ -702,7 +702,7 @@ html{
 	width: 150px;
 	height: 25px;
 	margin-left: 20px;
-	margin-bottom: 65px;
+	margin-bottom: 35px;
 }
 .path .path-main{
 	float: left;
@@ -722,7 +722,10 @@ html{
 	float: right;
 	color: #b8b8b8;
 }
-.main-price{
+.articles .path .path-price{
+	margin-right: 25px;
+}
+.main-price, .articles{
 	width: 980px;
 	padding: 0 10px;
 	margin: 0 auto;
@@ -836,6 +839,84 @@ html{
 	bottom: 0;
 	left: 0;
 }
+
+/*-------------------------------------------------------------------------
+-------------------------------Articles------------------------------------
+---------------------------------------------------------------------------*/
+.articles-menu-conteiner{
+	float: left;
+	width: 241px;
+	font-size: 20px;
+	line-height: 25px;
+	font-weight: bold;
+	margin-right: 0px;
+	margin-left: 40px;
+	text-transform: none;
+}
+.articles-navigation ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.articles-navigation a{
+	display: block;
+	position: relative;
+	width: 250px;
+	text-decoration: none;
+	color: #000000;
+  	transition: 0.2s linear;
+}
+.articles-navigation a:hover:not(.no-hover){
+	text-decoration: underline;
+	-webkit-transform: scale(1.07);
+  	transform: scale(1.07);
+}
+.articles-navigation a::before{
+	position: absolute;
+	content: "";
+	display: block;
+	width: 13px;
+	height: 13px;
+	top: 50%;
+	left: 0;
+	margin-left: -30px;
+	margin-top: -6px;
+	background: url("../img/list_marker.png");
+}
+.articles-navigation li{
+	margin-bottom: 20px;
+}
+.articles-area{
+	float: right;
+	width: 678px;
+	padding-bottom: 35px;
+	background-color: #ffffff;
+	box-shadow: 4px 9px 9.3px 0.7px rgba(0, 0, 0, 0.35);
+}
+.articles-area-item{
+	font-size: 18px;
+	line-height: 25px;
+	font-weight: normal;
+	text-transform: none;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+.articles-area-item img{
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+#a0{
+	font-size: 25px;
+	text-decoration: underline;
+}
+#article-1,#article-2,#article-3{
+	display: none;
+}
+
+
+
 
 
 /*----------------------------------------------*/
