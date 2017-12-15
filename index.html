@@ -107,22 +107,22 @@
         </div>
         <div class="contacts-right">
           <h2 class="contacts-right-title">Форма записи</h2>
-          <form class="appointment-form" action="#" method="post">
+          <form  id="form" class="appointment-form" action="send.php" method="post">
             <div class="appointment-form-item">
-              <label for="name-fild">имя</label>
-              <input id="name-fild" type="text" name="name" value="" placeholder="Ваше имя">
+              <label for="name-field">имя<span>*</span></label>
+              <input id="name-field" type="text" name="name" value="" required="required" placeholder="Ваше имя">
             </div>
             <div class="appointment-form-item">
-              <label for="phone-fild">телефон</label>
-              <input id="phone-fild" type="tel" name="phone" value="" placeholder="Телефон">
+              <label for="phone-field">телефон<span>*</span></label>
+              <input id="phone-field" type="tel" name="phone" value="" required="required" placeholder="Телефон">
             </div>
             <div class="appointment-form-item">
-              <label for="date-fild">дата</label>
-              <input id="date-fild" type="date" name="date" value="" placeholder="Дата">
+              <label for="date-field">дата</label>
+              <input id="date-field" type="date" name="date" value="" placeholder="Дата">
             </div>
             <div class="appointment-form-item">
-              <label for="time-fild">время</label>
-              <input id="time-fild" type="time" name="time" value="" placeholder="Время">
+              <label for="time-field">время</label>
+              <input id="time-field" type="time" name="time" value="" placeholder="Время">
             </div>
             <button class="btn" type="submit">отправить</button>
           </form>  
@@ -341,7 +341,21 @@
       };
 
     </script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+   jQuery (necessary for Bootstrap's JavaScript plugins)
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    $(document).ready(function(){
+    $("#form").submit(function() { //устанавливаем событие отправки для формы с id=form
+            var form_data = $(this).serialize(); //собераем все данные из формы
+            $.ajax({
+            type: "POST", //Метод отправки
+            url: "send.php", //путь до php фаила отправителя
+            data: form_data,
+            success: function() {
+                   //код в этом блоке выполняется при успешной отправке сообщения
+                   alert("Ваше сообщение отпрвлено!");
+            });
+    });
+});    
+    </script>
   </body>
 </html>

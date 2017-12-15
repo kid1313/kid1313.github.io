@@ -340,6 +340,9 @@ html{
 	background-color: #000000;
 	color: #ffffff;
 }
+.contacts-right span{
+	color: red;
+}
 .main-footer{
 	margin-top: 65px;
 	height: 200px;
@@ -413,7 +416,6 @@ html{
 	padding-left: 60px;
 	padding-bottom: 20px;
 	margin-top: 0px;
-
 }
 /*-------------------------------------------------------------*/
 /*-------------------------Popup-------------------------------*/
