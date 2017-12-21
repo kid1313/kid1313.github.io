@@ -1,0 +1,291 @@
+/*-----------------------------------------------------------
+-------------------------Главная мобил-----------------------
+------------------------------------------------------------*/
+html{
+	background-color: #000000;
+}
+
+.body{
+	width: 320px;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 22px;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	color: #ffffff;
+	background: #242424; /*для старых броузеров*/
+	margin: 0 auto;
+	z-index: 20;
+}
+
+/*--------------------Меню-----------------------------*/
+.header{
+	width: 280px;
+	font-style: bold;
+	text-transform: uppercase;
+
+
+}
+
+.header__logo{
+	height: 70px;
+	margin-left: 55px;
+	background: url("../img/header_logo_mobil.png") no-repeat;
+
+}
+
+.menu__wrapper{
+	width: 320px;
+	display: flex;
+}
+
+.menu__button{
+	width: 70px;
+	height: 50px;
+	border: none;
+	font-size: 0;
+	background: #000000 url("../img/icon-menu-bottom.png") center no-repeat;
+	outline: none;
+	cursor: pointer; 
+	
+}
+
+.menu__current{
+	display: inline-block;
+	width: 250px;
+	height: 50px;
+	background-color: rgba(193, 135, 92, 0.7);
+	line-height: 50px;
+	text-align: center;
+}
+
+.menu__list{
+	position: absolute;
+	z-index: 20;
+	margin: 0;
+	margin-top: 10px
+	padding-top: 10px;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+	width: 218px;
+	height: 282px;
+	background-color: #000000;
+}
+
+.menu__item{
+	width: 202px;
+	height: 45px;
+	border: solid 3px #1c1c1c;
+	margin: 5px;
+	font-size: 20px;
+	color: #ffffff;
+	line-height: 45px;
+	text-align: center;
+
+}
+
+.menu__item__link{
+	text-decoration: none;
+	color: #ffffff;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+/*---------------Полезная информация--------------------*/
+ 
+.article{
+	width: 280px;
+	margin-right: 20px;
+	margin-left: 20px;
+	text-align: center;
+	
+}
+
+.article__main-title{
+	display: inline-block;
+	font-size: 25px;
+	line-height: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.article__list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.article__title{
+	font-size: 23px;
+	font-weight: bold;
+	line-height: 25px;
+	text-transform: uppercase;
+}
+
+.article__text{
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 22px;
+	margin-bottom: 35px;
+}
+
+.article__link{
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: #ffffff;
+	padding-top: 50px;
+	padding-left: 130px;
+	padding-bottom: 30px;
+
+}
+
+.article__item{
+	width: 280px;
+	height: 370px;
+
+
+}
+
+.article__item--care::before{
+	content: "";
+	display: block;
+	width: 101px;
+	height: 125px;
+	background: url("../img/icon-care.png") center no-repeat;
+	margin-left: 85px;
+}
+
+.article__item--wax::before{
+	content: "";
+	display: block;
+	width: 126px;
+	height: 125px;
+	background: url("../img/icon-wax.png") center no-repeat;
+	margin-left: 80px;
+}
+
+.article__item--shugaring::before{
+	content: "";
+	display: block;
+	width: 96px;
+	height: 125px;
+	background: url("../img/icon_shugaring.png");
+	margin-left: 100px;
+}
+
+.article__slider{
+	display: flex;
+	width: 840px;
+}
+
+.slader__toggle{
+	width: 15px;
+	height: 15px;
+	font-size: 0;
+	border: none;
+	border: 1px solid #ffffff;
+	background: #000000;
+	transform: rotate(45deg);
+	margin-right: 20px;
+	outline: none;
+}
+
+.toggler{
+	background: #ffffff;
+}
+
+.hidden{
+	display: none;
+}
+
+/*--------------Обо мне------------------------*/
+
+.about-me{
+	width: 320px;
+	height: 741px;
+	background: url("../img/about-me-backgroung.png") center no-repeat;
+}
+
+.about-me__wrapper{
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+}
+.about-me__foto{
+	margin-top: 100px;
+}
+
+.about-me__text{
+	font-size: 20px;
+	line-height: 22px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.about-me__button{
+	display: block;
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: #000000;
+	margin-left: 40px;
+	margin-top: 40px;
+}
+/*--------------------Подвал-----------------------------*/
+
+.footer{
+	width: 320px;
+	height: 312px;
+	font-size: 18px;
+	list-style: 27px;
+}
+
+.footer__wraper{
+	margin-right: 20px;
+	margin-left: 20px;
+	text-align: center;
+}
+
+.footer__name{
+	margin-top: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.footer__adress{
+	margin-top: 25px;
+	font-weight: normal;
+}
+
+.footer_phone{
+	margin-top: 25px;
+	font-weight: bold;
+}
+
+.footer__social{
+	margin-top: 40px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.social__link{
+	text-decoration: none;
+	font-size: 0;
+	display: block;
+	width: 45px;
+	height: 46px;
+	background: url("../img/icon-vk.png") center no-repeat;
+	margin-top: 25px;
+	margin-left: 117px;
+}

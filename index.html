@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Депиляция Киров</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="./js/jquery.js"></script>
+    <script>
+      function AjaxFormRequest(result_id,formMain,url) {
+        jQuery.ajax({
+        url:     url,
+        type:     "POST",
+        dataType: "html",
+        data: jQuery("#"+formMain).serialize(),
+        success: function(response) {
+         document.getElementById(result_id).innerHTML = response;
+        },
+        error: function(response) {
+         document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
+        }
+      });
+        $(':input','#form')
+        .not(':button, :submit, :reset, :hidden')
+        .val('')
+        .removeAttr('checked')
+        .removeAttr('selected');
+    }
+    </script>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header__logo"></div>
+      <section class="menu">
+        <div class="menu__wrapper">
+          <button class="menu__button">Меню</button> 
+          <b class="menu__current">Главная</b>
+        </div>
+        <ul class="menu__list hidden">
+          <li class="menu__item">
+            <a class="menu__item__link" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="#">Прайс-лист</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="#">Статьи</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="#">Контакты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="#">Отзывы</a>
+          </li>
+        </ul>
+      </section>
+    </header> 
+    <main class="main">
+      <section class="article">
+        <b class="article__main-title">Полезная информация</b>
+        <div class="article__wrapper">
+          <ul class="article__list article__slider">
+            <li class="article__item article__item--care">
+              <h2 class="article__title">Уход до и после депиляции</h2>
+              <p class="article__text">
+                Если Вы делаете депиляцию впервые, нужно отрастить
+                волоски длиной 0,5 - 0,7 см (примерно 2-3 недели 
+                после бритвы)...
+              </p>
+              <a class="article__link" href="">Читать далее...</a>
+            </li>
+            <li class="article__item article__item--wax hidden">
+              <h2 class="article__title">Восковая депиляция</h2>
+              <p class="article__text">Восковая депиляция представляет собой процедуру 
+                удаления нежелательных волос при помощи теплого и 
+                горячего воска...
+              </p>
+               <a class="article__link" href="">Читать далее...</a>
+            </li>
+            <li class="article__item article__item--shugaring hidden">
+              <h2 class="article__title">Сахарная депиляция</h2>
+              <p class="article__text">Сахарная депиляция (шугаринг) - одна 
+                  из наиболее эффективных методик 
+                  удаления нежелательных волос. Это 
+                  способ депиляции, выполняемый...
+              </p>
+               <a class="article__link" href="">Читать далее...</a>
+            </li>
+          </ul>
+        </div>
+        <p class="article__toggle">
+          <button class="slader__toggle toggler">1</button>
+          <button class="slader__toggle">2</button>
+          <button class="slader__toggle">3</button>
+        </p>
+      </section>
+      <section class="about-me">
+        <div class="about-me__wrapper">
+          <img class="about-me__foto" src="./img/about-me.png" width="258" height="258" alt="Депиляция Киров">
+          <p class="about-me__text">
+            Здравствуйте! Меня зовут Марина. 
+            Я мастер восковой депиляции и 
+            шугаринга. Работаю в уютном кабинете
+            в центре нашего города Кирова. 
+            Использую только качественные, 
+            проверенные временем материалы. 
+            Постоянно совершенствую свои 
+            навыки. Буду рада видеть Вас в числе 
+            посетителей моего кабинета. 
+            Хорошее настроение гарантирую ;-)
+          </p>
+          <a class="about-me__button" href="#">Записаться</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wraper">
+        <p class="footer__name">Депиляция киров</p>
+        <p class="footer__adress">г. Киров, ул. Карла Маркса д.21 
+        5 этаж, офис 508 </p>
+        <p class="footer_phone">+7(922)903-19-05</p>
+        <p class="footer__social">Присовединяйтесь!</p>
+        <a class="social__link" href="https://vk.com/depilyaciya_kirov">Вконтакте</a>
+      </div>
+    </footer>   
+   
+    <div class="modal-overlay"></div>
+<!--Описание скриптов-->
+    <script>
+
+      //Слайдер мобил
+       document.addEventListener('DOMContentLoaded', function(){
+        var articleItem = document.getElementsByClassName('article__item');
+        var togglerItem = document.getElementsByClassName('slader__toggle');
+        setInterval(function() {
+          for(var i=0; i<articleItem.length; i++)
+          {
+            if(!articleItem[i].classList.contains('hidden'))
+            {
+              articleItem[i].classList.add("hidden");
+              togglerItem[i].classList.remove("toggler");
+              i++;
+              if(i != articleItem.length)
+              {
+                articleItem[i].classList.remove("hidden");
+                togglerItem[i].classList.add("toggler");
+              }
+              else
+              {
+                articleItem[0].classList.remove("hidden");
+                togglerItem[0].classList.add("toggler");
+              }
+            }
+          }
+        }, 5000);
+        });
+
+       //Меню мобил
+       document.querySelector(".menu__button").addEventListener("click", function(){
+        document.querySelector(".menu__list").classList.toggle("hidden");
+       });
+
+
+    
+    </script>
+   <!--jQuery (necessary for Bootstrap's JavaScript plugins)-->
+  </body>
+</html>
