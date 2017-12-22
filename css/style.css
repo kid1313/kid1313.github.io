@@ -289,3 +289,46 @@ html{
 	margin-top: 25px;
 	margin-left: 117px;
 }
+
+/*-----------------------------------------------------------
+-------------------------Отзывы мобил-----------------------
+------------------------------------------------------------*/
+
+.reviews__list{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	margin-top: 30px;
+}
+.item__name{
+	display: block;
+	position: relative;
+	
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000000;
+	margin-top: -50px;
+}
+.item__text{
+	margin-top: 45px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 18px;
+	outline-width: 22px;
+	font-weight: normal;
+	text-align: left;
+}
+
+.footer__reviews{
+	margin-top: 60px;
+}
+
+.footer__reviews::before{
+	content: "";
+	display: block;
+	width: 280px;
+	height: 3px;
+	background: #1c1c1c;
+}
