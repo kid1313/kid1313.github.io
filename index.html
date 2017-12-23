@@ -71,7 +71,7 @@
                 волоски длиной 0,5 - 0,7 см (примерно 2-3 недели 
                 после бритвы)...
               </p>
-              <a class="article__link" href="">Читать далее...</a>
+              <a class="article__link" href="#" onClick="return btnReadMore()">Читать далее...</a>
             </li>
             <li class="article__item article__item--wax hidden">
               <h2 class="article__title">Восковая депиляция</h2>
@@ -79,7 +79,7 @@
                 удаления нежелательных волос при помощи теплого и 
                 горячего воска...
               </p>
-               <a class="article__link" href="">Читать далее...</a>
+               <a class="article__link" href="#" onClick="return btnReadMore()">Читать далее...</a>
             </li>
             <li class="article__item article__item--shugaring hidden">
               <h2 class="article__title">Сахарная депиляция</h2>
@@ -88,7 +88,7 @@
                   удаления нежелательных волос. Это 
                   способ депиляции, выполняемый...
               </p>
-               <a class="article__link" href="">Читать далее...</a>
+               <a class="article__link" href="#" onClick="return btnReadMore()">Читать далее...</a>
             </li>
           </ul>
         </div>
@@ -98,6 +98,7 @@
           <button class="slader__toggle">3</button>
         </p>
       </section>
+      <div class="global-wrapper">
       <section class="about-me">
         <div class="about-me__wrapper">
           <img class="about-me__foto" src="./img/about-me.png" width="258" height="258" alt="Депиляция Киров">
@@ -116,7 +117,6 @@
           <a class="about-me__button" href="#">Записаться</a>
         </div>
       </section>
-    </main>
     <footer class="footer">
       <div class="footer__wraper">
         <p class="footer__name">Депиляция киров</p>
@@ -126,17 +126,76 @@
         <p class="footer__social">Присовединяйтесь!</p>
         <a class="social__link" href="https://vk.com/depilyaciya_kirov">Вконтакте</a>
       </div>
-    </footer>   
+    </footer>
+    </div>
+    </main>
+     <section class="modal-article">
+      <div class="modal-article__wrapper">
+        <ul class="modal-article__list">
+          <li class="modal-article__item hidden">
+            <p class="modal-article__text">Если Вы делаете депиляцию впервые, нужно отрастить волоски длиной 0,5 - 0,7 см (примерно 2-3 недели после бритвы)
+              ЗА СУТКИ до депиляции необходимо провести скрабирование участка кожи, где предполагается депиляция. Слегка массируем кожу во всех направлениях, после наносим увлажняющее средство. За 24 часа до депиляции откажитесь от посещения бани, сауны, солярия.</p>
+              <p class="modal-article__text">В ДЕНЬ ДЕПИЛЯЦИИ не наносим косметические средства на депилируемые участки. Надеваем свободное белье из хлопка (для области бикини), свободную одежду из натуральных материалов.</p>
+              <p class="modal-article__text">В ТЕЧЕНИЕ 24 ЧАСОВ ПОСЛЕ ДЕПИЛЯЦИИ не пользуемся дезодорантом, мылом, гелем для душа, лосьоном для тела, автозагаром, косметикой (если депиляция производилась на области лица). Моемся водой либо детским мылом. Нежелательно иметь интимную близость, если депиляция осуществлялась на зоне бикини. </p>
+              <p class="modal-article__text">В течении 24 часов после депиляции:
+                <ul class="modal-article__item__care-list">
+                  <li class="care-list__item">НЕ загораем</li>
+                  <li class="care-list__item">НЕ ходим в солярий</li>
+                  <li class="care-list__item">НЕ посещаем сауну, НЕ принимаем горячие ванны</li>
+                  <li class="care-list__item">НЕ чешем место депиляции, НЕ трогаем его</li>
+                </ul></p>
+              <p class="modal-article__text">Через 2 дня после депиляции начинаем увлажнять кожу (лосьон, масло, крем) и делать это не реже, чем через день.</p>
+              <p class="modal-article__text">Через 2-3 дня после депиляции необходимо произвести скрабирование участка депиляции и делать это регулярно 1-2 раза в неделю, после чего увлажнить кожу.</p>
+               <button class="modal-article__close" onClick="return modalClose()">Закрыть</button>
+          </li>
+          <li class="modal-article__item hidden">
+            <p class="modal-article__text"> Восковая депиляция представляет собой процедуру удаления нежелательных волос при помощи теплого и горячего воска.
+              Применяется на любых участках тела, рук и ног, лица, подмышечных впадин и области бикини. Результат после ее проведения сохраняется в течение 3-5 недель.</p>
+              <p class="modal-article__text">Основное отличие восковой депиляции от эпиляции состоит в том, что в первом случае воздействие оказывается только на ту часть волоса, которая находится на поверхности кожи и его корня. В то время как эпиляция подразумевает разрушение самого основания волоса (фолликулярного аппарата).
+              Вновь выросшие после депиляции волосы становятся более мягкими и редкими.</p>
+              <h3 class="modal-article__text__name">Депиляция теплым воском</h3>
+              <p class="modal-article__text">Для проведения данной процедуры используют предварительно нагретый воск до температуры в 40С. На поверхность кожи воск наносят при помощи специальной машинки, которая подает разогретый воск в виде тонких полосок.
+              После остывания воска на его поверхность наносят плотные полоски бумаги и удаляют резким рывком против роста волос вместе с влипшими в нее волосками. Депиляция теплым воском менее болезненна и применяется для удаления волос на больших участках тела (ноги, руки, спина). Результат депиляции теплым воском сохраняется в течение месяца.</p>
+              <h3 class="modal-article__text__name">Депиляция горячим воском (пленочный воск)</h3>
+              <p class="modal-article__text">Данная процедура относится к наиболее эффективным и менее болезненным типам депиляции. В данном случае на кожу наносится воск, предварительно разогретый до температуры в 60 градусов.
+              Благодаря тепловому воздействию, кожа под воском распаривается, и поры клеток раскрываются, что обеспечивает более глубокое проникновение воска под кожу.
+              После остывания воска его удаляют резким рывком против роста волос, вместе с застывшими в нем волосками. Эффект после депиляции горячим воском сохраняется от 1 - 1,5 месяцев
+              Применяют восковую депиляцию горячим воском для удаления жестких волос с нежных участков кожи (область бикини, удаление волос с верхней губы и подмышечных впадин, коррекции бровей).</p>
+              <h3 class="modal-article__text__name">Что лучше воск или сахар?</h3>
+              <p class="modal-article__text">Многое зависит от ваших индивидуальных особенностей. Если вы делаете процедуру в первый раз, то рекомендуется сначала попробовать депиляцию воском, а потом поэксперементировать и сравнить с шугарингом. Каждая процедура имеет преимущества, которые помогут вам сделать свой выбор.</p>
+              <button class="modal-article__close" onClick="return modalClose()">Закрыть</button>
+          </li>
+          <li class="modal-article__item hidden">
+            <p class="modal-article__text">Сахарная депиляция (шугаринг) - одна из наиболее эффективных методик удаления нежелательных волос. Это способ депиляции, выполняемый с помощью густой сахарной пасты. На обрабатываемый участок кожи наносится натуральная карамель и удаляется вместе с волосками.</p>
+            <p class="modal-article__text">Сахарная паста имеет ряд преимуществ:
+            <ul class="modal-article__item__shugaring-list">
+              <li class="shugaring-list__item">не вызывает аллергию, раздражения, не повреждает кожу</li>
+              <li class="shugaring-list__item">удаляет короткие волоски</li>
+              <li class="shugaring-list__item">занимает не много времени, обычно от 15-30 минут (в зависимости от количества и особенности волос)</li>
+              <li class="shugaring-list__item">эффект сохраняется до 4х недель</li></ul></p>
+            <p class="modal-article__text">Используемая профессиональная косметика в работе гипоаллергена (состав: сахар, вода, кукурузный крахмал).</p>
+            <p class="modal-article__text">Что лучше воск или сахар?
+            Многое зависит от ваших индивидуальных особенностей. Если вы делаете процедуру в первый раз, то мы рекомендуем сначала попробовать эпиляцию воском, а потом поэксперементировать и сравнить с шугарингом. Каждая процедура имеет преимущества, которые помогут вам сделать свой выбор.</p>
+            <button class="modal-article__close" onClick="return modalClose()">Закрыть</button>
+          </li>
+        </ul>
+      </div>
+    </section>   
    
     <div class="modal-overlay"></div>
 <!--Описание скриптов-->
     <script>
 
+      var intTimer=0;
+      var articleItem = document.getElementsByClassName('article__item');
+      var modalItem = document.getElementsByClassName('modal-article__item');
       //Слайдер мобил
-       document.addEventListener('DOMContentLoaded', function(){
-        var articleItem = document.getElementsByClassName('article__item');
+      document.addEventListener('DOMContentLoaded', articleToggle());
+
+       function articleToggle(){
         var togglerItem = document.getElementsByClassName('slader__toggle');
-        setInterval(function() {
+        var intervalID = setInterval(function() {
+          intTimer = intervalID;
           for(var i=0; i<articleItem.length; i++)
           {
             if(!articleItem[i].classList.contains('hidden'))
@@ -156,8 +215,44 @@
               }
             }
           }
-        }, 6000);
-        });
+        }, 5000);
+      };
+
+      function btnReadMore(){
+        if(intTimer!=0)
+        {
+          clearInterval(intTimer);
+          modalSlide();
+        }
+        return false;
+      };
+
+      function modalSlide(){
+        for(var i=0; i<articleItem.length; i++)
+        {
+          if(!articleItem[i].classList.contains('hidden'))
+          {
+            modalItem[i].classList.remove('hidden');
+            var computedStyle = getComputedStyle(modalItem[i]);
+            var h = computedStyle.height;
+            h = +(h.replace("px","")) + 50 + 'px';
+            document.querySelector(".global-wrapper").style.marginTop = h;
+          }
+        }
+      };
+
+      function modalClose(){
+        document.querySelector(".global-wrapper").style.marginTop = 0;
+        setTimeout(function(){
+          for(var i=0; i<modalItem.length; i++)
+          {
+            if(!modalItem[i].classList.contains('hidden'))
+              modalItem[i].classList.add('hidden');
+          }
+        }, 500);
+        articleToggle();
+        return false;
+      };
 
        //Меню мобил
        document.querySelector(".menu__button").addEventListener("click", function(){
