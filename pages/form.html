@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Депиляция Киров</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+    <script>
+      function AjaxFormRequest(result_id,formMain,url) {
+        jQuery.ajax({
+        url:     url,
+        type:     "POST",
+        dataType: "html",
+        data: jQuery("#"+formMain).serialize(),
+        success: function(response) {
+         document.getElementById(result_id).innerHTML = response;
+        },
+        error: function(response) {
+         document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
+        }
+      });
+        $(':input','#form')
+        .not(':button, :submit, :reset, :hidden')
+        .val('')
+        .removeAttr('checked')
+        .removeAttr('selected');
+    }
+    </script>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header__logo"></div>
+      <section class="menu">
+        <div class="menu__wrapper">
+          <button class="menu__button">Меню</button> 
+          <b class="menu__current">Запись</b>
+        </div>
+        <ul class="menu__list hidden">
+          <li class="menu__item">
+            <a class="menu__item__link" href="../index.html">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="./price.html">Прайс-лист</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="#">Статьи</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="#">Контакты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="./pages/reviews.html">Отзывы</a>
+          </li>
+        </ul>
+      </section>
+    </header> 
+    <main class="main">
+      <section class="enroll">
+        <div class="enroll__wrapper">
+          <h1 class="enroll__title">Форма записи</h1>
+          <p class="enroll__annotation">Прием ведется по записи. Вы можете оставить свои контактные данные и в ближайшее 
+            время я с вами свяжусь для уточнения даты и времени. </p>
+          <form class="enroll__form" action="" method="post">
+            <div class="enroll__item">
+              <label class="enroll__item__name" for="name">Имя<span>*</span></label>
+              <input class="enrol__item__field" type="text" name="name" value="" required="required" placeholder="Ваше имя">
+            </div>
+            <div class="enroll__item">
+              <label class="enroll__item__name" for="phone">Телефон<span>*</span></label>
+              <input class="enrol__item__field" type="tel" name="phone" value="" required="required" placeholder="Ваш телефон">
+            </div>
+            <div class="enroll__item">
+              <label class="enroll__item__name" for="date">Дата</label>
+              <input class="enrol__item__field" type="date" name="date" value="" placeholder="Дата">
+            </div>
+             <div class="enroll__item">
+              <label class="enroll__item__name" for="time">Время</label>
+              <input class="enrol__item__field" type="time" name="time" value="" placeholder="Время">
+            </div>
+            <p class="enroll__warning">* поля отмеченный звездочкой обязательны для заполнения</p>
+            <button class="enroll__button" type="button" onclick="">записаться</button>
+          </form>
+        </div>
+        <div class="enroll__decoration"></div>
+      </section>
+    <footer class="footer">
+      <div class="footer__wraper">
+        <p class="footer__name">Депиляция киров</p>
+        <p class="footer__adress">г. Киров, ул. Карла Маркса д.21 
+        5 этаж,<br> офис 508 </p>
+        <p class="footer_phone">+7(922)903-19-05</p>
+        <p class="footer__social">Присовединяйтесь!</p>
+        <a class="social__link" href="https://vk.com/depilyaciya_kirov">Вконтакте</a>
+      </div>
+    </footer>
+    </main>
+  </body>
+</html>

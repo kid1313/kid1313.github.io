@@ -388,3 +388,120 @@ html{
 	height: 3px;
 	background: #1c1c1c;
 }
+
+/*--------------------------------------------------------
+---------------------Форма записи мобил-------------------
+---------------------------------------------------------*/
+
+.enroll__wrapper{
+	margin-bottom: 0px;
+	background: #f5f5f5;
+	color: #000000;
+}
+
+.enroll__title{
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 20px;
+}
+
+.enroll__annotation{
+	margin-left: 20px;
+	margin-right: 20px;
+
+}
+.enroll__form{
+	text-align: center;
+}
+.enroll__item__name{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.enroll__item__name span{
+	color: red;
+}
+
+.enrol__item__field{
+	width: 280px;
+	height: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.enroll__warning{
+	font-size: 12px;
+	font-weight: normal;
+	color: red;
+}
+
+.enroll__button{
+	width: 280px;
+	height: 40px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	line-height: 40px;
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: #000000;
+}
+
+.enroll__decoration{
+	width: 320px;
+	height: 70px;
+	background: url("../img/decor.png") center no-repeat;
+	margin-top: -20px;
+}
+
+/*------------------------------------------------------------------
+-------------------------Прайс мобил-------------------------------
+-------------------------------------------------------------------*/
+
+.price__item{
+	background: #f8f5f2;
+	margin-top: 25px;
+	color: #000000;
+	text-align: center;
+	padding-bottom: 2px;
+}
+
+.price_img{
+	margin-top: 20px;
+}
+
+.price__title{
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.price__price{
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background: #e5e5e5;
+}
+
+.price__button{
+	border: none;
+	width: 320px;
+	height: 70px;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	text-transform: uppercase;
+	background: url("../img/decor.png") no-repeat center;
+	margin-top: -20px;
+	outline: none;
+	cursor: pointer;
+}
