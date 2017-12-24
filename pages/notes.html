@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Депиляция Киров</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header__logo"></div>
+      <section class="menu">
+        <div class="menu__wrapper">
+          <button class="menu__button">Меню</button> 
+          <b class="menu__current">Статьи</b>
+        </div>
+        <ul class="menu__list hidden">
+          <li class="menu__item">
+            <a class="menu__item__link" href="../index.html">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="./pages/price.html">Прайс-лист</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="#">Статьи</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="./contacts.html">Контакты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="./pages/reviews.html">Отзывы</a>
+          </li>
+        </ul>
+      </section>
+    </header> 
+    <main class="main">
+      <section class="notes">
+        <select class="notes__menu" size="1" >
+          <option class="notes__munu__item" disabled selected>Выберите статью</option>
+          <option class="notes__munu__item" value="Волосы в носу...">Волосы в носу...</option>
+          <option class="notes__munu__item" value="Как снять раздражение после депиляции">Как снять раздражение после депиляции</option>
+          <option class="notes__munu__item" value="Пушковые волосы на лице">Пушковые волосы на лице</option>
+          <option class="notes__munu__item" value="Гиперкетароз">Гиперкетароз</option>
+          <option class="notes__munu__item" value="5 советов как предотвратить врастание волос">5 советов как предотвратить врастание волос</option>
+          <option class="notes__munu__item" value="Что делать если не хочется отращивать волосы перед шугарингом">Что делать если не хочется отращивать волосы <br> перед шугарингом</option>
+          <option class="notes__munu__item" value="Домашний уход. Глубокое очищение">Домашний уход. Глубокое очищение</option>
+        </select>
+      </section>
+      
+    </main>  
+    <footer class="footer">
+      <div class="footer__wraper">
+        <p class="footer__name">Депиляция киров</p>
+        <p class="footer__adress">г. Киров, ул. Карла Маркса д.21 
+        5 этаж,<br> офис 508 </p>
+        <p class="footer_phone">+7(922)903-19-05</p>
+        <p class="footer__social">Присовединяйтесь!</p>
+        <a class="social__link" href="https://vk.com/depilyaciya_kirov">Вконтакте</a>
+      </div>
+    </footer>
+   
+    <div class="modal-overlay"></div>
+<!--Описание скриптов-->
+    <script>
+
+      
+
+       //Меню мобил
+       document.querySelector(".menu__button").addEventListener("click", function(){
+        document.querySelector(".menu__list").classList.toggle("hidden");
+       });
+
+
+    
+    </script>
+   <!--jQuery (necessary for Bootstrap's JavaScript plugins)-->
+  </body>
+</html>
