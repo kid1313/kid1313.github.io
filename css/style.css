@@ -518,13 +518,43 @@ html{
 --------------------Статьи мобил---------------------------
 -----------------------------------------------------------*/
 
+.notes{
+	min-height: 400px;
+}
+
 .notes__menu{
 	width: 320px;
 	font-family: "PT Sans Narrow", "Arial", sans-serif;
 	font-size: 13px;
 	font-weight: normal;
+	margin-bottom: 10px;
+	height: 40px;
 }
 
-.notes__munu__item{
+.notes__menu__item{
 	width: 320px;
+}
+
+.notes__item{
+	background: #f5f5f5;
+	color: #000000;
+	padding-top: 1px;
+	padding-bottom: 20px;
+	font-size: 18px;
+}
+
+.notes__text{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.notes__img{
+	padding-bottom: 20px;
+}
+
+.notes__decor{
+	width: 320px;
+	height: 70px;
+	margin-top: -25px;
+	background: url("../img/decor.png") center no-repeat;
 }

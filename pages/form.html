@@ -10,27 +10,6 @@
     <link href="../css/normalize.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <script src="../js/jquery.js"></script>
-    <script>
-      function AjaxFormRequest(result_id,formMain,url) {
-        jQuery.ajax({
-        url:     url,
-        type:     "POST",
-        dataType: "html",
-        data: jQuery("#"+formMain).serialize(),
-        success: function(response) {
-         document.getElementById(result_id).innerHTML = response;
-        },
-        error: function(response) {
-         document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
-        }
-      });
-        $(':input','#form')
-        .not(':button, :submit, :reset, :hidden')
-        .val('')
-        .removeAttr('checked')
-        .removeAttr('selected');
-    }
-    </script>
   </head>
   <body class="body">
     <header class="header">
