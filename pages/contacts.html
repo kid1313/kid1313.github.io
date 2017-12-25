@@ -24,7 +24,7 @@
             <a class="menu__item__link" href="../index.html">Главная</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item__link" href="./pages/price.html">Прайс-лист</a>
+            <a class="menu__item__link" href="./price.html">Прайс-лист</a>
           </li>
           <li class="menu__item">
             <a class="menu__item__link" href="./notes.html">Статьи</a>
@@ -33,7 +33,7 @@
             <a class="menu__item__link" href="#">Контакты</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item__link" href="./pages/reviews.html">Отзывы</a>
+            <a class="menu__item__link" href="./reviews.html">Отзывы</a>
           </li>
         </ul>
       </section>
@@ -54,5 +54,16 @@
         <a class="social__link" href="https://vk.com/depilyaciya_kirov">Вконтакте</a>
       </div>
     </footer>
+      <script>
+
+    
+       //Меню мобил
+       document.querySelector(".menu__button").addEventListener("click", function(){
+        document.querySelector(".menu__list").classList.toggle("hidden");
+       });
+
+
+    
+    </script>
   </body>
 </html>

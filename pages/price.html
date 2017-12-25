@@ -33,7 +33,7 @@
             <a class="menu__item__link" href="./contacts.html">Контакты</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item__link" href="./pages/reviews.html">Отзывы</a>
+            <a class="menu__item__link" href="./reviews.html">Отзывы</a>
           </li>
         </ul>
       </section>
@@ -45,37 +45,77 @@
           <h2 class="price__title">Депиляция зоны бикини</h2>
           <p class="price__price">от 350 руб.</p>
         </div>
-        <button class="price__button">подробнее</button>
+        <div class="price__descr">
+           <p class="price__descr__text">Удаление волос в области бикини<br> 
+                  (шугаринг, пленочный воск) <br>
+                  - классическое бикини - 350 руб. <br>
+                  - классическое + меж ягодичная впадина - 400 руб. <br>
+                  - глубокое бикини - 500 руб.</p>
+          <button class="price__button" id="btn_0" onClick="return btnClick(this.id)">подробнее</button>
+        </div>
         <div class="price__item">
           <img class="price_img" src="../img/legs.jpg" width="280" height="280" alt="Депиляция ног">
           <h2 class="price__title">Депиляция ног</h2>
           <p class="price__price">от 250 руб.</p>
         </div>
-        <button class="price__button">подробнее</button>
+        <div class="price__descr">
+           <p class="price__descr__text">Удаление волос на ногах <br>
+                    ШУГАРИНГ: <br>
+                    - голень - 350 руб. <br>
+                    - бедро - 400 руб. <br>
+                    - ноги полностью - 800 руб. <br>
+                    ТЕПЛЫЙ ВОСК в картридже: <br>
+                    - голень - 250 руб. <br>
+                    - бедро - 250 руб. <br>
+                    - ноги полностью - 500 руб.</p>
+          <button class="price__button" id="btn_1" onClick="return btnClick(this.id)">подробнее</button>
+        </div> 
         <div class="price__item">
           <img class="price_img" src="../img/hands.jpg" width="280" height="280" alt="Депиляция рук">
           <h2 class="price__title">Депиляция рук</h2>
           <p class="price__price">от 200 руб.</p>
         </div>
-        <button class="price__button">подробнее</button>
+        <div class="price__descr">
+            <p class="price__descr__text">Удаление волос на руках<br> 
+                  (шугаринг, теплый воск в картридже) <br>
+                  ШУГАРИНГ: <br>
+                  - руки до локтя - 250 руб. <br>
+                  - руки полностью - 500 руб. <br>
+                  ТЕПЛЫЙ ВОСК в картридже: <br>
+                  - руки до локтя - 200 руб. <br>
+                  - руки полностью - 400 руб.</p>
+          <button class="price__button" id="btn_2" onClick="return btnClick(this.id)">подробнее</button>
+        </div>
         <div class="price__item">
           <img class="price_img" src="../img/armpits.jpg" width="280" height="280" alt="Депиляция подмышечных впадин">
           <h2 class="price__title">Депиляция подмышечных впадин</h2>
           <p class="price__price">200 руб.</p>
         </div>
-        <button class="price__button">подробнее</button>
+        <div class="price__descr">
+             <p class="price__descr__text">Депиляция подмышечных впадин<br> 
+                (шугаринг, пленочный воск)</p>
+          <button class="price__button" id="btn_3" onClick="return btnClick(this.id)">подробнее</button>
+        </div>
         <div class="price__item">
           <img class="price_img" src="../img/face.jpg" width="280" height="280" alt="Депиляция лица">
-          <h2 class="price__title">Депиляция подмышечных впадин</h2>
+          <h2 class="price__title">Депиляция лица</h2>
           <p class="price__price">от 100 руб.</p>
         </div>
-        <button class="price__button">подробнее</button>
+        <div class="price__descr">
+             <p class="price__descr__text">Удаление нежелательных волос на лице<br> 
+                (шугаринг, пленочный воск)</p>
+          <button class="price__button" id="btn_4" onClick="return btnClick(this.id)">подробнее</button>
+        </div>
         <div class="price__item">
           <img class="price_img" src="../img/ass.jpg" width="280" height="280" alt="Депиляция ягодиц/поясницы">
           <h2 class="price__title">Депиляция ягодиц/поясницы</h2>
           <p class="price__price">от 100 руб.</p>
         </div>
-        <button class="price__button">подробнее</button>
+        <div class="price__descr">
+             <p class="price__descr__text">Удаление волос на ягодицах / пояснице<br> 
+                  (шугаринг, теплый воск в картридже)</p>
+          <button class="price__button" id="btn_5" onClick="return btnClick(this.id)">подробнее</button>
+        </div>
       </section> 
     </main>
     <footer class="footer">
@@ -90,11 +130,43 @@
     </footer>
      <script>
 
-    
+      var modalPrice = document.getElementsByClassName('price__descr');
+      var modalHeight = [];
+
+      document.addEventListener('DOMContentLoaded', function(){
+        for(var i=0; i<modalPrice.length; i++){
+          var computedStyle = getComputedStyle(modalPrice[i]);
+          var h = computedStyle.height;
+          modalHeight[i] = (h.replace("px","")) - 30 + "px";
+          modalPrice[i].style.marginTop = "-" + modalHeight[i];
+        }
+        setTimeout(function(){
+           for(var i=0; i<modalPrice.length; i++)
+           {
+              modalPrice[i].classList.add("add_transition");
+           }
+        },200);
+      });
+
+      function btnClick(id){
+        var i = id.replace("btn_","");
+        if((getComputedStyle(modalPrice[i]).marginTop).replace("px","") < 0)
+        {
+          modalPrice[i].style.marginTop = 0;
+          document.getElementById(id).innerHTML = "Свернуть";
+        }
+        else
+        {
+          modalPrice[i].style.marginTop = "-" + modalHeight[i];
+          document.getElementById(id).innerHTML = "Подробнее";
+        }
+      };
+
        //Меню мобил
        document.querySelector(".menu__button").addEventListener("click", function(){
         document.querySelector(".menu__list").classList.toggle("hidden");
        });
+     
 
 
     

@@ -465,11 +465,13 @@ html{
 -------------------------------------------------------------------*/
 
 .price__item{
+	position: relative;
 	background: #f8f5f2;
 	margin-top: 25px;
 	color: #000000;
 	text-align: center;
 	padding-bottom: 2px;
+	z-index: 100;
 }
 
 .price_img{
@@ -501,9 +503,26 @@ html{
 	font-family: "PT Sans Narrow", "Arial", sans-serif;
 	text-transform: uppercase;
 	background: url("../img/decor.png") no-repeat center;
-	margin-top: -20px;
+	/*margin-top: -20px;*/
 	outline: none;
 	cursor: pointer;
+}
+
+.price__descr{
+
+
+}
+
+.price__descr__text{
+	font-size: 18px;
+	font-weight: normal;
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.add_transition{
+	transition: 0.5s linear;
 }
 
 /*--------------------------------------------------------
@@ -558,3 +577,8 @@ html{
 	margin-top: -25px;
 	background: url("../img/decor.png") center no-repeat;
 }
+
+/*--------------------------------------------------------------
+--------------------------Планшет-------------------------------
+----------------------------------------------------------------*/
+
