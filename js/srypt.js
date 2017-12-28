@@ -10,6 +10,27 @@
       
       document.addEventListener('DOMContentLoaded', function()
       {
+        if(device.desktop() || device.tablet())
+        {
+          var tag_css = document.createElement('link');
+        //  tag_css.rel = 'stylesheet';
+        //  tag_css.href = "../css/style.css"; // здесь указывается URL стилевого файла
+        //  tag_css.type = 'text/css';
+          tag_css.setAttribute("rel", "stylesheet");
+          tag_css.setAttribute("type", "text/css");
+          tag_css.setAttribute("href", "D:/Для Марины/Сайт/website_adaptive/css/tablet_style.css");
+          var tag_head = document.getElementsByTagName('head');
+          tag_head[0].appendChild(tag_css);
+        }
+        if(device.mobile())
+        {
+           var tag_css = document.createElement('link');
+          tag_css.setAttribute("rel", "stylesheet");
+          tag_css.setAttribute("type", "text/css");
+          tag_css.setAttribute("href", "D:/Для Марины/Сайт/website_adaptive/css/mobil_style.css");
+          var tag_head = document.getElementsByTagName('head');
+          tag_head[0].appendChild(tag_css);
+        }
         intTimer=0;
         articleToggle();
       });
@@ -201,12 +222,7 @@
       //---------------------------Таблетка--------------------------------------
       //-------------------------------------------------------------------------
 
-      window.onresize = windowReload;
-
-      function windowReload(){
-          location.reload();
-          console(navigator.appName);
-      }
+     
 
       function funModalTabletHihgt(){
         if(document.body.clientWidth == 720)
@@ -229,3 +245,20 @@
            h = +(modalHeightTablet[i].replace("px","")) + h;
            return h;
       }
+
+      function get_name_browser(){
+          // получаем данные userAgent
+          var ua = navigator.userAgent;    
+          // с помощью регулярок проверяем наличие текста,
+          // соответствующие тому или иному браузеру
+          if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+          if (ua.search(/Firefox/) > 0) return 'Firefox';
+          if (ua.search(/Opera/) > 0) return 'Opera';
+          if (ua.search(/Safari/) > 0) return 'Safari';
+          if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+          // условий может быть и больше.
+          // сейчас сделаны проверки только 
+          // для популярных браузеров
+          return 'Не определен';
+      }
+
