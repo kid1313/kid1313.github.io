@@ -204,8 +204,8 @@
       window.onresize = windowReload;
 
       function windowReload(){
-        location.reload();
-        alert("тута");
+          location.reload();
+          console(navigator.appName);
       }
 
       function funModalTabletHihgt(){
