@@ -18,8 +18,8 @@
         //  tag_css.type = 'text/css';
           tag_css.setAttribute("rel", "stylesheet");
           tag_css.setAttribute("type", "text/css");
-          tag_css.setAttribute("href", "D:/Для Марины/Сайт/website_adaptive/css/tablet_style.css");
-          //tag_css.setAttribute("href", "kid1313.github.io/css/tablet_style.css");
+          //tag_css.setAttribute("href", "D:/Для Марины/Сайт/website_adaptive/css/tablet_style.css");
+          tag_css.setAttribute("href", "kid1313.github.io/css/tablet_style.css");
           var tag_head = document.getElementsByTagName('head');
           tag_head[0].appendChild(tag_css);
         }
@@ -28,8 +28,8 @@
            var tag_css = document.createElement('link');
           tag_css.setAttribute("rel", "stylesheet");
           tag_css.setAttribute("type", "text/css");
-          tag_css.setAttribute("href", "D:/Для Марины/Сайт/website_adaptive/css/mobil_style.css");
-          //tag_css.setAttribute("href", "kid1313.github.io/css/mobil_style.css");
+          //tag_css.setAttribute("href", "D:/Для Марины/Сайт/website_adaptive/css/mobil_style.css");
+          tag_css.setAttribute("href", "kid1313.github.io/css/mobil_style.css");
           var tag_head = document.getElementsByTagName('head');
           tag_head[0].appendChild(tag_css);
         }
