@@ -24,7 +24,7 @@
             <a class="menu__item__link" href="../index.html">Главная</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item__link" href="./price.html">Прайс-лист</a>
+            <a class="menu__item__link" href="./pages/price.html">Прайс-лист</a>
           </li>
           <li class="menu__item">
             <a class="menu__item__link" href="#">Статьи</a>
@@ -33,7 +33,7 @@
             <a class="menu__item__link" href="./contacts.html">Контакты</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item__link" href="./reviews.html">Отзывы</a>
+            <a class="menu__item__link" href="" onClick="return onClickReviews()">Отзывы</a>
           </li>
         </ul>
       </section>
@@ -174,31 +174,7 @@
    
     <div class="modal-overlay"></div>
 <!--Описание скриптов-->
-    <script>
-
-      var flagNotes = -1;
-      var notesArray = document.getElementsByClassName('notes__item');
-      function notesSwitch(i){
-        if(flagNotes != i && flagNotes != -1){
-          notesArray[flagNotes].classList.add("hidden");
-          notesArray[i].classList.remove("hidden");
-          document.querySelector(".notes__decor").classList.remove("hidden");
-          flagNotes = i;
-        }
-        if(flagNotes == -1)
-          notesArray[i].classList.remove("hidden");
-          document.querySelector(".notes__decor").classList.remove("hidden");
-          flagNotes = i;
-      }
-
-       //Меню мобил
-       document.querySelector(".menu__button").addEventListener("click", function(){
-        document.querySelector(".menu__list").classList.toggle("hidden");
-       });
-
-
-    
-    </script>
+    <script src="../js/srypt.js"></script>
    <!--jQuery (necessary for Bootstrap's JavaScript plugins)-->
   </body>
 </html>

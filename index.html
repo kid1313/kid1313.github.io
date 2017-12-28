@@ -54,12 +54,13 @@
             <a class="menu__item__link" href="./pages/contacts.html">Контакты</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item__link" href="./pages/reviews.html">Отзывы</a>
+            <a class="menu__item__link" href="" onClick="return onClickReviews()">Отзывы</a>
           </li>
         </ul>
       </section>
     </header> 
     <main class="main">
+      <img class = "main__logo hidden" src="./img/main_logo.png" width="640" height="314" alt="Депиляция Киров">
       <section class="article">
         <b class="article__main-title">Полезная информация</b>
         <div class="article__wrapper">
@@ -69,26 +70,34 @@
               <p class="article__text">
                 Если Вы делаете депиляцию впервые, нужно отрастить
                 волоски длиной 0,5 - 0,7 см (примерно 2-3 недели 
-                после бритвы)...
+                после бритвы) <span class="dot">...</span><span class="cont hidden">ЗА СУТКИ до депиляции 
+                необходимо провести скрабирование участка кожи, где предполагается 
+                депиляция. Слегка массируем кожу во всех направлениях, после наносим 
+                увлажняющее средство.</span>
               </p>
-              <a class="article__link" href="#" onClick="return btnReadMore()">Читать далее...</a>
+              <a class="article__link" href="#" onClick="return btnReadMore(this.id)" id=d_0>Читать далее...</a>
             </li>
             <li class="article__item article__item--wax hidden">
               <h2 class="article__title">Восковая депиляция</h2>
               <p class="article__text">Восковая депиляция представляет собой процедуру 
                 удаления нежелательных волос при помощи теплого и 
-                горячего воска...
+                горячего воска <span class="dot">...</span><span class="cont hidden">Применяется на любых участках тела, рук и ног, лица, 
+                подмышечных впадин и области бикини. Результат после ее 
+                проведения сохраняется в течение 3-5 недель.
+                </span>
               </p>
-               <a class="article__link" href="#" onClick="return btnReadMore()">Читать далее...</a>
+               <a class="article__link" href="#" onClick="return btnReadMore(this.id)" id=d_1>Читать далее...</a>
             </li>
             <li class="article__item article__item--shugaring hidden">
               <h2 class="article__title">Сахарная депиляция</h2>
               <p class="article__text">Сахарная депиляция (шугаринг) - одна 
                   из наиболее эффективных методик 
                   удаления нежелательных волос. Это 
-                  способ депиляции, выполняемый...
+                  способ депиляции, выполняемый <span class="dot">...</span><span class="cont hidden">с помощью густой сахарной пасты. На 
+                  обрабатываемый участок кожи наносится натуральная карамель и 
+                  удаляется вместе с волосками.</span>
               </p>
-               <a class="article__link" href="#" onClick="return btnReadMore()">Читать далее...</a>
+               <a class="article__link" href="#" onClick="return btnReadMore(this.id)" id=d_2>Читать далее...</a>
             </li>
           </ul>
         </div>
@@ -117,14 +126,49 @@
           <a class="about-me__button" href="./pages/form.html">Записаться</a>
         </div>
       </section>
+      <section class="form-tablet hidden">
+        <div class="form-tablet__decor"></div>
+        <div class="form-tablet__wrapper">
+          <h2 class="form-tablet__title">Форма записи</h2>
+          <p class="form-tablet__text">Прием ведется по записи. Вы можете оставить свои контактные данные и в ближайшее 
+          время я с вами свяжусь для уточнения даты и времени. </p>
+           <form class="form-tablet__form" action="" method="post">
+            <div class="input__wrapper">
+              <div class="form-tablet__item">
+                <label class="form-tablet__item__name" for="name">Имя<span>*</span></label>
+                <input class="form-tablet__item__field" type="text" name="name" value="" required="required" placeholder="Ваше имя">
+              </div>
+              <div class="form-tablet__item">
+                <label class="form-tablet__item__name" for="phone">Телефон<span>*</span></label>
+                <input class="form-tablet__item__field" type="tel" name="phone" value="" required="required" placeholder="Ваш телефон">
+              </div>
+              <div class="form-tablet__item">
+                <label class="form-tablet__item__name" for="date">Дата</label>
+                <input class="form-tablet__item__field" type="date" name="date" value="" placeholder="Дата">
+              </div>
+               <div class="form-tablet__item">
+                <label class="form-tablet__item__name" for="time">Время</label>
+                <input class="form-tablet__item__field" type="time" name="time" value="" placeholder="Время">
+              </div>
+            </div>
+            <p class="form-tablet__warning">* поля отмеченный звездочкой обязательны для заполнения</p>
+            <button class="form-tablet__button" type="button" onclick="">записаться</button>
+          </form>
+        </div>
+      </section>
     <footer class="footer">
       <div class="footer__wraper">
-        <p class="footer__name">Депиляция киров</p>
-        <p class="footer__adress">г. Киров, ул. Карла Маркса д.21 
-        5 этаж,<br> офис 508 </p>
-        <p class="footer_phone">+7(922)903-19-05</p>
-        <p class="footer__social">Присовединяйтесь!</p>
-        <a class="social__link" href="https://vk.com/depilyaciya_kirov">Вконтакте</a>
+        <div class="footer__logo"></div>
+        <div class="footer__adress-block">
+          <p class="footer__name">Депиляция киров</p>
+          <p class="footer__adress">г. Киров, ул. Карла Маркса д.21 
+          5 этаж,<br> офис 508 </p>
+          <p class="footer_phone">+7(922)903-19-05</p>
+        </div>
+        <div class="footer__social-block">
+          <p class="footer__social">Присоединяйтесь!</p>
+          <a class="social__link" href="https://vk.com/depilyaciya_kirov">Вконтакте</a>
+        </div>
       </div>
     </footer>
     </div>
@@ -132,7 +176,7 @@
      <section class="modal-article">
       <div class="modal-article__wrapper">
         <ul class="modal-article__list">
-          <li class="modal-article__item hidden">
+          <li class="modal-article__item hidden hidden--tablet">
             <p class="modal-article__text">Если Вы делаете депиляцию впервые, нужно отрастить волоски длиной 0,5 - 0,7 см (примерно 2-3 недели после бритвы)
               ЗА СУТКИ до депиляции необходимо провести скрабирование участка кожи, где предполагается депиляция. Слегка массируем кожу во всех направлениях, после наносим увлажняющее средство. За 24 часа до депиляции откажитесь от посещения бани, сауны, солярия.</p>
               <p class="modal-article__text">В ДЕНЬ ДЕПИЛЯЦИИ не наносим косметические средства на депилируемые участки. Надеваем свободное белье из хлопка (для области бикини), свободную одежду из натуральных материалов.</p>
@@ -148,7 +192,7 @@
               <p class="modal-article__text">Через 2-3 дня после депиляции необходимо произвести скрабирование участка депиляции и делать это регулярно 1-2 раза в неделю, после чего увлажнить кожу.</p>
                <button class="modal-article__close" onClick="return modalClose()">Закрыть</button>
           </li>
-          <li class="modal-article__item hidden">
+          <li class="modal-article__item hidden hidden--tablet">
             <p class="modal-article__text"> Восковая депиляция представляет собой процедуру удаления нежелательных волос при помощи теплого и горячего воска.
               Применяется на любых участках тела, рук и ног, лица, подмышечных впадин и области бикини. Результат после ее проведения сохраняется в течение 3-5 недель.</p>
               <p class="modal-article__text">Основное отличие восковой депиляции от эпиляции состоит в том, что в первом случае воздействие оказывается только на ту часть волоса, которая находится на поверхности кожи и его корня. В то время как эпиляция подразумевает разрушение самого основания волоса (фолликулярного аппарата).
@@ -165,7 +209,7 @@
               <p class="modal-article__text">Многое зависит от ваших индивидуальных особенностей. Если вы делаете процедуру в первый раз, то рекомендуется сначала попробовать депиляцию воском, а потом поэксперементировать и сравнить с шугарингом. Каждая процедура имеет преимущества, которые помогут вам сделать свой выбор.</p>
               <button class="modal-article__close" onClick="return modalClose()">Закрыть</button>
           </li>
-          <li class="modal-article__item hidden">
+          <li class="modal-article__item hidden hidden--tablet">
             <p class="modal-article__text">Сахарная депиляция (шугаринг) - одна из наиболее эффективных методик удаления нежелательных волос. Это способ депиляции, выполняемый с помощью густой сахарной пасты. На обрабатываемый участок кожи наносится натуральная карамель и удаляется вместе с волосками.</p>
             <p class="modal-article__text">Сахарная паста имеет ряд преимуществ:
             <ul class="modal-article__item__shugaring-list">
@@ -183,85 +227,6 @@
     </section>   
    
     <div class="modal-overlay"></div>
-<!--Описание скриптов-->
-    <script>
-
-      var intTimer=0;
-      var articleItem = document.getElementsByClassName('article__item');
-      var modalItem = document.getElementsByClassName('modal-article__item');
-      //Слайдер мобил
-      document.addEventListener('DOMContentLoaded', articleToggle());
-
-       function articleToggle(){
-        var togglerItem = document.getElementsByClassName('slader__toggle');
-        var intervalID = setInterval(function() {
-          intTimer = intervalID;
-          for(var i=0; i<articleItem.length; i++)
-          {
-            if(!articleItem[i].classList.contains('hidden'))
-            {
-              articleItem[i].classList.add("hidden");
-              togglerItem[i].classList.remove("toggler");
-              i++;
-              if(i != articleItem.length)
-              {
-                articleItem[i].classList.remove("hidden");
-                togglerItem[i].classList.add("toggler");
-              }
-              else
-              {
-                articleItem[0].classList.remove("hidden");
-                togglerItem[0].classList.add("toggler");
-              }
-            }
-          }
-        }, 5000);
-      };
-
-      function btnReadMore(){
-        if(intTimer!=0)
-        {
-          clearInterval(intTimer);
-          modalSlide();
-        }
-        return false;
-      };
-
-      function modalSlide(){
-        for(var i=0; i<articleItem.length; i++)
-        {
-          if(!articleItem[i].classList.contains('hidden'))
-          {
-            modalItem[i].classList.remove('hidden');
-            var computedStyle = getComputedStyle(modalItem[i]);
-            var h = computedStyle.height;
-            h = +(h.replace("px","")) + 50 + 'px';
-            document.querySelector(".global-wrapper").style.marginTop = h;
-          }
-        }
-      };
-
-      function modalClose(){
-        document.querySelector(".global-wrapper").style.marginTop = 0;
-        setTimeout(function(){
-          for(var i=0; i<modalItem.length; i++)
-          {
-            if(!modalItem[i].classList.contains('hidden'))
-              modalItem[i].classList.add('hidden');
-          }
-        }, 500);
-        articleToggle();
-        return false;
-      };
-
-       //Меню мобил
-       document.querySelector(".menu__button").addEventListener("click", function(){
-        document.querySelector(".menu__list").classList.toggle("hidden");
-       });
-
-
-    
-    </script>
-   <!--jQuery (necessary for Bootstrap's JavaScript plugins)-->
+   <script src="./js/srypt.js"></script>
   </body>
 </html>

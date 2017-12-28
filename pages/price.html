@@ -33,7 +33,7 @@
             <a class="menu__item__link" href="./contacts.html">Контакты</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item__link" href="./reviews.html">Отзывы</a>
+            <a class="menu__item__link" href="" onClick="return onClickReviews()">Отзывы</a>
           </li>
         </ul>
       </section>
@@ -128,48 +128,6 @@
         <a class="social__link" href="https://vk.com/depilyaciya_kirov">Вконтакте</a>
       </div>
     </footer>
-     <script>
-
-      var modalPrice = document.getElementsByClassName('price__descr');
-      var modalHeight = [];
-
-      document.addEventListener('DOMContentLoaded', function(){
-        for(var i=0; i<modalPrice.length; i++){
-          var computedStyle = getComputedStyle(modalPrice[i]);
-          var h = computedStyle.height;
-          modalHeight[i] = (h.replace("px","")) - 30 + "px";
-          modalPrice[i].style.marginTop = "-" + modalHeight[i];
-        }
-        setTimeout(function(){
-           for(var i=0; i<modalPrice.length; i++)
-           {
-              modalPrice[i].classList.add("add_transition");
-           }
-        },200);
-      });
-
-      function btnClick(id){
-        var i = id.replace("btn_","");
-        if((getComputedStyle(modalPrice[i]).marginTop).replace("px","") < 0)
-        {
-          modalPrice[i].style.marginTop = 0;
-          document.getElementById(id).innerHTML = "Свернуть";
-        }
-        else
-        {
-          modalPrice[i].style.marginTop = "-" + modalHeight[i];
-          document.getElementById(id).innerHTML = "Подробнее";
-        }
-      };
-
-       //Меню мобил
-       document.querySelector(".menu__button").addEventListener("click", function(){
-        document.querySelector(".menu__list").classList.toggle("hidden");
-       });
-     
-
-
-    
-    </script>
+     <script src="../js/srypt.js"></script>
   </body>
 </html>
