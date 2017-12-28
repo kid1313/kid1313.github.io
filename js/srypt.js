@@ -205,6 +205,7 @@
 
       function windowReload(){
         location.reload();
+        alert("тута");
       }
 
       function funModalTabletHihgt(){
