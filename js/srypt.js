@@ -29,7 +29,7 @@
           tag_css.setAttribute("rel", "stylesheet");
           tag_css.setAttribute("type", "text/css");
          // tag_css.setAttribute("href", "D:/Для Марины/Сайт/website_adaptive/css/mobil_style.css");
-          tag_css.setAttribute("href", "https://github.com/kid1313/kid1313.github.io/tree/master/css/mobil_style.css");
+          tag_css.setAttribute("href", "kid1313.github.io/css/mobil_style.css");
           var tag_head = document.getElementsByTagName('head');
           tag_head[0].appendChild(tag_css);
         }
