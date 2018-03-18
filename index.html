@@ -5,229 +5,170 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Депиляция Киров</title>
+    <title>Воркер - контроль рабочего времени сотрудников</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <!--<link href="css/style.css" rel="stylesheet">-->
+    <link href="css/style.css" rel="stylesheet">
     <script src="./js/jquery.js"></script>
-    <script>
-      function AjaxFormRequest(result_id,formMain,url) {
-        jQuery.ajax({
-        url:     url,
-        type:     "POST",
-        dataType: "html",
-        data: jQuery("#"+formMain).serialize(),
-        success: function(response) {
-         document.getElementById(result_id).innerHTML = response;
-        },
-        error: function(response) {
-         document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
-        }
-      });
-        $(':input','#form')
-        .not(':button, :submit, :reset, :hidden')
-        .val('')
-        .removeAttr('checked')
-        .removeAttr('selected');
-    }
-    </script>
   </head>
   <body class="body">
     <header class="header">
-      <div class="header__logo"></div>
-      <section class="menu">
-        <div class="menu__wrapper">
-          <button class="menu__button">Меню</button> 
-          <b class="menu__current">Главная</b>
+      <div class="header__wrapper">
+        <div class="header__logo"> <img class="header__logo_img"  src="img/main_logo.png" width="311" height="62" alt="Воркер-учет рабочего времени"></div>
+        <div class=menu_wrapper>
+          <section class="header__callback">
+            <button class="button_callback">Заказать звонок</button>
+            <div class="header__phone">
+              <p class="header__phone__text"> 8 (800) 511-20-30</p>
+              <p class="header__phone__text">+7 (495) 137-79-90</p>
+            </div>
+          </section>
+          <section class="header__menu">
+            <ul class="menu__list">
+              <li class="menu__item"> <a class="menu__item_link underline_menu" href="#">Главная</a></li>
+              <li class="menu__item"> <a class="menu__item_link" href="#">Возможности</a></li>
+              <li class="menu__item"> <a class="menu__item_link" href="./pages/download.html">Скачать</a></li>
+              <li class="menu__item"> <a class="menu__item_link" href="#">Тарифы</a></li>
+              <li class="menu__item"> <a class="menu__item_link" href="#">Справка</a></li>
+            </ul>
+          </section>
         </div>
-        <ul class="menu__list hidden">
-          <li class="menu__item">
-            <a class="menu__item__link" href="#">Главная</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__item__link" href="./pages/price.html">Прайс-лист</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__item__link" href="./pages/notes.html">Статьи</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__item__link" href="./pages/contacts.html">Контакты</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__item__link" href="" onClick="return onClickReviews()">Отзывы</a>
-          </li>
-        </ul>
-      </section>
+       </div>
     </header> 
     <main class="main">
-      <img class = "main__logo hidden" src="./img/main_logo.png" width="640" height="314" alt="Депиляция Киров">
-      <section class="article">
-        <b class="article__main-title">Полезная информация</b>
-        <div class="article__wrapper">
-          <ul class="article__list article__slider">
-            <li class="article__item article__item--care">
-              <h2 class="article__title">Уход до и после депиляции</h2>
-              <p class="article__text">
-                Если Вы делаете депиляцию впервые, нужно отрастить
-                волоски длиной 0,5 - 0,7 см (примерно 2-3 недели 
-                после бритвы) <span class="dot">...</span><span class="cont hidden">ЗА СУТКИ до депиляции 
-                необходимо провести скрабирование участка кожи, где предполагается 
-                депиляция. Слегка массируем кожу во всех направлениях, после наносим 
-                увлажняющее средство.</span>
-              </p>
-              <a class="article__link" href="#" onClick="return btnReadMore(this.id)" id=d_0>Читать далее...</a>
-            </li>
-            <li class="article__item article__item--wax hidden">
-              <h2 class="article__title">Восковая депиляция</h2>
-              <p class="article__text">Восковая депиляция представляет собой процедуру 
-                удаления нежелательных волос при помощи теплого и 
-                горячего воска <span class="dot">...</span><span class="cont hidden">Применяется на любых участках тела, рук и ног, лица, 
-                подмышечных впадин и области бикини. Результат после ее 
-                проведения сохраняется в течение 3-5 недель.
-                </span>
-              </p>
-               <a class="article__link" href="#" onClick="return btnReadMore(this.id)" id=d_1>Читать далее...</a>
-            </li>
-            <li class="article__item article__item--shugaring hidden">
-              <h2 class="article__title">Сахарная депиляция</h2>
-              <p class="article__text">Сахарная депиляция (шугаринг) - одна 
-                  из наиболее эффективных методик 
-                  удаления нежелательных волос. Это 
-                  способ депиляции, выполняемый <span class="dot">...</span><span class="cont hidden">с помощью густой сахарной пасты. На 
-                  обрабатываемый участок кожи наносится натуральная карамель и 
-                  удаляется вместе с волосками.</span>
-              </p>
-               <a class="article__link" href="#" onClick="return btnReadMore(this.id)" id=d_2>Читать далее...</a>
-            </li>
+      <section class="main__theme">
+        <div class="main__theme__background">
+          <h1 class="main__theme__title">Система учета рабочего времени за компьютером</h1>
+          <p class="main__theme__subtitle">Хотите знать:</p>
+          <ul class="main__theme__ask">
+            <li class="theme__ask__item">Кто из сотрудников хочет уволится?</li>
+            <li class="theme__ask__item">Кто любит опаздывать и уходить пораньше?</li>
+            <li class="theme__ask__item">Кто тратит рабочее время на соцсети?</li>
           </ul>
-        </div>
-        <p class="article__toggle">
-          <button class="slader__toggle toggler">1</button>
-          <button class="slader__toggle">2</button>
-          <button class="slader__toggle">3</button>
-        </p>
-      </section>
-      <div class="global-wrapper">
-      <section class="about-me">
-        <div class="about-me__wrapper">
-          <img class="about-me__foto" src="./img/about-me.png" width="258" height="258" alt="Депиляция Киров">
-          <p class="about-me__text">
-            Здравствуйте! Меня зовут Марина. 
-            Я мастер восковой депиляции и 
-            шугаринга. Работаю в уютном кабинете
-            в центре нашего города Кирова. 
-            Использую только качественные, 
-            проверенные временем материалы. 
-            Постоянно совершенствую свои 
-            навыки. Буду рада видеть Вас в числе 
-            посетителей моего кабинета. 
-            Хорошее настроение гарантирую ;-)
-          </p>
-          <a class="about-me__button" href="./pages/form.html">Записаться</a>
+          <a class="main__theme__button" href="./pages/download.html">
+            Узнайте сейчас <br>
+            <span class="main__theme__button__text">(14 дней бесплатно)</span>
+          </a>
+          <a class="main__theme__video" href="#">Видеообзор</a>
         </div>
       </section>
-      <section class="form-tablet hidden">
-        <div class="form-tablet__decor"></div>
-        <div class="form-tablet__wrapper">
-          <h2 class="form-tablet__title">Форма записи</h2>
-          <p class="form-tablet__text">Прием ведется по записи. Вы можете оставить свои контактные данные и в ближайшее 
-          время я с вами свяжусь для уточнения даты и времени. </p>
-           <form class="form-tablet__form" action="" method="post">
-            <div class="input__wrapper">
-              <div class="form-tablet__item">
-                <label class="form-tablet__item__name" for="name">Имя<span>*</span></label>
-                <input class="form-tablet__item__field" type="text" name="name" value="" required="required" placeholder="Ваше имя">
-              </div>
-              <div class="form-tablet__item">
-                <label class="form-tablet__item__name" for="phone">Телефон<span>*</span></label>
-                <input class="form-tablet__item__field" type="tel" name="phone" value="" required="required" placeholder="Ваш телефон">
-              </div>
-              <div class="form-tablet__item">
-                <label class="form-tablet__item__name" for="date">Дата</label>
-                <input class="form-tablet__item__field" type="date" name="date" value="" placeholder="Дата">
-              </div>
-               <div class="form-tablet__item">
-                <label class="form-tablet__item__name" for="time">Время</label>
-                <input class="form-tablet__item__field" type="time" name="time" value="" placeholder="Время">
-              </div>
-            </div>
-            <p class="form-tablet__warning">* поля отмеченный звездочкой обязательны для заполнения</p>
-            <button class="form-tablet__button" type="button" onclick="">записаться</button>
-          </form>
+      <section class="for_whom">
+        <div class="for_whom__title"><h2 class="for_whom__tittle__text">Для кого этот сервис</h2></div>
+        <div class="for_whom__list">
+          <div class="for_whom__item">
+            <img class="for_whom__item__img" src="img/dir.png" width="187" height="187" alt="Воркер для руководителя">
+            <h2 class="for_whom__item__title">Для руководителя</h2>
+            <p class="for_whom__item__text">Узнайте, на что сотрудник тратит свое рабочее время. Экономьте время, оценивая эффективность сотрудников. Контролируйте сотрудников, которые работают <br> удаленно.</p>
+            <a class="for_whom__item__button" href="#">Подробнее</a>
+          </div>
+          <div class="for_whom__item">
+            <img class="for_whom__item__img" src="img/hr.png" width="187" height="187" alt="Воркер для менеджера по кадрам">
+            <h2 class="for_whom__item__title">Для менеджера по кадрам</h2>
+            <p class="for_whom__item__text">Не допускайте «выгорания» кадров. Своевременноe выявление 
+            сотрудников, планирующих уволиться. Корректируйте график работы в зависимости от загруженности персонала.</p>
+            <a class="for_whom__item__button" href="#">Подробнее</a>
+          </div>
+          <div class="for_whom__item">
+            <img class="for_whom__item__img" src="img/buh.png" width="187" height="187" alt="Воркер для бухгалтера">
+            <h2 class="for_whom__item__title">Для бухгалтера</h2>
+            <p class="for_whom__item__text"> Используйте отчеты программы, чтобы быстро сделать табель рабочего времени. Учитывайте штрафы за опоздания и прочие нарушения дисциплины. Легко посчитать,сколько именно заработал фрилансер.</p>
+            <a class="for_whom__item__button" href="#">Подробнее</a>
+          </div>
         </div>
       </section>
+      <section class="capab">
+        <div class="capab__title"><h2 class="capab__title__text for_whom__tittle__text">Возможности сервиса</h2></div>
+        <div class="capab__main">
+          <div class="capab_wrapper">
+            <ul class=capab__main__list_left>
+              <li class="capab__main__list_left__item">
+                <div class="list_left__item">
+                  <b class="list_left__item__title icon_shifr"><img class="lefting" src="img/shifr.png">Шифрование данных индивидуальным ключом</b>
+                  <p class="list_left__item__text">Данные передаются и храняться в зашифрованном виде. Никто кроме Вас не имеет к ним доступ</p>
+                </div>
+              </li>
+              <li class="capab__main__list_left__item">
+                <div class="list_left__item">
+                  <b class="list_left__item__title icon_control"><img class="lefting" src="img/control.png">Контроль соблюдения штатного расписания</b>
+                  <p class="list_left__item__text">Пребывание сотрудника на рабочем месте: точное время прихода и ухода</p>
+                </div>
+              </li>
+              <li class="capab__main__list_left__item">
+                <div class="list_left__item">
+                  <b class="list_left__item__title icon_use"><img class="lefting" src="img/statist.png">Статистика использования программ и сайтов</b>
+                  <p class="list_left__item__text">Фиксация программ и сайтов и общее время работы с ними</p>
+                </div>
+              </li>
+              <li class="capab__main__list_left__item">
+                <div class="list_left__item">
+                  <b class="list_left__item__title icon_block"><img  class="lefting" class="lefting" src="img/use.png">Блокировка сайтов и запуска приложений</b>
+                  <p class="list_left__item__text">Блокировка нежелательных сайтов и программ в один клик</p>
+                </div>
+              </li>
+              <li class="capab__main__list_left__item">
+                <div class="list_left__item">
+                  <b class="list_left__item__title icon_pic"><img class="lefting" src="img/cam.png">Снимки рабочего стола и веб-камеры</b>
+                  <p class="list_left__item__text">Чем именно был занят сотрудник на рабочем месте фиксируеься с помощью снимков экрана и веб-камеры</p>
+                </div>
+              </li>
+            </ul>
+            <ul class="capab__main__list_right">
+              <li class="capab__main__list_right__item">
+                <div class="list_right__item">
+                  <b class="list_right__item__title icon_work"><img class="lefting" src="img/spisok.png">Управление списком рабочих программ и сайтов</b>
+                  <p class="list_right__item__text">Разделение программ и сайтов на те, которые относятся к рабочим процессам и на те, которые к ним не относятся</p>
+                </div>
+              </li>
+              <li class="capab__main__list_right__item">
+                <div class="list_right__item">
+                  <b class="list_right__item__title icon_self_stat"><img class="lefting" src="img/self_stat.png">Режим работы с просмотром личной статистики</b>
+                  <p class="list_right__item__text">Сотрудник может самостоятельно оценить свою эффективность и принять меры по её улучшению</p>
+                </div>
+              </li>
+               <li class="capab__main__list_right__item">
+                <div class="list_right__item">
+                  <b class="list_right__item__title icon_hide"><img class="lefting" src="img/hide.png">Явный и скрытый от сотрудника режим работы</b>
+                  <p class="list_right__item__text">Система может быть срыта от сотрудника или открыта. В открытом режиме сотрудник может самостоятельно оценить свою эффективность</p>
+                </div>
+              </li>
+              <li class="capab__main__list_right__item">
+                <div class="list_right__item">
+                  <b class="list_right__item__title icon_stor"><img class="lefting" src="img/cloud.png">Хранение данных в надежном облачном сервисе</b>
+                  <p class="list_right__item__text">Базы данных надежно зашифрованы и расположены в облачном хранилище Microsoft Azure</p>
+                </div>
+              </li>
+              <li class="capab__main__list_right__item">
+                <div class="list_right__item">
+                  <b class="list_right__item__title icon_load"><img class="lefting" src="img/load.png">График нагрузки на работника в течении дня</b>
+                  <p class="list_right__item__text">Программа позволяет отслеживать интенсивность нагрузки на сотрудника в течении дня</p>
+                </div>
+              </li>
+             </ul>
+           </div>
+          <a class="capab_button" href="#">Подробнее</a>
+          </div>
+      </section>
+      <section class="company_use">
+        <div class="company_use__wrapper">
+          <p class="company_use__text">Уже более 200 компаний пользуются нашим сервисом для учета и контроля рабочего времени своих сотрудников</p>
+          <p class="company_use__text">Вы все еще думаете? Просто попробуйте!</p>
+          <p class="company_use__sub_text">Бесплатная пробная версия на 14 дней и 2 рабочих места</p>
+          <a class="company_use__button" href="./pages/download.html">Начать бесплатно</a>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
-      <div class="footer__wraper">
-        <div class="footer__logo"></div>
-        <div class="footer__adress-block">
-          <p class="footer__name">Депиляция киров</p>
-          <p class="footer__adress">г. Киров, ул. Карла Маркса д.21 
-          5 этаж,<br> офис 508 </p>
-          <p class="footer_phone">+7(922)903-19-05</p>
-        </div>
-        <div class="footer__social-block">
-          <p class="footer__social">Присоединяйтесь!</p>
-          <a class="social__link" href="https://vk.com/depilyaciya_kirov">Вконтакте</a>
-        </div>
+      <div class="footer__wrapper">
+        <section class="footer__contacts">
+          <p class="contacts__vorker">Воркер - система учета и контроля рабочего времени за компьютером</p>
+          <b>Телефон:</b>
+          <p class="contacts__phone">8 (800) 511-20-30 <br>
+            +7 (495) 137-79-90</p>
+          <b class="contacts__el_pochta">Эл. почта:</b>
+          <p class="contacts__email">911@worker.pro</p>
+        </section> 
       </div>
     </footer>
-    </div>
-    </main>
-     <section class="modal-article">
-      <div class="modal-article__wrapper">
-        <ul class="modal-article__list">
-          <li class="modal-article__item hidden hidden--tablet">
-            <p class="modal-article__text"><span class="modal-article__text__begin hidden--tablet">Если Вы делаете депиляцию впервые, нужно отрастить волоски длиной 0,5 - 0,7 см (примерно 2-3 недели после бритвы)
-              ЗА СУТКИ до депиляции необходимо провести скрабирование участка кожи, где предполагается депиляция. Слегка массируем кожу во всех направлениях, после наносим увлажняющее средство.</span> За 24 часа до депиляции откажитесь от посещения бани, сауны, солярия.</p>
-              <p class="modal-article__text">В ДЕНЬ ДЕПИЛЯЦИИ не наносим косметические средства на депилируемые участки. Надеваем свободное белье из хлопка (для области бикини), свободную одежду из натуральных материалов.</p>
-              <p class="modal-article__text">В ТЕЧЕНИЕ 24 ЧАСОВ ПОСЛЕ ДЕПИЛЯЦИИ не пользуемся дезодорантом, мылом, гелем для душа, лосьоном для тела, автозагаром, косметикой (если депиляция производилась на области лица). Моемся водой либо детским мылом. Нежелательно иметь интимную близость, если депиляция осуществлялась на зоне бикини. </p>
-              <p class="modal-article__text">В течении 24 часов после депиляции:
-                <ul class="modal-article__item__care-list">
-                  <li class="care-list__item">НЕ загораем</li>
-                  <li class="care-list__item">НЕ ходим в солярий</li>
-                  <li class="care-list__item">НЕ посещаем сауну, НЕ принимаем горячие ванны</li>
-                  <li class="care-list__item">НЕ чешем место депиляции, НЕ трогаем его</li>
-                </ul></p>
-              <p class="modal-article__text">Через 2 дня после депиляции начинаем увлажнять кожу (лосьон, масло, крем) и делать это не реже, чем через день.</p>
-              <p class="modal-article__text">Через 2-3 дня после депиляции необходимо произвести скрабирование участка депиляции и делать это регулярно 1-2 раза в неделю, после чего увлажнить кожу.</p>
-               <button class="modal-article__close" onClick="return modalClose()">Закрыть</button>
-          </li>
-          <li class="modal-article__item hidden hidden--tablet">
-            <p class="modal-article__text"><span class="modal-article__text__begin hidden--tablet">Восковая депиляция представляет собой процедуру удаления нежелательных волос при помощи теплого и горячего воска.
-              Применяется на любых участках тела, рук и ног, лица, подмышечных впадин и области бикини. Результат после ее проведения сохраняется в течение 3-5 недель.</span></p>
-              <p class="modal-article__text">Основное отличие восковой депиляции от эпиляции состоит в том, что в первом случае воздействие оказывается только на ту часть волоса, которая находится на поверхности кожи и его корня. В то время как эпиляция подразумевает разрушение самого основания волоса (фолликулярного аппарата).
-              Вновь выросшие после депиляции волосы становятся более мягкими и редкими.</p>
-              <h3 class="modal-article__text__name">Депиляция теплым воском</h3>
-              <p class="modal-article__text">Для проведения данной процедуры используют предварительно нагретый воск до температуры в 40С. На поверхность кожи воск наносят при помощи специальной машинки, которая подает разогретый воск в виде тонких полосок.
-              После остывания воска на его поверхность наносят плотные полоски бумаги и удаляют резким рывком против роста волос вместе с влипшими в нее волосками. Депиляция теплым воском менее болезненна и применяется для удаления волос на больших участках тела (ноги, руки, спина). Результат депиляции теплым воском сохраняется в течение месяца.</p>
-              <h3 class="modal-article__text__name">Депиляция горячим воском (пленочный воск)</h3>
-              <p class="modal-article__text">Данная процедура относится к наиболее эффективным и менее болезненным типам депиляции. В данном случае на кожу наносится воск, предварительно разогретый до температуры в 60 градусов.
-              Благодаря тепловому воздействию, кожа под воском распаривается, и поры клеток раскрываются, что обеспечивает более глубокое проникновение воска под кожу.
-              После остывания воска его удаляют резким рывком против роста волос, вместе с застывшими в нем волосками. Эффект после депиляции горячим воском сохраняется от 1 - 1,5 месяцев
-              Применяют восковую депиляцию горячим воском для удаления жестких волос с нежных участков кожи (область бикини, удаление волос с верхней губы и подмышечных впадин, коррекции бровей).</p>
-              <h3 class="modal-article__text__name">Что лучше воск или сахар?</h3>
-              <p class="modal-article__text">Многое зависит от ваших индивидуальных особенностей. Если вы делаете процедуру в первый раз, то рекомендуется сначала попробовать депиляцию воском, а потом поэксперементировать и сравнить с шугарингом. Каждая процедура имеет преимущества, которые помогут вам сделать свой выбор.</p>
-              <button class="modal-article__close" onClick="return modalClose()">Закрыть</button>
-          </li>
-          <li class="modal-article__item hidden hidden--tablet">
-            <p class="modal-article__text"><span class="modal-article__text__begin hidden--tablet">Сахарная депиляция (шугаринг) - одна из наиболее эффективных методик удаления нежелательных волос. Это способ депиляции, выполняемый с помощью густой сахарной пасты. На обрабатываемый участок кожи наносится натуральная карамель и удаляется вместе с волосками.</span></p>
-            <p class="modal-article__text">Сахарная паста имеет ряд преимуществ:
-            <ul class="modal-article__item__shugaring-list">
-              <li class="shugaring-list__item">не вызывает аллергию, раздражения, не повреждает кожу</li>
-              <li class="shugaring-list__item">удаляет короткие волоски</li>
-              <li class="shugaring-list__item">занимает не много времени, обычно от 15-30 минут (в зависимости от количества и особенности волос)</li>
-              <li class="shugaring-list__item">эффект сохраняется до 4х недель</li></ul></p>
-            <p class="modal-article__text">Используемая профессиональная косметика в работе гипоаллергена (состав: сахар, вода, кукурузный крахмал).</p>
-            <p class="modal-article__text">Что лучше воск или сахар?
-            Многое зависит от ваших индивидуальных особенностей. Если вы делаете процедуру в первый раз, то мы рекомендуем сначала попробовать эпиляцию воском, а потом поэксперементировать и сравнить с шугарингом. Каждая процедура имеет преимущества, которые помогут вам сделать свой выбор.</p>
-            <button class="modal-article__close" onClick="return modalClose()">Закрыть</button>
-          </li>
-        </ul>
-      </div>
-    </section>   
-   
-    <div class="modal-overlay"></div>
-   <script src="./js/srypt.js"></script>
-   <script src="./js/device.js"></script>
+    
   </body>
 </html>
