@@ -12,9 +12,18 @@
 /* -------------------------------Меню---------------------------------- */
 
 .header{	
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	top: 0;
+
 	min-height: 120px;
     background: #f1efef;
     box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.35);
+}
+
+.main{
+	margin-top: 120px;
 }
 
 .header__logo{
@@ -562,9 +571,11 @@
 	-webkit-justify-content: space-around;
 	        justify-content: space-around;
 	margin: 0 auto;
+	padding-top: 20px;
 }
 
 .download__box{
+	margin: 0;
 	margin-right: 50px;
 }
 
@@ -659,10 +670,24 @@
 
 }
 
-
 .attention__left_col{
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	margin-right: 40px;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+
+.attention__left_col__img{
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.attention__left_col__text{
 	display: block;
-	width: 130px;
+	width: 90px;
 	height: 35px;
 	-webkit-border-radius: 15px;
 	        border-radius: 15px;
@@ -672,20 +697,7 @@
 	line-height: 35px;
 	text-align: center;
 	color: #00ff00;
-	margin-right: 40px; 
-	position: relative;
-	top: 120px;
-}
-
-.attention__left_col::before{
-	content: "";
-	display: block;
-	width: 76px;
-	height: 105px;
-	background: url(../img/virustotal.png) center no-repeat;
-	position: absolute;
-	top: -120px;
-	left: -2px;
+	margin-top: 10px;
 }
 
 .right_col__text1{
@@ -796,9 +808,408 @@
 
 .scheme__left_col{
 	margin-right: 30px;
+	margin-top: 20px;
+}
+
+.scheme__right_col{
+	margin-top: 20px;
 }
 
 .top_line{
 	border-top: 2px dashed;
 }
 
+/* -----------------------------------------------Для директора--------------------------- */
+
+/* ------------------------------------------------Шапка------------------------------------ */
+
+.director_theme{
+	width: 100%;
+	background: url(../img/director_theme.jpg) center no-repeat;
+	-webkit-background-size: cover;
+	      -o-background-size: cover;
+	         background-size: cover; 
+	box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.35);
+}
+
+.director_theme__wrapper{
+	width: 820px;
+	margin: 0 auto;
+}
+
+.director_theme__text{
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 50px;
+	color: #ffffff;	
+	text-align: center;
+	padding-top: 45px;
+	padding-bottom: 50px;
+	text-transform: uppercase;
+}
+
+/*--------------------------------------Приемущества-------------------------------*/
+
+.director_benefit{
+	width: 980px;
+	margin: 0 auto;
+}
+
+.benefit__item{
+	display: flex;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	 margin-top: 30px;
+	 margin-bottom: 30px;
+}
+
+.benefit__item__left{
+	width: 450px;
+}
+
+.benefit__item__title{
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 25px;
+	text-transform: uppercase;	
+}
+
+.benefit__item__text{
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 25px;
+}
+/* -------------------------------------------------Для HR---------------------------------- */
+
+/* -------------------------------------------------Шапка------------------------------------- */
+
+.hr_theme{
+	width: 100%;
+	background: url(../img/hr_theme.jpg) center no-repeat;
+	-webkit-background-size: cover;
+	      -o-background-size: cover;
+	         background-size: cover; 
+	box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.35);
+}
+
+.hr_theme__wrapper{
+	width: 565px;
+	margin: 0 auto;
+}
+
+.hr_theme__text{
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 50px;
+	color: #ffffff;	
+	text-align: center;
+	padding-top: 45px;
+	padding-bottom: 50px;
+	text-transform: uppercase;
+}
+
+/* ------------------------------------------Приемущества-------------------------------------- */
+
+.hr_benefit{
+	width: 980px;
+	margin: 0 auto;
+}
+
+/* ----------------------------------------------Для бухгалтера--------------------------------- */
+
+/* -------------------------------------------------Шапка--------------------------------------- */
+
+.buh_theme{
+	width: 100%;
+	background: url(../img/buh_theme.jpg) center no-repeat;
+	-webkit-background-size: cover;
+	      -o-background-size: cover;
+	         background-size: cover; 
+	box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.35);
+}
+
+.buh_theme__wrapper{
+	width: 565px;
+	margin: 0 auto;
+}
+
+.buh_theme__text{
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 50px;
+	color: #ffffff;	
+	text-align: center;
+	padding-top: 45px;
+	padding-bottom: 50px;
+	text-transform: uppercase;
+}
+
+/* ------------------------------Приемущества------------------------------------------- */
+
+.buh_benefit{
+	width: 980px;
+	margin: 0 auto;
+}
+
+.buh_benefit_img2{
+	padding-left: 50px;
+}
+
+/* -------------------------------------Возможности----------------------------------- */
+
+/* ----------------------------------------Шапка--------------------------------------- */
+
+.capabilities_theme{
+	width: 100%;
+	background: url(../img/buh_theme.jpg) center no-repeat;
+	-webkit-background-size: cover;
+	      -o-background-size: cover;
+	         background-size: cover; 
+	box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.35);
+}
+
+.capabilities_theme__wrapper{
+	width: 565px;
+	margin: 0 auto;
+}
+
+.capabilities_theme__text{
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 50px;
+	color: #ffffff;	
+	text-align: center;
+	padding-top: 45px;
+	padding-bottom: 50px;
+	text-transform: uppercase;
+}
+
+/* ---------------------------------------Возможности----------------------------------- */
+
+.capabilities_benefit{
+	width: 980px;
+	margin: 0 auto;
+}
+
+.benefit__item__img{
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+/* -------------------------------------------Тарифы-------------------------------------- */
+
+/* --------------------------------------------Шапка--------------------------------------- */
+
+.tarif_theme{
+	width: auto;
+	background: url(../img/tarif_theme.jpg) center no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.35);
+}
+
+.tarif_theme__wrapper{
+	width: 960px;
+	margin: 0 auto;	
+}
+
+.tarif_theme__title{
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 40px;
+	text-transform: uppercase;
+	color: #ffffff;
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+/* --------------------------------------------Прайс------------------------------- */
+
+.desсr_tarif{
+	width: 960px;
+	margin: 0 auto;	
+}
+
+.desсr_tarif__text{
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 40px;
+	text-transform: uppercase;
+	color: #000000;
+	text-align: center;
+}
+
+.tarif__cloud, .tarif__local{
+	min-width: 980px;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.35);
+	background: #f1efef;
+	padding-bottom: 20px;
+	
+}
+
+.tarif__cloud__title, .tarif__local__title{
+	min-height: 55px;
+	background: #353535;
+	-webkit-border-radius: 10px 10px 0 0;
+	        border-radius: 10px 10px 0 0;
+	margin: 0 auto;
+}
+
+.tarif__cloud__title__text, .tarif__local__title__text{
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 50px;
+	color: #ffffff;
+	text-align: center;;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.cloud_icon{
+	margin-right: 10px;
+}
+
+.tarif__flex_conteiner{
+	display: flex;
+	width: 960px;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	margin: 0 auto;
+}
+
+.tarif__benefit_list{
+	list-style-image: url(../img/check2.png);
+	font-size: 18px;
+	line-height: 22px;
+	width: 360px;
+	margin-right: 60px;
+	padding-top: 15px;
+}
+
+.benefit_list__item b{
+	text-transform: uppercase;
+}
+
+.cloud__1col{
+	width: 115px;
+	font-size: 18px;
+	height: 40px;
+}
+
+.cloud__2col{
+	width: 125px;
+	font-size: 18px;
+}
+
+.cloud__3col{
+	width: 135px;
+	font-size: 18px;
+}
+
+.cloud__4col{
+	width: 90px;
+	font-size: 18px;
+}
+
+.cloud__1row, .cloud__2row, .cloud__3row, .cloud__4row{
+	text-align: center;
+	font-size: 25px;
+	height: 50px;
+}
+
+
+.color{
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 25px;
+	color: #ff0000;
+}
+
+.cloud__button{
+	display: block;
+	width: 190px;
+	height: 45px;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 42px;
+	text-decoration: none;
+	text-align: center;
+	color: #000000;
+	background: #00ff00;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+.cloud__table, .local__table{
+	margin-top: 15px;
+}
+
+.local__col1{
+	width: 205px;
+	font-size: 18px;
+	height: 40px;
+}
+
+.local__col2{
+	width: 165px;
+	font-size: 18px;	
+}
+
+.local__col3{
+	width: 95px;
+	font-size: 18px;
+}
+
+.local__1row, .local__2row, .local__3row{
+	text-align: center;
+	font-size: 25px;
+	height: 50px;
+}
+
+.local_width{
+	width: 580px;	
+}
+
+.tarif__local__ring_text{
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 18px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.tarif__local__button{
+	display: block;
+	width: 190px;
+	height: 45px;
+	border: none;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	background: #00ff00;
+	color: #000000;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 41px;
+	text-decoration: none;
+	text-align: center;
+	margin: 0 auto;	
+}
+
+.tarif__local__additional_padding{
+	padding-bottom: 35px;
+}
+
+.table_line{
+	height: 3px;
+    background-image: -moz-linear-gradient( 0deg, rgb(241,239,239) 0%, rgb(121,120,120) 14%, rgb(0,0,0) 50%, rgb(121,120,120) 86%, rgb(241,239,239) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(241,239,239) 0%, rgb(121,120,120) 14%, rgb(0,0,0) 50%, rgb(121,120,120) 86%, rgb(241,239,239) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(241,239,239) 0%, rgb(121,120,120) 14%, rgb(0,0,0) 50%, rgb(121,120,120) 86%, rgb(241,239,239) 100%);	
+}
