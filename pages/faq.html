@@ -19,20 +19,35 @@
           <section class="header__callback">
             <button class="button_callback">Заказать звонок</button>
             <div class="header__phone">
-              <p class="header__phone__text"> 8 (800) 511-20-30</p>
-              <p class="header__phone__text">+7 (495) 137-79-90</p>
+              <p class="header__phone__text"> 8 (800) 350-64-10</p>
             </div>
           </section>
           <section class="header__menu">
             <ul class="menu__list">
-              <li class="menu__item"> <a class="menu__item_link" href="../index.html">Главная</a></li>
-              <li class="menu__item"> <a class="menu__item_link" href="../pages/capabilities.html">Возможности</a></li>
-              <li class="menu__item"> <a class="menu__item_link " href="../pages/download.html">Скачать</a></li>
-              <li class="menu__item"> <a class="menu__item_link" href="../pages/tarif.html">Тарифы</a></li>
-              <li class="menu__item"> <a class="menu__item_link underline_menu header__menu_help" href="#">Справка</a></li>
+              <li class="menu__item"> 
+                <a class="menu__item_link" href="../index.html">Главная</a>
+                <div class="line_menu hidden"></div>
+              </li>
+              <li class="menu__item"> 
+                <a class="menu__item_link" href="../pages/capabilities.html">Возможности</a>
+                <div class="line_menu hidden"></div>
+              </li>
+              <li class="menu__item"> 
+                <a class="menu__item_link " href="../pages/download.html">Скачать</a>
+                <div class="line_menu hidden"></div>
+              </li>
+              <li class="menu__item"> 
+                <a class="menu__item_link" href="../pages/tarif.html">Тарифы</a>
+                <div class="line_menu hidden"></div>
+              </li>
+              <li class="menu__item"> 
+                <a class="menu__item_link underline_menu header__menu_help" href="#">Помощь</a>
+                <div class="line_menu"></div>
+              </li>
             </ul>
             <div class="popup_menu">
               <ul class="popup_menu__list">
+                <li class="popup_menu__item"><a class="popup_menu__item_link" href="http://worker.pro/help/" target="_blank">Справка</a></li>
                 <li class="popup_menu__item"><a class="popup_menu__item_link" href="#">Вопрос/Ответ</a></li>
                 <li class="popup_menu__item"><a class="popup_menu__item_link" href="../pages/instructions.html">Инструкции</a></li>
               </ul>
@@ -186,17 +201,59 @@
         <div class="attention__line"></div>
       </section>
     </main>
-    <footer class="footer">
+     <footer class="footer">
       <div class="footer__wrapper">
-        <section class="footer__contacts">
-          <p class="contacts__vorker">Воркер - система учета и контроля рабочего времени за компьютером</p>
-          <b>Телефон:</b>
-          <p class="contacts__phone">8 (800) 511-20-30 <br>
-            +7 (495) 137-79-90</p>
-          <b class="contacts__el_pochta">Эл. почта:</b>
-          <p class="contacts__email">911@worker.pro</p>
-        </section> 
+        <ul class="footer__contacts_list rst-style">
+          <li class="contacts_list__item">Воркер - система учета и контроля рабочего времени за компьютером</li>
+          <li class="contacts_list__item">Телефон: <span class="contacts_list__data">8 (800) 350-64-10</span></li>
+          <li class="contacts_list__item">Эл. почта: <span class="contacts_list__data">911@worker.pro</span></p>
+        </ul> 
+        <ul class="footer__about_list rst-style width-col">
+          <li class="list__item__title">О продукте</li>
+          <li><div class="list_line"></div></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/about-2.html" target="_blank">О сервисе</a></li>
+          <li class="list__item"><a class="list__item__link" href="../pages/download.html">Пробный период</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/demo-4.html" target="_blank">Демо-режим</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/cloud-5.html" target="_blank">Облачная версия</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/local-6.html" target="_blank">Локальная версия</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/security-7.html" target="_blank">Безопасность</a></li>
+        </ul>
+        <ul class="footer__setup_list rst-style width-col">
+          <li class="list__item__title">Установка</li>
+          <li><div class="list_line"></div></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/install/director-13.html" target="_blank">Директор</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/install/agent-14.html" target="_blank">Сотрудник</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/install/director-13.html" target="_blank">Удаление</a></li>
+        </ul>
+        <ul class="footer__tuning_list rst-style width-col">
+          <li class="list__item__title">Настройка</li>
+          <li><div class="list_line"></div></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/settings/options-18.html" target="_blank">Общие настройки</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/settings/employee-profile-22.html" target="_blank">Профиль сотрудника</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/settings/category-23.html" target="_blank">Категории</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/settings/rules-24.html" target="_blank">Правила</a></li>
+        </ul>
+        <ul class="footer_report_list rst-style width-col">
+          <li class="list__item__title">Отчеты</li>
+          <li><div class="list_line"></div></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/calendar-26.html" target="_blank">Календарь</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/statistics-27.html" target="_blank">Статистика</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/day-review-28.html" target="_blank">Обзор дня</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/searches-29.html" target="_blank">Поисковые запросы</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/categories-30.html" target="_blank">Категории</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/applications-31.html" target="_blank">Программы</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/day-details-32.html" target="_blank">Детали дня</a></li>
+        </ul>
+        <ul class="footer__partners_list rst-style width-col">
+          <li class="list__item__title">Партнерам</li>
+          <li><div class="list_line"></div></li>
+          <li class="list__item"><a class="list__item__link" href="http://partner.worker.pro/" target="_blank">Личный кабинет</a></li>
+        </ul>
       </div>
+      <section class="license">
+        <p>© 2013–2018, ИП Вахрушев А.В., компания «IT-Сервис».
+        <a href="http://worker.pro/articles/license-34.html" target="_blank">Лицензионное соглашение</a></p>
+      </section>
     </footer>
     
   </body>
