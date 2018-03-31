@@ -47,7 +47,7 @@
             </ul>
             <div class="popup_menu">
               <ul class="popup_menu__list">
-                <li class="popup_menu__item"><a class="popup_menu__item_link" href="http://worker.pro/help/" target="_blank">Справка</a></li>
+                <li class="popup_menu__item"><a class="popup_menu__item_link" href="../pages/help.html">Справка</a></li>
                 <li class="popup_menu__item"><a class="popup_menu__item_link" href="../pages/faq.html">Вопрос/Ответ</a></li>
                 <li class="popup_menu__item"><a class="popup_menu__item_link" href="../pages/instructions.html">Инструкции</a></li>
               </ul>
@@ -72,7 +72,7 @@
         <div class="download__flex_conteiner">
           <div class="download__box">
             <img src="../img/worker_box.png" width="178" height="178" alt="Воркер-учет и контроль рабочего времени">
-            <a class="download__button" href="#"><p class="download__button__text">Начать загрузку</p></a>
+            <a class="download__button" href="/"><p class="download__button__text">Начать загрузку</p></a>
           </div>
           <div class="download__description">
             <p class="download__description__text">Воркер.Директор - как видно из названия, это рограмма, которая устанавливается на компьютер директора и является сердцем системы Воркер. С помощью программы Воркер.Директор осуществляеется:</p>
@@ -81,7 +81,7 @@
               <li class="description__list__item">создание и управление Агентами - программами, которые собирают статистику по сотрудникам</li>
               <li class="description__list__item">просмотр собранной статистики по сотрудникам</li>
             </ul>
-            <a class="download__play" href="#">Посмотрите короткую видеоинструкцию по установке Воркер.Директор</a>
+            <a class="download__play" href="#" id="setup_review" onclick="return onPlay(event, this.id)">Посмотрите короткую видеоинструкцию по установке Воркер.Директор</a>
             <p class="download__description_file">Имя файла: wDirector3.exe  |  Размер: 10 Mb  |  Операционная система: Windows 7 или новее</p>
           </div>
         </div>
@@ -214,6 +214,10 @@
         <a href="http://worker.pro/articles/license-34.html" target="_blank">Лицензионное соглашение</a></p>
       </section>
     </footer>
+    <div class="modal_video">
+      <iframe class="review" width="728" height="409" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div class="modal_cover"></div>
     
   </body>
 </html>
