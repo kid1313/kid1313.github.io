@@ -7,7 +7,7 @@
     <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <title>Воркер - контроль рабочего времени сотрудников</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="./js/srypt.js"></script>
@@ -20,35 +20,20 @@
           <section class="header__callback">
             <button class="button_callback">Заказать звонок</button>
             <div class="header__phone">
-              <p class="header__phone__text"> 8 (800) 350-64-10</p>
+              <p class="header__phone__text"> 8 (800) 511-20-30</p>
+              <p class="header__phone__text">+7 (495) 137-79-90</p>
             </div>
           </section>
           <section class="header__menu">
             <ul class="menu__list">
-              <li class="menu__item"> 
-                <a class="menu__item_link" href="#">Главная</a>
-                <div class="line_menu"></div>
-              </li>
-              <li class="menu__item"> 
-                <a class="menu__item_link" href="pages/capabilities.html">Возможности</a>
-                <div class="line_menu hidden"></div>
-              </li>
-              <li class="menu__item"> 
-                <a class="menu__item_link" href="./pages/download.html">Скачать</a>
-                <div class="line_menu hidden"></div>
-              </li>
-              <li class="menu__item"> 
-                <a class="menu__item_link" href="./pages/tarif.html">Тарифы</a>
-                <div class="line_menu hidden"></div>
-              </li>
-              <li class="menu__item"> 
-                <a class="menu__item_link header__menu_help" href="#">Помощь</a>
-                <div class="line_menu hidden"></div>
-              </li>
+              <li class="menu__item"> <a class="menu__item_link underline_menu" href="#">Главная</a></li>
+              <li class="menu__item"> <a class="menu__item_link" href="pages/capabilities.html">Возможности</a></li>
+              <li class="menu__item"> <a class="menu__item_link" href="./pages/download.html">Скачать</a></li>
+              <li class="menu__item"> <a class="menu__item_link" href="./pages/tarif.html">Тарифы</a></li>
+              <li class="menu__item"> <a class="menu__item_link header__menu_help" href="#">Справка</a></li>
             </ul>
             <div class="popup_menu">
               <ul class="popup_menu__list">
-                <li class="popup_menu__item"><a class="popup_menu__item_link" href="http://worker.pro/help/" target="_blank">Справка</a></li>
                 <li class="popup_menu__item"><a class="popup_menu__item_link" href="./pages/faq.html">Вопрос/Ответ</a></li>
                 <li class="popup_menu__item"><a class="popup_menu__item_link" href="./pages/instructions.html">Инструкции</a></li>
               </ul>
@@ -75,11 +60,7 @@
         </div>
       </section>
       <section class="for_whom">
-        <div class="for_whom__title">
-          <div class="attention__line"></div>
-          <h2 class="for_whom__tittle__text">Для кого этот сервис</h2>
-          <div class="attention__line"></div>
-        </div>
+        <div class="for_whom__title"><h2 class="for_whom__tittle__text">Для кого этот сервис</h2></div>
         <div class="for_whom__list">
           <div class="for_whom__item">
             <img class="for_whom__item__img" src="img/dir.png" width="187" height="187" alt="Воркер для руководителя">
@@ -103,40 +84,36 @@
         </div>
       </section>
       <section class="capab">
-        <div class="capab__title">
-          <div class="capab__underline"></div>
-          <h2 class="capab__title__text for_whom__tittle__text">Возможности сервиса</h2>
-          <div class="capab__underline"></div>
-        </div>
+        <div class="capab__title"><h2 class="capab__title__text for_whom__tittle__text">Возможности сервиса</h2></div>
         <div class="capab__main">
           <div class="capab_wrapper">
             <ul class=capab__main__list_left>
               <li class="capab__main__list_left__item">
-                <div class="list_left__item" onclick="return capab_click('d1')">
+                <div class="list_left__item">
                   <b class="list_left__item__title icon_shifr"><img class="lefting" src="img/shifr.png">Шифрование данных индивидуальным ключом</b>
                   <p class="list_left__item__text">Данные передаются и храняться в зашифрованном виде. Никто кроме Вас не имеет к ним доступ</p>
                 </div>
               </li>
               <li class="capab__main__list_left__item">
-                <div class="list_left__item" onclick="return capab_click('d2')">
+                <div class="list_left__item">
                   <b class="list_left__item__title icon_control"><img class="lefting" src="img/control.png">Контроль соблюдения штатного расписания</b>
                   <p class="list_left__item__text">Пребывание сотрудника на рабочем месте: точное время прихода и ухода</p>
                 </div>
               </li>
               <li class="capab__main__list_left__item">
-                <div class="list_left__item" onclick="return capab_click('d3')">
+                <div class="list_left__item">
                   <b class="list_left__item__title icon_use"><img class="lefting" src="img/statist.png">Статистика использования программ и сайтов</b>
                   <p class="list_left__item__text">Фиксация программ и сайтов и общее время работы с ними</p>
                 </div>
               </li>
               <li class="capab__main__list_left__item">
-                <div class="list_left__item" onclick="return capab_click('d4')">
+                <div class="list_left__item">
                   <b class="list_left__item__title icon_block"><img  class="lefting" class="lefting" src="img/use.png">Блокировка сайтов и запуска приложений</b>
                   <p class="list_left__item__text">Блокировка нежелательных сайтов и программ в один клик</p>
                 </div>
               </li>
               <li class="capab__main__list_left__item">
-                <div class="list_left__item" onclick="return capab_click('d5')">
+                <div class="list_left__item">
                   <b class="list_left__item__title icon_pic"><img class="lefting" src="img/cam.png">Снимки рабочего стола и веб-камеры</b>
                   <p class="list_left__item__text">Чем именно был занят сотрудник на рабочем месте фиксируеься с помощью снимков экрана и веб-камеры</p>
                 </div>
@@ -144,38 +121,38 @@
             </ul>
             <ul class="capab__main__list_right">
               <li class="capab__main__list_right__item">
-                <div class="list_right__item" onclick="return capab_click('d6')">
+                <div class="list_right__item">
                   <b class="list_right__item__title icon_work"><img class="lefting" src="img/spisok.png">Управление списком рабочих программ и сайтов</b>
                   <p class="list_right__item__text">Разделение программ и сайтов на те, которые относятся к рабочим процессам и на те, которые к ним не относятся</p>
                 </div>
               </li>
               <li class="capab__main__list_right__item">
-                <div class="list_right__item" onclick="return capab_click('d7')">
+                <div class="list_right__item">
                   <b class="list_right__item__title icon_self_stat"><img class="lefting" src="img/self_stat.png">Режим работы с просмотром личной статистики</b>
                   <p class="list_right__item__text">Сотрудник может самостоятельно оценить свою эффективность и принять меры по её улучшению</p>
                 </div>
               </li>
                <li class="capab__main__list_right__item">
-                <div class="list_right__item" onclick="return capab_click('d7')">
+                <div class="list_right__item">
                   <b class="list_right__item__title icon_hide"><img class="lefting" src="img/hide.png">Явный и скрытый от сотрудника режим работы</b>
                   <p class="list_right__item__text">Система может быть срыта от сотрудника или открыта. В открытом режиме сотрудник может самостоятельно оценить свою эффективность</p>
                 </div>
               </li>
               <li class="capab__main__list_right__item">
-                <div class="list_right__item" onclick="return capab_click('d9')">
+                <div class="list_right__item">
                   <b class="list_right__item__title icon_stor"><img class="lefting" src="img/cloud.png">Хранение данных в надежном облачном сервисе</b>
                   <p class="list_right__item__text">Базы данных надежно зашифрованы и расположены в облачном хранилище Microsoft Azure</p>
                 </div>
               </li>
               <li class="capab__main__list_right__item">
-                <div class="list_right__item" onclick="return capab_click('d10')">
+                <div class="list_right__item">
                   <b class="list_right__item__title icon_load"><img class="lefting" src="img/load.png">График нагрузки на работника в течении дня</b>
                   <p class="list_right__item__text">Программа позволяет отслеживать интенсивность нагрузки на сотрудника в течении дня</p>
                 </div>
               </li>
              </ul>
            </div>
-         <!-- <a class="capab_button" href="pages/capabilities.html">Подробнее</a>-->
+          <a class="capab_button" href="pages/capabilities.html">Подробнее</a>
           </div>
       </section>
       <section class="company_use">
@@ -189,57 +166,15 @@
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
-        <ul class="footer__contacts_list rst-style">
-          <li class="contacts_list__item">Воркер - система учета и контроля рабочего времени за компьютером</li>
-          <li class="contacts_list__item">Телефон: <span class="contacts_list__data">8 (800) 350-64-10</span></li>
-          <li class="contacts_list__item">Эл. почта: <span class="contacts_list__data">911@worker.pro</span></p>
-        </ul> 
-        <ul class="footer__about_list rst-style width-col">
-          <li class="list__item__title">О продукте</li>
-          <li><div class="list_line"></div></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/about-2.html" target="_blank">О сервисе</a></li>
-          <li class="list__item"><a class="list__item__link" href="./pages/download.html">Пробный период</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/demo-4.html" target="_blank">Демо-режим</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/cloud-5.html" target="_blank">Облачная версия</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/local-6.html" target="_blank">Локальная версия</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/security-7.html" target="_blank">Безопасность</a></li>
-        </ul>
-        <ul class="footer__setup_list rst-style width-col">
-          <li class="list__item__title">Установка</li>
-          <li><div class="list_line"></div></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/install/director-13.html" target="_blank">Директор</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/install/agent-14.html" target="_blank">Сотрудник</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/install/director-13.html" target="_blank">Удаление</a></li>
-        </ul>
-        <ul class="footer__tuning_list rst-style width-col">
-          <li class="list__item__title">Настройка</li>
-          <li><div class="list_line"></div></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/settings/options-18.html" target="_blank">Общие настройки</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/settings/employee-profile-22.html" target="_blank">Профиль сотрудника</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/settings/category-23.html" target="_blank">Категории</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/settings/rules-24.html" target="_blank">Правила</a></li>
-        </ul>
-        <ul class="footer_report_list rst-style width-col">
-          <li class="list__item__title">Отчеты</li>
-          <li><div class="list_line"></div></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/calendar-26.html" target="_blank">Календарь</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/statistics-27.html" target="_blank">Статистика</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/day-review-28.html" target="_blank">Обзор дня</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/searches-29.html" target="_blank">Поисковые запросы</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/categories-30.html" target="_blank">Категории</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/applications-31.html" target="_blank">Программы</a></li>
-          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/day-details-32.html" target="_blank">Детали дня</a></li>
-        </ul>
-        <ul class="footer__partners_list rst-style width-col">
-          <li class="list__item__title">Партнерам</li>
-          <li><div class="list_line"></div></li>
-          <li class="list__item"><a class="list__item__link" href="http://partner.worker.pro/" target="_blank">Личный кабинет</a></li>
-        </ul>
+        <section class="footer__contacts">
+          <p class="contacts__vorker">Воркер - система учета и контроля рабочего времени за компьютером</p>
+          <b>Телефон:</b>
+          <p class="contacts__phone">8 (800) 511-20-30 <br>
+            +7 (495) 137-79-90</p>
+          <b class="contacts__el_pochta">Эл. почта:</b>
+          <p class="contacts__email">911@worker.pro</p>
+        </section> 
       </div>
-      <section class="license">
-        <p>© 2013–2018, ИП Вахрушев А.В., компания «IT-Сервис».
-        <a href="http://worker.pro/articles/license-34.html" target="_blank">Лицензионное соглашение</a></p>
-      </section>
     </footer>
 
   </body>
