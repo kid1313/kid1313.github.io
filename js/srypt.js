@@ -15,7 +15,7 @@
     document.querySelector('.popup_menu').style.display = "";
   };
   
-  ScrollUp();
+  //ScrollUp();
   
   //--------Переход на клавную страницу при клике на лого в шапке----------------
   
@@ -28,11 +28,18 @@
   });
   
 
+
+
 //---------Отслеживание события закрытия для закрытия видео-------------------------------------------
-document.querySelector('.modal_cover').addEventListener("click", function(event){
+
+if(document.querySelector('.modal_cover'))
+{
+  document.querySelector('.modal_cover').addEventListener("click", function(event){
     event.preventDefault();
     CloseModal();
   });
+};
+
 
 //--------Закрытие видео по ECs------------------------------------
 document.onkeydown = function(event) {
@@ -49,6 +56,25 @@ document.onkeydown = function(event) {
 
 };
 
+$(document).ready(function(){
+
+  if(window.location.href.indexOf("help")>0)
+  {
+    onLoadHelp();
+  }
+});
+
+
+//--------------------Проверка перехода в справку из футера---------------------
+function onLoadHelp(){
+  var id = 0;
+  if(window.location.hash != "")
+  {
+    id = window.location.hash.replace("#","");
+    onClickFooterLink(id);
+  }
+};
+
 //-------------Закрытие модального окна видео--------------------------------------------------
 function CloseModal(){
   document.querySelector('.modal_cover').style.display = "none";
@@ -62,7 +88,7 @@ function capab_click(id){ // переход на страницу возможн
 };
 
 function ScrollUp(){ //скролит вверх, чтобы курсор позиционировался на нужном пункте. Сдвиг 120px из-за фиксированного меню 
-  if(window.location.href.indexOf("#d") > 0){
+  if(window.location.hash != ""){
     window.scrollBy(0, -120);
   }
 };
@@ -150,4 +176,20 @@ function articleId(id){
   }
   return article_id;  
 
+}
+
+//-------------------Переход в Справку из подвала------------------------------------
+
+function onClickFooterLink(id){
+  var mainMenu_id = [];
+  var i = 0;
+  while(id[i] != "_")
+  {
+    mainMenu_id[i] = id[i];
+    i++;
+  }
+  mainMenu_id = mainMenu_id.join('');
+  onClickMenu(mainMenu_id);
+  onClickSubMenu(id);
+  window.scrollTo(0,0);
 }
