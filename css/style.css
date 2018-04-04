@@ -23,6 +23,7 @@
 
 .main{
 	margin-top: 120px;
+	/*margin-top: -20px;*/
 }
 
 .header__logo{
@@ -1576,6 +1577,11 @@
 	text-transform: uppercase;
 }
 
+/*.help_menu__item__link{
+	text-decoration: none;
+	color: inherit;	
+}*/
+
 .help_menu__sub_list{
 	margin: 0;
 	padding: 0;
@@ -1585,6 +1591,20 @@
 
 .help_menu__sub_item{
 	padding-bottom: 5px;
+}
+
+.help_article__item__title{
+	color: blue;
+}
+
+.help_article__item__text{
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.help_media{
+	display: block;
+	margin: 0 auto;
 }
 
 .italic{
@@ -1610,3 +1630,4 @@
 	cursor: pointer;
 	color: blue;
 }
+

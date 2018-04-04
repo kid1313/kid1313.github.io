@@ -15,7 +15,6 @@
     document.querySelector('.popup_menu').style.display = "";
   };
   
-  //ScrollUp();
   
   //--------Переход на клавную страницу при клике на лого в шапке----------------
   
@@ -54,10 +53,14 @@ document.onkeydown = function(event) {
       return false;
   }
 
+
 };
+
 
 $(document).ready(function(){
 
+  if(window.location.href.indexOf("capabilities.html#") > 0)
+    ScrollUp();
   if(window.location.href.indexOf("help")>0)
   {
     onLoadHelp();
@@ -72,7 +75,7 @@ function onLoadHelp(){
   {
     id = window.location.hash.replace("#","");
     onClickFooterLink(id);
-    window.scrollTo(0,0);
+    $(document).scrollTop(0);
   }
 };
 
@@ -88,11 +91,12 @@ function capab_click(id){ // переход на страницу возможн
   return false;
 };
 
-function ScrollUp(){ //скролит вверх, чтобы курсор позиционировался на нужном пункте. Сдвиг 120px из-за фиксированного меню 
+function ScrollUp(){ //скролит вверх, чтобы курсор позиционировался на нужном пункте. Сдвиг 130px из-за фиксированного меню 
   if(window.location.hash != ""){
-    window.scrollBy(0, -120);
+    window.scrollBy(0, -130);
   }
 };
+
 
 //------------------------Видео в модальном окне---------------------------------------------
 function onPlay(event, id){
@@ -139,8 +143,10 @@ function  onClickMenu(id){
 
 //-------------------------------Открытие статьи----------------------------------------
 
-function onClickSubMenu(id){
-  var article_id = articleId(id).join(''); // массив->строка
+function onClickSubMenu(id, flag){
+  var article_id = id.split("-")[1];
+  if(flag != undefined)
+    onClickMenu(id.split("_")[0]);
   var menuSubItemArr = document.getElementsByClassName('help_menu__sub_item'); //элементы списка подменю
   var articleItemArr = document.getElementsByClassName('help_article__item'); // массив статей
   document.getElementById(id).classList.add('active_mark');
@@ -163,33 +169,10 @@ function onClickSubMenu(id){
   }
 }
 
-
-//------------------------------Определение какую статью открыть-----------------------
-
-// структура пути <основное меню>_<подменю>-<статья>
-function articleId(id){
-  var article_id = [];
-  var j = 0;
-  for(var i = id.indexOf("-") + 1; i < id.length; i++) //записываем в переменную все что после "-"
-  {
-    article_id[j] = id[i];
-    j++;
-  }
-  return article_id;  
-
-}
-
 //-------------------Переход в Справку из подвала------------------------------------
 
 function onClickFooterLink(id){
-  var mainMenu_id = [];
-  var i = 0;
-  while(id[i] != "_")
-  {
-    mainMenu_id[i] = id[i];
-    i++;
-  }
-  mainMenu_id = mainMenu_id.join('');
+  var mainMenu_id = id.split("_")[0];
   onClickMenu(mainMenu_id);
   onClickSubMenu(id);
 }
