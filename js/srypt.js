@@ -75,7 +75,7 @@ function onLoadHelp(){
   {
     id = window.location.hash.replace("#","");
     onClickFooterLink(id);
-    $(document).scrollTop(0);
+    $('html, body').scrollTop(0);
   }
 };
 
