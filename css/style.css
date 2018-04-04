@@ -254,10 +254,13 @@
 	width: 100px;
 	margin: 0 auto;
 	margin-top: 40px;
+	padding-left: 15px;
+	padding-right: -25px;
 	font-size: 20px;
-	font-weight: bold;
-	line-height: 20px;
-	text-decoration: underline;
+	font-weight: normal;
+	line-height: 25px;
+	text-decoration: none;
+	border-bottom: dashed #ffffff 2px;
 	color: #ffffff;
 	position: relative;
 }
@@ -270,7 +273,7 @@
 	background: url(../img/play.png) center no-repeat;
 	position: absolute;
 	top: -12px;
-	left: 100px;
+	left: 120px;
 
 }
 /* -----------------------------Для кого сервис----------------------------------- */

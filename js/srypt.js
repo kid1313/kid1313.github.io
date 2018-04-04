@@ -72,6 +72,7 @@ function onLoadHelp(){
   {
     id = window.location.hash.replace("#","");
     onClickFooterLink(id);
+    window.scrollTo(0,0);
   }
 };
 
@@ -191,5 +192,4 @@ function onClickFooterLink(id){
   mainMenu_id = mainMenu_id.join('');
   onClickMenu(mainMenu_id);
   onClickSubMenu(id);
-  window.scrollTo(0,0);
 }
