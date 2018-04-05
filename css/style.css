@@ -45,7 +45,7 @@
 }
 
 .button_callback{
-	width: 170px;
+	width: 157px;
 	height: 40px;
 	border: none;
 	border: 1px solid #000000;
@@ -252,11 +252,11 @@
 
 .main__theme__video{
 	display: block;
-	width: 100px;
+	width: 85px;
 	margin: 0 auto;
 	margin-top: 40px;
-	padding-left: 15px;
-	padding-right: -25px;
+	/*padding-left: 15px;*/
+	/*padding-right: -25px;*/
 	font-size: 20px;
 	font-weight: normal;
 	line-height: 25px;
@@ -269,12 +269,12 @@
 .main__theme__video:after{
 	content: "";
 	display: block;
-	width: 53px;
-	height: 53px;
+	width: 80px;
+	height: 50px;
 	background: url(../img/play.png) center no-repeat;
 	position: absolute;
 	top: -12px;
-	left: 120px;
+	left: 80px;
 
 }
 /* -----------------------------Для кого сервис----------------------------------- */

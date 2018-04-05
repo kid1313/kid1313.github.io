@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>Воркер - контроль рабочего времени сотрудников</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/srypt.js"></script>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__logo"> <img class="header__logo_img"  src="../img/main_logo.png" width="311" height="62" alt="Воркер-учет рабочего времени"></div>
+        <div class=menu_wrapper>
+          <section class="header__callback">
+            <button class="button_callback">Заказать звонок</button>
+            <div class="header__phone">
+              <p class="header__phone__text"> 8 (800) 350-64-10</p>
+            </div>
+          </section>
+          <section class="header__menu">
+            <ul class="menu__list">
+              <li class="menu__item"> 
+                <a class="menu__item_link" href="../index.html">Главная</a>
+                <div class="line_menu hidden"></div>
+              </li>
+              <li class="menu__item"> 
+                <a class="menu__item_link" href="../pages/capabilities.html">Возможности</a>
+                <div class="line_menu hidden"></div>
+              </li>
+              <li class="menu__item"> 
+                <a class="menu__item_link" href="../pages/download.html">Скачать</a>
+                <div class="line_menu hidden"></div>
+              </li>
+              <li class="menu__item"> 
+                <a class="menu__item_link" href="../pages/tarif.html">Тарифы</a>
+                <div class="line_menu hidden"></div>
+              </li>
+              <li class="menu__item"> 
+                <a class="menu__item_link header__menu_help" href="#">Помощь</a>
+                <div class="line_menu"></div>
+              </li>
+            </ul>
+            <div class="popup_menu">
+              <ul class="popup_menu__list">
+                <li class="popup_menu__item"><a class="popup_menu__item_link" href="#">Справка</a></li>
+                <li class="popup_menu__item"><a class="popup_menu__item_link" href="../pages/faq.html">Вопрос/Ответ</a></li>
+                <li class="popup_menu__item"><a class="popup_menu__item_link" href="../pages/instructions.html">Инструкции</a></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+       </div>
+    </header> 
+    <main class="main">
+      <div class="help__flex_conteiner">
+        <nav class="help_menu">
+          <ul class="help_menu__list">
+            <li class="help_menu__item active_mark" id="common"><a class="help_menu__item__link" href="../pages/help.html#common_sub-about">Общие вопросы</a></li>
+            <li>
+                <ul class="help_menu__sub_list" id="common_sub">
+                  <li class="help_menu__sub_item active_mark" id="common_sub-about" onclick="return onClickSubMenu(this.id)">О сервисе</li>
+                  <li class="help_menu__sub_item" id="common_sub-trial" onclick="return onClickSubMenu(this.id)">Пробный период</li>
+                  <li class="help_menu__sub_item" id="common_sub-demo" onclick="return onClickSubMenu(this.id)">Демо-режим</li>
+                  <li class="help_menu__sub_item" id="common_sub-cloud" onclick="return onClickSubMenu(this.id)">Облачная версия</li>
+                  <li class="help_menu__sub_item" id="common_sub-local" onclick="return onClickSubMenu(this.id)">Локальная версия</li>
+                  <li class="help_menu__sub_item" id="common_sub-secure" onclick="return onClickSubMenu(this.id)">Безопасность</li>
+                </ul>
+            </li>
+            <li class="help_menu__item" id="setup"><a class="help_menu__item__link" href="../pages/help.html#setup_sub-director">Установка и удаление</a></li>
+            <li>
+                <ul class="help_menu__sub_list help_hide" id="setup_sub">
+                  <li class="help_menu__sub_item" id="setup_sub-director" onclick="return onClickSubMenu(this.id)">Директор</li>
+                  <li class="help_menu__sub_item" id="setup_sub-agent" onclick="return onClickSubMenu(this.id)">Агент</li>
+                  <li class="help_menu__sub_item" id="setup_sub-delete" onclick="return onClickSubMenu(this.id)"> Удаление</li>
+                </ul>
+            </li>
+            <li class="help_menu__item" id="tune"><a class="help_menu__item__link" href="../pages/help_.html#tune_sub-commontune">Настройка</a></li>
+            <li>  
+                <ul class="help_menu__sub_list help_hide" id="tune_sub">
+                  <li class="help_menu__sub_item" id="tune_sub-commontune" onclick="return onClickSubMenu(this.id)">Общие настройки системы</li>
+                  <li class="help_menu__sub_item" id="tune_sub-profileemployer" onclick="return onClickSubMenu(this.id)">Профиль сотрудника</li>
+                  <li class="help_menu__sub_item" id="tune_sub-rule" onclick="return onClickSubMenu(this.id)">Правила</li>
+                </ul>
+            </li>
+            <li class="help_menu__item" id="report" onclick="return onClickMenu(this.id)">Отчеты</li>
+            <li>
+                <ul class="help_menu__sub_list help_hide" id="report_sub">
+                  <li class="help_menu__sub_item" id="report_sub-calendar" onclick="return onClickSubMenu(this.id)">Отчет «Календарь»</li>
+                 <li class="help_menu__sub_item" id="report_sub-statist" onclick="return onClickSubMenu(this.id)">Отчет «Статистика»</li>
+                  <li class="help_menu__sub_item" id="report_sub-day" onclick="return onClickSubMenu(this.id)">Отчет «Обзор дня»</li>
+                  <li class="help_menu__sub_item" id="report_sub-search" onclick="return onClickSubMenu(this.id)">Отчет «Поисковые запросы»</li>
+                  <li class="help_menu__sub_item" id="report_sub-categoryrep" onclick="return onClickSubMenu(this.id)">Отчет «Категории»</li>
+                  <li class="help_menu__sub_item" id="report_sub-program" onclick="return onClickSubMenu(this.id)">Отчет «Программы»</li>
+                  <li class="help_menu__sub_item" id="report_sub-detail" onclick="return onClickSubMenu(this.id)">Отчет «Детали дня»</li>
+                </ul>
+            </li>
+          </ul>
+        </nav>
+        <section class="help_article">   
+          <!-- Отчеты -->
+          <!-- Календарь -->
+          <div class="help_article__item help_hide" id="calendar">
+            <h2 class="help_article__item__title">Отчет «Календарь»</h2>
+            <p class="help_article__item__text">В отчёте «Календарь» вы можете увидеть помесячно сгруппированные данные о работе каждого сотрудника за последний год, а также о работе одного подразделения и предприятия в целом — за выбранный месяц.</p>
+            <img src="../img/help/calendar.png" width="571" height="338" alt="отчет Календарь">
+            <p class="help_article__item__text">Дважды кликнув по ячейке в календаре, вы сможете ознакомиться с подробностями за выбранный вами день. Нажав правую кнопку мыши появится контекстное меню с возможностью выбрать отчет для перехода независимо от общих настроек.</p>
+            <p class="help_article__item__text">Наведите указатель мышки на ячейку в календаре, чтобы увидеть краткую статистику: во сколько сотрудник в этот день пришёл на работу, во сколько ушёл, какое количество часов он отработал продуктивно.</p>
+            <img src="../img/help/calendar2.png" width="511" height="392" alt="отчет Календарь2">
+            <p class="help_article__item__text">Ячейки в календаре раскрашены в разные цвета:</p>
+            <ul>
+              <li class="help_article__item__text">Зелёнй - продуктивные дни</li>
+              <li class="help_article__item__text">краснй - непродуктивные</li>
+              <li class="help_article__item__text">жёлтый - промежуточные</li>
+              <li class="help_article__item__text">Белый - простои и отсутствие на рабочем месте</li>
+            </ul>
+            <p class="help_article__item__text">На вкладке «Отчёты» в <a href="#">«Общих настройках системы»</a> вы можете указать, какой процент выработки в день считается продуктивным, среднепродуктивным и непродуктивным. (По умолчанию при выработке от 80% ячейка окрашивается в зелёный, от 50% до 80% — в жёлтый, и меньше 50% — в красный).</p>
+          </div>
+
+          <!-- Статистика -->
+          <div class="help_article__item help_hide" id="statist">
+            <h2 class="help_article__item__title">Отчет «Статистика»</h2>
+            <p class="help_article__item__text">В отчёте «Статистика» отображается, кто и сколько пользовался программами/сайтами из определенной категории. Эти данные выводятся только по фирме в целом и по отделам. Если нажать на стрелочку рядом с названием категории, то можно увидеть какими именно программами/сайтами из этой категории пользовались сотрудники и сколько времени.</p>
+            <img src="../img/help/statistic.png" width="571" height="338" alt="отчет Статистика">
+            <p class="help_article__item__text">Двойной клик по имени сотрудника перенаправит вас к отчёту «Детали дня» по выбранному сотруднику, отфильтрованные по данной программе/сайту.</p>
+            <img src="../img/help/statistic_rule.png" width="192" height="211" alt="Правила">
+            <p class="help_article__item__text">Помимо колонок с именами сотрудников и временем, затраченным ими на то или иное приложение, в таблице присутствуют также колонки <a href="#">правил</a>. Каждое правило обозначено соответствующей иконкой. Слева направо: «В рабочие процессы», «Заблокировано», «Следить за заголовками окон», «Особый контроль», «Не делать снимки».</p>
+            <img src="../img/help/statistic_rule_select.png" width="309" height="221" alt="Выбор правила">
+            <p class="help_article__item__text">Двойной клик по пустой ячейке таблицы названием программы создаёт новое правило, после этого полупрозрачная иконка станет непрозрачной.</p>
+            <img src="../img/help/statistic_del_rule.png" width="394" height="177" alt="Выбор правила">
+            <p class="help_article__item__text">Если правило для этого действия уже задано, система предложит его удалить, иконка вновь станет полупрозрачной</p>
+            <p class="help_article__item__text italic">Чтобы открыть посещённый сотрудником сайт в интернете, нажмите Ctrl (все ссылки станут подчёркнутыми), и не отпуская его, кликните по ссылке — сайт откроется в браузере.</p>
+            <p class="help_article__item__text">Для перемещения программ и сайтов по категориям вы также можете кликнуть правой кнопкой мыши по названию в таблице, и выбрать категорию, в которую нуобходимо поместить программу/сайт</p>
+          </div>
+
+    
+
+
+           <!-- Обзор дня -->
+          <div class="help_article__item help_hide" id="day">
+            <h2 class="help_article__item__title">Отчет «Обзор дня»</h2>
+            <p class="help_article__item__text">Этот отчёт может строиться либо для фирмы/подразделения за один день, либо для сотрудника в заданном диапазоне дат.</p>
+            <img src="../img/help/review_day.png" width="571" height="338" alt="отчет Обзор дня">
+            <p class="help_article__item__text">Данные выводятся в виде гистограммы. Этот отчёт показывает:</p>
+            <ul>
+              <li class="help_article__item__text">Время прихода и ухода сотрудника на работу/с работы.</li>
+              <li class="help_article__item__text">Сколько времени сотрудник потратил на рабочие процессы(зелёные участки на гистограмме) и сколько на нерабочие (жёлтые участки на гистограмме).</li>
+              <li class="help_article__item__text">Сколько времени компьютер простаивал (белые участки на гистограмме).</li>
+            </ul>
+          </div>
+
+           <!-- Отчет «Поисковые запросы» -->
+          <div class="help_article__item help_hide" id="search">
+            <h2 class="help_article__item__title">Отчет «Поисковые запросы»</h2>
+            <img src="../img/help/search.png" width="571" height="338" alt="отчет Поисковые запросы">
+            <p class="help_article__item__text">Отчет "Поисковые запросы" позволяет узнать, какие именно запросы сотрудник вводил в поисковую строку. Запросы собираются со всех популярных поисковых систем.</p>
+          </div>
+
+           <!-- Отчет «Категории» -->
+          <div class="help_article__item help_hide" id="categoryrep">
+            <h2 class="help_article__item__title">Отчет «Категории»</h2>
+            <p class="help_article__item__text">Этот отчёт выводится исключительно по отдельным сотрудникам, и только за один день. Он показывает, программы из каких категорий использовал сотрудник в течение того или иного рабочего дня, и какие сайты он посещал. В подвале отчета находится суммарное время по отчету, учитывая введенный фильтр по записям.</p>
+            <img src="../img/help/category.png" width="571" height="338" alt="Отчет «Категории»">
+            <p class="help_article__item__text">Двойной клик по названию программы или сайта откроет отчёт «Детали дня» с фильтром по этой программе. Вы также можете кликнуть по названию программы, сайта либо категории правой кнопкой мыши, и выбрать нужный вам пункт в контекстном меню.</p>      
+          </div>
+
+          <!-- Отчет «Программы» -->
+          <div class="help_article__item help_hide" id="program">
+            <h2 class="help_article__item__title">Отчет «Программы»</h2>
+            <p class="help_article__item__text">Этот отчёт выводится исключительно по отдельным сотрудникам, и только за один день. Он показывает, программы из каких категорий использовал сотрудник в течение того или иного рабочего дня, и какие сайты он посещал. В подвале отчета находится суммарное время по отчету, учитывая введенный фильтр по записям.</p>
+            <img src="../img/help/programm.png" width="571" height="338" alt="Отчет «Категории»">
+            <p class="help_article__item__text">Здесь вы также можете создавать и редактировать правила, как и в <a href="#">«Статистике»</a>. Делается это либо двойным кликом по иконке с изображением, либо правой кнопкой мыши на программе с выбором соответствующего пункта в контекстном меню.</p>
+            <p class="help_article__item__text">Кликните два раза по названию программы/сайта, чтобы перейти к отчёту <a href="#">«Детали дня»</a> с фильтром по ним.</p>
+          </div>
+
+          <!-- Отчет «Детали дня» -->
+          <div class="help_article__item help_hide" id="detail">
+            <h2 class="help_article__item__title">Отчет «Детали дня»</h2>
+            <img src="../img/help/detail_day.png" width="571" height="338" alt="Отчет «Категории»">
+            <p class="help_article__item__text">Детали дня — самый подробный из всех отчётов: здесь фиксируется каждое действие сотрудника в течение рабочего дня. Данные выводятся по отдельным сотрудникам за указанную дату.</p>
+            <p class="help_article__item__text">Как и в <a href="#">«Статистике»</a>, вы можете создавать и удалять правила прямо в таблице. Кликните правой кнопкой мыши по названию приложения, и выберите нужный пункт в контекстном меню. Возможен и другой вариант: дважды кликните левой кнопкой мыши в соответствующей колонке с правилом.</p>
+            <p class="help_article__item__text">Самый правый столбик содержит перечень снимков экрана или снимков с веб-камеры. Двойной клик по иконке фотоаппарата покажет сделанный в указанное время снимок экрана.</p>
+            <img src="../img/help/detail_day_shot.png" width="571" height="338" alt="Отчет «Категории»">
+            <p class="help_article__item__text">Слева во вкладках вы можете задать, какие снимки вы хотите просматривать — с экрана, с веб-камеры, или и то и другое вместе.</p>
+
+          </div>
+        </section>
+      </div>
+    </main>
+     <footer class="footer">
+       <div class="footer__wrapper">
+        <ul class="footer__contacts_list rst-style">
+          <li class="contacts_list__item">Воркер - система учета и контроля рабочего времени за компьютером</li>
+          <li class="contacts_list__item">Телефон: <span class="contacts_list__data">8 (800) 350-64-10</span></li>
+          <li class="contacts_list__item">Эл. почта: <span class="contacts_list__data">911@worker.pro</span></p>
+        </ul> 
+        <ul class="footer__about_list rst-style width-col">
+          <li class="list__item__title">О продукте</li>
+          <li><div class="list_line"></div></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/about-2.html" target="_blank">О сервисе</a></li>
+          <li class="list__item"><a class="list__item__link" href="../pages/download.html">Пробный период</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/demo-4.html" target="_blank">Демо-режим</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/cloud-5.html" target="_blank">Облачная версия</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/local-6.html" target="_blank">Локальная версия</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/general/security-7.html" target="_blank">Безопасность</a></li>
+        </ul>
+        <ul class="footer__setup_list rst-style width-col">
+          <li class="list__item__title">Установка</li>
+          <li><div class="list_line"></div></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/install/director-13.html" target="_blank">Директор</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/install/agent-14.html" target="_blank">Сотрудник</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/install/director-13.html" target="_blank">Удаление</a></li>
+        </ul>
+        <ul class="footer__tuning_list rst-style width-col">
+          <li class="list__item__title">Настройка</li>
+          <li><div class="list_line"></div></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/settings/options-18.html" target="_blank">Общие настройки</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/settings/employee-profile-22.html" target="_blank">Профиль сотрудника</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/settings/category-23.html" target="_blank">Категории</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/settings/rules-24.html" target="_blank">Правила</a></li>
+        </ul>
+        <ul class="footer_report_list rst-style width-col">
+          <li class="list__item__title">Отчеты</li>
+          <li><div class="list_line"></div></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/calendar-26.html" target="_blank">Календарь</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/statistics-27.html" target="_blank">Статистика</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/day-review-28.html" target="_blank">Обзор дня</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/searches-29.html" target="_blank">Поисковые запросы</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/categories-30.html" target="_blank">Категории</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/applications-31.html" target="_blank">Программы</a></li>
+          <li class="list__item"><a class="list__item__link" href="http://worker.pro/help/reports/day-details-32.html" target="_blank">Детали дня</a></li>
+        </ul>
+        <ul class="footer__partners_list rst-style width-col">
+          <li class="list__item__title">Партнерам</li>
+          <li><div class="list_line"></div></li>
+          <li class="list__item"><a class="list__item__link" href="http://partner.worker.pro/" target="_blank">Личный кабинет</a></li>
+        </ul>
+      </div>
+      <section class="license">
+        <p>© 2013–2018, ИП Вахрушев А.В., компания «IT-Сервис».
+        <a href="http://worker.pro/articles/license-34.html" target="_blank">Лицензионное соглашение</a></p>
+      </section>
+    </footer>
+    
+  </body>
+</html>
