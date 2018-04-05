@@ -59,7 +59,8 @@ document.onkeydown = function(event) {
 $(document).ready(function(){
   if(window.location.href.indexOf("help") > 0)
   {
-     onClickFooterLink(location.search.substring(1));
+     onClickFooterLink(location.hash.replace("#?",""));
+     //onClickFooterLink(location.search.substring(1));
   }
 
   if(window.location.href.indexOf("capabilities.html#") > 0)
@@ -68,19 +69,7 @@ $(document).ready(function(){
 
 
 //--------------------Проверка перехода в справку из футера---------------------
-function onLoadHelp(path){
- /* var id = 0;
-  if(window.location.hash != "")
-  {
-    id = window.location.hash.replace("#","");
-    onClickFooterLink(id);
-  /*  $(document).scrollTop(0);
-    window.scrollTo(0,0);
-  }*/
-  console.log("onLoadHelp "+path);
-  footerPath = path;
-   console.log("onLoadHelp "+footerPath);
-};
+
 
 //-------------Закрытие модального окна видео--------------------------------------------------
 function CloseModal(){
@@ -140,7 +129,7 @@ function  onClickMenu(id){
     else
       menuListArr[j].classList.remove('active_mark');
   }
-  //onClickSubMenu(document.querySelectorAll("#" + id + "_sub" + " > li:first-child")[0].id); // первый элемент в выбраном меню 
+  onClickSubMenu(document.querySelectorAll("#" + id + "_sub" + " > li:first-child")[0].id); // первый элемент в выбраном меню 
   return false;
 }
 
@@ -148,11 +137,12 @@ function  onClickMenu(id){
 
 function onClickSubMenu(id, flag){
   var article_id = id.split("-")[1];
-  if(flag != undefined){
+  if(flag == 1){
     location.href = location.href.replace(location.search.substring(0), "?" + id);
   }
   var menuSubItemArr = document.getElementsByClassName('help_menu__sub_item'); //элементы списка подменю
   var articleItemArr = document.getElementsByClassName('help_article__item'); // массив статей
+  location.hash = "?"+id;
   document.getElementById(id).classList.add('active_mark');
   for(var i = 0; i < menuSubItemArr.length; i++)
   {
@@ -182,4 +172,5 @@ function onClickFooterLink(id){
   var mainMenu_id = id.split("_")[0];
   onClickMenu(mainMenu_id)//mainMenu_id);
   onClickSubMenu(id);
+  return false;
 }
