@@ -1,21 +1,4 @@
-﻿window.onload=function(){
-  
-  //--------------Всплывающее меню-------------------------------------------
-  
-  document.querySelector('.header__menu_help').onmouseover = function(){
-   	document.querySelector('.popup_menu').style.display = "block";
-  };
-  document.querySelector('.popup_menu').onmouseover =function(){
-    document.querySelector('.popup_menu').style.display = "block";
-  };
-  document.querySelector('.popup_menu').onmouseout =function(){
-    document.querySelector('.popup_menu').style.display = "";
-  };
-  document.querySelector('.header__menu_help').onmouseout = function(){
-    document.querySelector('.popup_menu').style.display = "";
-  };
-  
-  
+window.onload=function(){
   //--------Переход на клавную страницу при клике на лого в шапке----------------
   
   document.querySelector('.header__logo').addEventListener("click", function(event){ 
@@ -25,22 +8,11 @@
     else
       location.href="../index.html";
   });
-  
 
 
-
-//---------Отслеживание события закрытия для закрытия видео-------------------------------------------
-
-if(document.querySelector('.modal_cover'))
-{
-  document.querySelector('.modal_cover').addEventListener("click", function(event){
-    event.preventDefault();
-    CloseModal();
-  });
 };
 
-
-//--------Закрытие видео по ECs------------------------------------
+//---------Отслеживание события закрытия для закрытия видео-------------------------------------------
 document.onkeydown = function(event) {
   var kCode = window.event ? window.event.keyCode : (event.keyCode ? event.keyCode : (event.which ? event.which : null))
     switch (kCode)
@@ -50,13 +22,11 @@ document.onkeydown = function(event) {
         CloseModal();
         break;
     }
-      return false;
-  }
-
 };
 
 
-$(document).ready(function(){
+
+ $(document).ready(function(){
   if(window.location.href.indexOf("help") > 0)
   {
      onClickFooterLink(location.hash.replace("#?",""));
@@ -65,6 +35,12 @@ $(document).ready(function(){
 
   if(window.location.href.indexOf("capabilities.html#") > 0)
     ScrollUp();
+
+  $(function(){
+    console.log("я тут");
+   $("#phone").mask("+7(999) 999-9999");
+  });
+
 });
 
 
@@ -101,6 +77,10 @@ function onPlay(event, id){
   if(id == "setup_review"){
     document.getElementsByClassName('review')[0].src = "https://www.youtube.com/embed/C4e974kerTc?rel=0&autoplay=1";
   }
+  document.querySelector('.modal_cover').addEventListener("click", function(event){
+    event.preventDefault();
+    CloseModal();
+  });
   return false;
 };
 
@@ -173,4 +153,16 @@ function onClickFooterLink(id){
   onClickMenu(mainMenu_id)//mainMenu_id);
   onClickSubMenu(id);
   return false;
+}
+
+
+//---------------------------CallBack-----------------------------------------------
+function  onClickCallback(){
+  document.querySelector('.modal_callback').style.display = "block";
+  return false;
+}
+
+function onCloseCallback(){
+   document.querySelector('.modal_callback').style.display = "none";
+   return false;
 }

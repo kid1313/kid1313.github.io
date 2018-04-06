@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
@@ -12,6 +11,7 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="./js/jquery.js"></script>
     <script src="./js/srypt.js"></script>
+    <script src="./js/jquery.maskedinput.min.js "></script>
   </head>
   <body class="body">
     <header class="header">
@@ -20,7 +20,7 @@
         <div class=menu_wrapper>
           <section class="header__callback">
             <button class="button_callback">Задать вопрос</button>
-            <button class="button_callback">Заказать звонок</button>
+            <button class="button_callback" onclick="return onClickCallback()">Заказать звонок</button>
             <div class="header__phone">
               <p class="header__phone__text"> 8 (800) 350-64-10</p>
             </div>
@@ -43,21 +43,27 @@
                 <a class="menu__item_link" href="./pages/tarif.html">Тарифы</a>
                 <div class="line_menu hidden"></div>
               </li>
-              <li class="menu__item"> 
+              <li class="menu__item popup_munu_pos"> 
                 <a class="menu__item_link header__menu_help" href="#">Помощь</a>
                 <div class="line_menu hidden"></div>
+                <ul class="popup_menu">
+                  <li class="popup_menu__item"><a class="popup_menu__item_link" href="./pages/help.html#?common_sub-about">Справка</a></li>
+                  <li class="popup_menu__item"><a class="popup_menu__item_link" href="./pages/faq.html">Вопрос/Ответ</a></li>
+                  <li class="popup_menu__item"><a class="popup_menu__item_link" href="./pages/instructions.html">Инструкции</a></li>
+                </ul>
               </li>
             </ul>
-            <div class="popup_menu">
-              <ul class="popup_menu__list">
-                <li class="popup_menu__item"><a class="popup_menu__item_link" href="./pages/help.html#?common_sub-about">Справка</a></li>
-                <li class="popup_menu__item"><a class="popup_menu__item_link" href="./pages/faq.html">Вопрос/Ответ</a></li>
-                <li class="popup_menu__item"><a class="popup_menu__item_link" href="./pages/instructions.html">Инструкции</a></li>
-              </ul>
-            </div>
           </section>
         </div>
        </div>
+      <div class="modal_callback">
+      <button class="modal_callback__close" onclick="return onCloseCallback()">Закрыть</button>
+        <form class="modal_callback__form" action="" method="post">
+        <p class="form_lable">Укажите свой номер телефона и наш менеджер перезвонит Вам</p>
+        <p><input class="form_input" type= "text" name="phone" id="phone" placeholder="+7(___) ___-____"></p>
+        <p><button class="form_btn" type="button" onclick="">Жду звонка</button></p>  
+        </form>
+      </div>
     </header> 
     <main class="main">
       <section class="main__theme">

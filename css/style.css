@@ -123,23 +123,36 @@
 	
 }
 
+.popup_munu_pos{
+	position: relative;
+}
+
+.popup_munu_pos:hover .popup_menu{
+	display: block;
+}
+
+
 .popup_menu{
 	display: none;
-	padding: 20px;
+	margin: 0;
+	padding: 0;
+	width: 90px;
+	padding: 10px;
 	padding-top: 20px;
 	background: #f1efef;
 	position: absolute;
-	right: -45px;
-	top: 104px;
+	left: -10px;
+	top: 90%;
 	box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.35);
 	/*box-shadow: -3.41px -3.657px 12.87px 0.13px rgba(0, 0, 0, 0.1);*/
+	list-style: none;
 }
 
-.popup_menu__list{
+/*.popup_menu__list{
 	list-style: none;
 	margin: 0;
 	padding: 0;
-}
+}*/
 
 
 .popup_menu__item_link{
@@ -1632,3 +1645,75 @@
 	color: blue;
 }
 
+/*-------------------------------------Обратный звонок------------------------------ */
+
+.modal_callback{
+	display: none;
+	width: 500px;
+	position: absolute;
+	left: 50%;
+}
+
+.modal_callback__form{
+	display: flex;
+	-webkit-justify-content: space-between;
+		        justify-content: space-between;	
+	background: #f1efef;
+	border: 1px solid #838383;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	position: relative;
+}
+
+.modal_callback__close{
+	font-size: 0;
+	border: none;
+	outline: none;
+	width: 25px;
+	height: 25px;
+	background: url(../img/close.png) no-repeat center;
+	position: absolute;
+	left: 100%;
+	margin-top: -10px;
+	margin-left: -10px;
+	z-index: 50;	
+}
+
+
+.form_lable{
+	display: inline-block;
+	font-size: 15px;
+	width: 200px;
+	padding-right: 10px;
+	padding-left: 10px;
+	text-align: center;
+}
+
+.form_btn{
+	outline: none;
+	border: none;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	 background: #00cd00;
+	 color: #ffffff;
+	 font-size: 15px;
+	 width: 100px;
+	 height: 40px;
+	 margin-left: 10px;
+	 margin-right: 10px;
+	 vertical-align: middle;
+	 
+}
+
+.form_btn:hover, .modal_callback__close:hover{
+	cursor: pointer;
+}
+
+.form_input{
+	width: 134px;
+	font-size: 15px;
+	height: 30px;
+	border: none;
+	outline: none;
+	background: #f1efef;
+}
