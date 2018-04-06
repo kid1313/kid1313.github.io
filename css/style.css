@@ -61,6 +61,7 @@
 	text-align: center;
 	color: #2d2d2d;
 	background: #f1efef;
+	outline: none;
 }
 
 .button_callback:hover{
