@@ -10,29 +10,8 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="./js/jquery.js"></script>
-    <script src="./js/jquery.maskedinput.min.js "></script>
     <script src="./js/srypt.js"></script>
-     <script>
-      function AjaxFormRequest(result_id,formMain,url) {
-        jQuery.ajax({
-        url:     url,
-        type:     "POST",
-        dataType: "html",
-        data: jQuery("#"+formMain).serialize(),
-        success: function(response) {
-         document.getElementById(result_id).innerHTML = response;
-        },
-        error: function(response) {
-         document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
-        }
-      });
-        $(':input','#form')
-        .not(':button, :submit, :reset, :hidden')
-        .val('')
-        .removeAttr('checked')
-        .removeAttr('selected');
-    }
-    </script>
+    <script src="./js/jquery.maskedinput.min.js "></script>
   </head>
   <body class="body">
     <header class="header">
@@ -79,35 +58,27 @@
        </div>
       <div class="modal_callback">
       <button class="modal_callback__close" onclick="return onCloseCallback()">Закрыть</button>
-        <form class="modal_callback__form" action="" method="post" id="form">
-        <p class="form_lable messege-res">Укажите свой номер телефона и наш менеджер перезвонит Вам</p>
+        <form class="modal_callback__form" action="" method="post">
+        <p class="form_lable">Укажите свой номер телефона и наш менеджер перезвонит Вам</p>
         <p><input class="form_input" type= "text" name="phone" id="phone" placeholder="+7(___) ___-____"></p>
-        <p><button class="form_btn" type="button" onclick="AjaxFormRequest('messege-res', 'form', 'send.php')">Жду звонка</button></p>  
+        <p><button class="form_btn" type="button" onclick="">Жду звонка</button></p>  
         </form>
       </div>
     </header> 
     <main class="main">
       <section class="main__theme">
         <div class="main__theme__background">
-          <h1 class="main__theme__title">Что именно делает ваш подчиненный во время работы за компьютером?</h1>
-          <ul class="main__theme__ask">
-              <li class="theme__ask__item">Социальные сети</li>
-              <li class="theme__ask__item">Игры</li>
-              <li class="theme__ask__item">Чаты</li>
-              <li class="theme__ask__item">Поиск работы</li>
-          </ul>
-           <p class="main__theme__subtitle">Может сюда уходит время?</p>
-         <!-- <h1 class="main__theme__title">Система учета рабочего времени за компьютером</h1>
+          <h1 class="main__theme__title">Система учета рабочего времени за компьютером</h1>
           <p class="main__theme__subtitle">Хотите знать:</p>
           <ul class="main__theme__ask">
             <li class="theme__ask__item">Кто из сотрудников хочет уволится?</li>
             <li class="theme__ask__item">Кто любит опаздывать и уходить пораньше?</li>
             <li class="theme__ask__item">Кто тратит рабочее время на развлечения?</li>
-          </ul>-->
+          </ul>
           <a class="main__theme__button" href="./pages/download.html">
-           Проверьте бесплатно с помощью Воркер</a>
-          <!--  <span class="main__theme__button__text">(14 дней бесплатно)</span>
-          </a>-->
+            Узнайте сейчас <br>
+            <span class="main__theme__button__text">(14 дней бесплатно)</span>
+          </a>
           <a class="main__theme__video" href="#" id="main_review" onclick="return onPlay(event, this.id)">Видеообзор</a>
         </div>
       </section>

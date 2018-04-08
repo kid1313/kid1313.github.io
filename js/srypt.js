@@ -1,4 +1,4 @@
-﻿dow.onload=function(){
+﻿window.onload=function(){
   //--------Переход на клавную страницу при клике на лого в шапке----------------
   
   document.querySelector('.header__logo').addEventListener("click", function(event){ 

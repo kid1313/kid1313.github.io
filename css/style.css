@@ -175,15 +175,16 @@
 /* ------------------------------------Шапка----------------------------------- */
 
 .main__theme{
-	margin-top: 30px;
+	margin-top: 20px;
 	color: #ffffff;
+	padding-bottom: 45px;
 }
 
 .main__theme{
 	width: 100%;
-	min-height: 545px;
+	/*min-height: 545px;*/
 	background: url(../img/main_theme.jpg) center no-repeat;
-    background-size: cover; 
+    background-size: cover;
 }
 
 .main__theme__background{
@@ -219,6 +220,11 @@
 	        justify-content: center;
 }
 
+.main__theme__ask{
+	padding-top: 20px;
+}
+
+
 .theme__ask__item{
 	display: inline;
 	margin-left: 100px;
@@ -232,14 +238,14 @@
 	content: "";
 	display: block;
 	position: relative;
-	width: 51px;
-	height: 51px;
-	left: -65px;
-	top: 50px;
-	background: url(../img/mark.png) center no-repeat;
+	width: 25px;
+	height: 25px;
+	left: -35px;
+	top: 50%;
+	background: url(../img/mark_.png) center no-repeat;
 }
 
-.main__theme__button{
+/*.main__theme__button{
 	display: block;
 	width: 350px;
 	-webkit-border-radius: 10px;
@@ -255,7 +261,27 @@
 	padding-top: 10px;
 	padding-bottom: 10px;
 	margin-top: 50px;	
+}*/
+
+.main__theme__button{
+	display: block;
+	width: 500px;
+	height: 60px;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	background: #fff000;
+	margin: 0 auto;
+	text-decoration: none;
+	color: #000000;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 60px;
+	text-align: center;
+	margin-top: 50px;
+
 }
+
+
 
 .main__theme__button__text{
 	font-size: 18px;
