@@ -1,4 +1,4 @@
-window.onload=function(){
+﻿dow.onload=function(){
   //--------Переход на клавную страницу при клике на лого в шапке----------------
   
   document.querySelector('.header__logo').addEventListener("click", function(event){ 
@@ -37,7 +37,6 @@ document.onkeydown = function(event) {
     ScrollUp();
 
   $(function(){
-    console.log("я тут");
    $("#phone").mask("+7(999) 999-9999");
   });
 
