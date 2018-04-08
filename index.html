@@ -80,7 +80,7 @@
       <div class="modal_callback">
       <button class="modal_callback__close" onclick="return onCloseCallback()">Закрыть</button>
         <form class="modal_callback__form" action="" method="post" id="form">
-        <div class="messege-res"><p class="form_lable messege-res">Укажите свой номер телефона и наш менеджер перезвонит Вам</p></div>
+        <div id="messege-res"><p class="form_lable messege-res">Укажите свой номер телефона и наш менеджер перезвонит Вам</p></div>
         <p><input class="form_input" type= "text" name="phone" id="phone" placeholder="+7(___) ___-____"></p>
         <p><button class="form_btn" type="button" onclick="AjaxFormRequest('messege-res', 'form', 'send.php')">Жду звонка</button></p>  
         </form>
