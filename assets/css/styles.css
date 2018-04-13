@@ -857,6 +857,13 @@ a.btn-cta {
   .feature-nav > li {
     font-size: 15px;
   }
+
+  .feature-content p{
+    font-size: 14px;
+    font-weight: normal;
+    margin-right: 10px;
+    margin-left: 10px; 
+  }
   .hero-section .figure-holder .figure-image {
     width: 400px;
     bottom: inherit;
@@ -866,9 +873,19 @@ a.btn-cta {
     max-width: 300px;
     padding-top: 120px;
   }
-  .team-section .item-inner {
+   .team-section .item-inner {
     min-height: 515px;
   }
+  .pricing-wrapper{
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .pricing-wrapper .item{
+    min-width: 700px;
+  }
+
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -885,6 +902,14 @@ a.btn-cta {
   .feature-nav > li.active > a {
     padding: 15px 0;
   }
+
+  .feature-content p{
+    font-size: 15px;
+    font-weight: bold; 
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
   .hero-section .figure-holder .figure-image {
     width: 420px;
     bottom: inherit;
@@ -895,6 +920,12 @@ a.btn-cta {
   }
   .team-section .item-inner {
     min-height: 490px;
+  }
+  .pricing-wrapper{
+    display: block;
+  }
+  .pricing-wrapper .item{
+    min-width: inherit;
   }
 }
 /* Large devices (large desktops, 1200px and up) */
@@ -915,7 +946,7 @@ a.btn-cta {
 .town-working{
   background: #40babd;
   color: #fff;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .team-section .town-working_subtext{
@@ -935,17 +966,45 @@ a.btn-cta {
 }*/
 
 .tab-text{
-  position: absolute;
   font-weight: bold;
-  color: #000; 
+  color: #616670; 
   bottom: 0;
   background: none;
   padding: 8px 0;
-  font-size: 18px;
-  margin-right: 50px;
-  margin-left: 50px;
+  font-size: 15px;
 }
 
-.white{
-  color: #fff;
+.feature-nav{
+  padding-top: 100px;  
 }
+
+.underline{
+    width: inherit;
+    height: 1px;
+    background: #494d55;
+    border: solid 1px #494d55;
+    margin-top: -10px;
+    opacity: 0.2;
+}
+
+.number-client{
+  margin-top: 40px;
+}
+
+.snoska{
+  font-size: 10px;
+  opacity: 0.25;
+  text-align: center;
+}
+
+.profit{
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 70px;
+}
+
+.icon-figure{
+  font-size: 170px;
+  opacity: 0.4;
+}
+
